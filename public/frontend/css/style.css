@@ -1349,7 +1349,7 @@ img {
   padding: 10px 25px;
   font-size: 15px;
   font-weight: 500;
-  color: #293253;
+  color: #fff;
   text-transform: uppercase;
   -webkit-transition: all 500ms ease;
   -moz-transition: all 500ms ease;
@@ -9666,11 +9666,11 @@ div#mCSB_1_container{
 }
 
 .header-style-two .menu-area .mobile-nav-toggler .icon-bar{
-  background-color: #293253;
+  background-color: #fff;
 }
 
 .main-header.dark-header .menu-area .mobile-nav-toggler .icon-bar{
-  background-color: #293253;
+  background-color: #fff;
 }
 
 
