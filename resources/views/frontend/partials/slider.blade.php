@@ -3,9 +3,9 @@
         <div class="slide-item rtl">
             <div class="pattern-box">
                 <div class="pattern-1"></div>
-                <div class="pattern-2" style="background-image: url(assets/images/shape/shape-8.png);"></div>
-                <div class="pattern-3" style="background-image: url(assets/images/shape/shape-6.png);"></div>
-                <div class="pattern-4" style="background-image: url(assets/images/shape/shape-7.png);"></div>
+                <div class="pattern-2" style="background-image: url({{asset('https://k.top4top.io/p_246729yd21.jpg')}});"></div>
+                <div class="pattern-3" style="background-image: url({{asset('https://k.top4top.io/p_246729yd21.jpg')}});"></div>
+                <div class="pattern-4" style="background-image: url({{asset('https://k.top4top.io/p_246729yd21.jpg')}});"></div>
             </div>
             <div class="auto-container">
                 <div class="inner-box">
@@ -24,9 +24,9 @@
         <div class="slide-item rtl">
             <div class="pattern-box">
                 <div class="pattern-1"></div>
-                <div class="pattern-2" style="background-image: url(assets/images/shape/shape-8.png);"></div>
-                <div class="pattern-3" style="background-image: url(assets/images/shape/shape-6.png);"></div>
-                <div class="pattern-4" style="background-image: url(assets/images/shape/shape-7.png);"></div>
+                <div class="pattern-2" style="background-image: url({{asset('https://k.top4top.io/p_2467os9iq1.jpg')}});"></div>
+                <div class="pattern-3" style="background-image: url({{asset('https://k.top4top.io/p_2467os9iq1.jpg')}});"></div>
+                <div class="pattern-4" style="background-image: url({{asset('https://k.top4top.io/p_2467os9iq1.jpg')}});"></div>
             </div>
             <div class="auto-container">
                 <div class="inner-box">
