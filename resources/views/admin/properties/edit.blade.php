@@ -21,83 +21,83 @@
         <div class="col-lg-8 col-md-4 col-sm-12 col-xs-12">
             <div class="card">
                 <div class="header bg-indigo">
-                    <h2>Edit PROPERTY</h2>
+                    <h2>تعديل العقار</h2>
                 </div>
                 <div class="body">
 
                     <div class="form-group form-float">
                         <div class="form-line">
                             <input type="text" name="title" class="form-control" value="{{$property->title}}">
-                            <label class="form-label">Property Title</label>
+                            <label class="form-label">عنوان العقار</label>
                         </div>
                     </div>
 
                     <div class="form-group form-float">
                         <div class="form-line">
                             <input type="number" name="price" class="form-control" value="{{$property->price}}" required>
-                            <label class="form-label">Price</label>
+                            <label class="form-label">السعر</label>
                         </div>
                     </div>
 
                     <div class="form-group form-float">
                         <div class="form-line">
                             <input type="number" class="form-control" name="bedroom" value="{{$property->bedroom}}" required>
-                            <label class="form-label">Bedroom</label>
+                            <label class="form-label">غرف النوم</label>
                         </div>
                     </div>
 
                     <div class="form-group form-float">
                         <div class="form-line">
                             <input type="number" class="form-control" name="bathroom" value="{{$property->bathroom}}" required>
-                            <label class="form-label">Bathroom</label>
+                            <label class="form-label">دورات المياه</label>
                         </div>
                     </div>
 
                     <div class="form-group form-float">
                         <div class="form-line">
                             <input type="text" class="form-control" name="city" value="{{$property->city}}" required>
-                            <label class="form-label">City</label>
+                            <label class="form-label">المدينة</label>
                         </div>
                     </div>
 
                     <div class="form-group form-float">
                         <div class="form-line">
                             <input type="text" class="form-control" name="address" value="{{$property->address}}" required>
-                            <label class="form-label">Address</label>
+                            <label class="form-label">العنوان</label>
                         </div>
                     </div>
 
                     <div class="form-group form-float">
                         <div class="form-line">
                             <input type="number" class="form-control" name="area" value="{{$property->area}}" required>
-                            <label class="form-label">Area</label>
+                            <label class="form-label">المنطقة</label>
                         </div>
                         <div class="help-info">Square Feet</div>
                     </div>
 
                     <div class="form-group">
                         <input type="checkbox" id="featured" name="featured" class="filled-in" value="1" {{ $property->featured ? 'checked' : '' }}/>
-                        <label for="featured">Featured</label>
+                        <label for="featured">مميز؟</label>
                     </div>
 
                     <hr>
                     <div class="form-group">
-                        <label for="tinymce">Description</label>
+                        <label for="tinymce">الوصف</label>
                         <textarea name="description" id="tinymce">{{$property->description}}</textarea>
                     </div>
 
                     <hr>
-                    <div class="form-group">
+                    {{-- <div class="form-group">
                         <label for="tinymce-nearby">Nearby</label>
                         <textarea name="nearby" id="tinymce-nearby">{{$property->nearby}}</textarea>
-                    </div>
+                    </div> --}}
 
                 </div>
             </div>
 
             <div class="card">
                 <div class="header bg-red">
-                    <h2>GALLERY IMAGE</h2>
+                    <h2>صورة المعرض</h2>
                 </div>
                 <div class="body">
                     <div class="gallery-box" id="gallerybox">
@@ -111,7 +111,7 @@
                     <div class="gallery-box">
                         <hr>
                         <input type="file" name="gallaryimage[]" value="UPLOAD" id="gallaryimageupload" multiple>
-                        <button type="button" class="btn btn-info btn-lg right" id="galleryuploadbutton">UPLOAD GALLERY IMAGE</button>
+                        <button type="button" class="btn btn-info btn-lg right" id="galleryuploadbutton">رفع الصورة</button>
                     </div>
                 </div>
             </div>
@@ -120,17 +120,17 @@
         <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
             <div class="card">
                 <div class="header bg-indigo">
-                    <h2>SELECT</h2>
+                    <h2>اختيار</h2>
                 </div>
                 <div class="body">
 
                     <div class="form-group form-float">
                         <div class="form-line {{$errors->has('purpose') ? 'focused error' : ''}}">
-                            <label>Select Purpose</label>
+                            <label>اختر الغرض</label>
                             <select name="purpose" class="form-control show-tick">
-                                <option value="">-- Please select --</option>
-                                <option value="sale" {{ $property->purpose=='sale' ? 'selected' : '' }}>Sale</option>
-                                <option value="rent" {{ $property->purpose=='rent' ? 'selected' : '' }}>Rent</option>
+                                <option value="">-- اختر --</option>
+                                <option value="sale" {{ $property->purpose=='sale' ? 'selected' : '' }}>بيع</option>
+                                <option value="rent" {{ $property->purpose=='rent' ? 'selected' : '' }}>ايجار</option>
                             </select>
                         </div>
                     </div>
@@ -139,9 +139,9 @@
                         <div class="form-line {{$errors->has('type') ? 'focused error' : ''}}">
                             <label>Select type</label>
                             <select name="type" class="form-control show-tick">
-                                <option value="">-- Please select --</option>
-                                <option value="house" {{ $property->type=='house' ? 'selected' : '' }}>House</option>
-                                <option value="apartment" {{ $property->type=='apartment' ? 'selected' : '' }}>Apartment</option>
+                                <option value="">-- اختر --</option>
+                                <option value="house" {{ $property->type=='house' ? 'selected' : '' }}>بيت</option>
+                                <option value="apartment" {{ $property->type=='apartment' ? 'selected' : '' }}>شقة</option>
                             </select>
                         </div>
                     </div>
@@ -157,7 +157,7 @@
                             <label for="features-{{$feature->id}}">{{$feature->name}}</label>
                         @endforeach
                     </div>
-
+{{-- 
                     <div class="clearfix">
                         <h5>Google Map</h5>
                         <div class="form-group">
@@ -172,22 +172,22 @@
                                 <label class="form-label">Longitude</label>
                             </div>
                         </div>
-                    </div>
+                    </div> --}}
 
                 </div>
             </div>
 
             <div class="card">
                 <div class="header bg-indigo">
-                    <h2>PROPERTY VIDEO</h2>
+                    <h2>فيديو العقار</h2>
                 </div>
                 <div class="body">
                     <div class="form-group form-float">
                         <div class="form-line">
                             <input type="text" class="form-control" name="video" value="{{$property->video}}">
-                            <label class="form-label">Video</label>
+                            <label class="form-label">فيديو</label>
                         </div>
-                        <div class="help-info">Youtube Link</div>
+                        <div class="help-info">رابط اليوتيوب</div>
                     </div>
                     <div class="embed-video center">
                         {!! $videoembed !!}
@@ -197,7 +197,7 @@
 
             <div class="card">
                 <div class="header bg-indigo">
-                    <h2>FLOOR PLAN</h2>
+                    <h2>تخطيط الارض</h2>
                 </div>
                 <div class="body">
                     <div class="form-group">

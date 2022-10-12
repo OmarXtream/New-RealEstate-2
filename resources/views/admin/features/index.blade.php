@@ -14,7 +14,7 @@
     <div class="block-header">
         <a href="{{route('admin.features.create')}}" class="waves-effect waves-light btn right m-b-15 addbtn">
             <i class="material-icons left">add</i>
-            <span>CREATE </span>
+            <span>إنشاء </span>
         </a>
     </div>
 
@@ -22,25 +22,25 @@
         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
             <div class="card">
                 <div class="header bg-indigo">
-                    <h2>FEATURE LIST</h2>
+                    <h2>قائمة الخصائص</h2>
                 </div>
                 <div class="body">
                     <div class="table-responsive">
                         <table class="table table-bordered table-striped table-hover dataTable js-exportable">
                             <thead>
                                 <tr>
-                                    <th>SL.</th>
-                                    <th>Name</th>
-                                    <th>Slug</th>
-                                    <th>Action</th>
+                                    <th>#</th>
+                                    <th>الاسم</th>
+                                    <th>الاختصار</th>
+                                    <th>-</th>
                                 </tr>
                             </thead>
                             <tfoot>
                                 <tr>
-                                    <th>SL.</th>
-                                    <th>Name</th>
-                                    <th>Slug</th>
-                                    <th>Action</th>
+                                    <th>#</th>
+                                    <th>الاسم</th>
+                                    <th>الاختصار</th>
+                                    <th>-</th>
                                 </tr>
                             </tfoot>
                             <tbody>

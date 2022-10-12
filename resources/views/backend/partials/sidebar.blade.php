@@ -9,7 +9,7 @@
                 <li class="{{ Request::is('admin/dashboard') ? 'active' : '' }}">
                     <a href="{{ route('admin.dashboard') }}">
                         <i class="material-icons">dashboard</i>
-                        <span>Dashboard</span>
+                        <span>لوحة التحكم</span>
                     </a>
                 </li>
 
@@ -20,40 +20,40 @@
                     </a>
                 </li>
 
-                <li class="{{ Request::is('admin/sliders*') ? 'active' : '' }}">
+                {{-- <li class="{{ Request::is('admin/sliders*') ? 'active' : '' }}">
                     <a href="{{ route('admin.sliders.index') }}">
                         <i class="material-icons">burst_mode</i>
-                        <span>Sliders</span>
+                        <span></span>
                     </a>
-                </li>
+                </li> --}}
                 <li class="{{ Request::is('admin/properties*') ? 'active' : '' }}">
                     <a href="{{ route('admin.properties.index') }}">
                         <i class="material-icons">home</i>
-                        <span>Property</span>
+                        <span>العقارات</span>
                     </a>
                 </li>
                 <li class="{{ Request::is('admin/features*') ? 'active' : '' }}">
                     <a href="{{ route('admin.features.index') }}">
                         <i class="material-icons">star</i>
-                        <span>Features</span>
+                        <span>الخصائص</span>
                     </a>
                 </li>
 
                 <li class="{{ Request::is('admin/services*') ? 'active' : '' }}">
                     <a href="{{ route('admin.services.index') }}">
                         <i class="material-icons">wb_sunny</i>
-                        <span>Services</span>
+                        <span>الخدمات</span>
                     </a>
                 </li>
 
                 <li class="{{ Request::is('admin/testimonials*') ? 'active' : '' }}">
                     <a href="{{ route('admin.testimonials.index') }}">
                         <i class="material-icons">view_carousel</i>
-                        <span>Testimonials</span>
+                        <span>الشهادات</span>
                     </a>
                 </li>
 
-                <li class="header">Blog</li>
+                {{-- <li class="header">Blog</li>
                 <li class="{{ Request::is('admin/categories*') ? 'active' : '' }}">
                     <a href="{{ route('admin.categories.index') }}">
                         <i class="material-icons">category</i>
@@ -71,40 +71,40 @@
                         <i class="material-icons">library_books</i>
                         <span>Posts</span>
                     </a>
-                </li>
+                </li> --}}
 
-                <li class="header"> </li>
-                <li class="{{ Request::is('admin/galleries*') ? 'active' : '' }}">
+                {{-- <li class="header"> </li> --}}
+                {{-- <li class="{{ Request::is('admin/galleries*') ? 'active' : '' }}">
                     <a href="{{ route('admin.album') }}">
                         <i class="material-icons">view_list</i>
-                        <span>Gallery</span>
+                        <span>المعرض</span>
                     </a>
-                </li>
+                </li> --}}
  
                 <li class="{{ Request::is('admin/settings*') ? 'active' : '' }}">
                     <a href="javascript:void(0);" class="menu-toggle">
                         <i class="material-icons">settings</i>
-                        <span>Settings</span>
+                        <span>الاعدادات</span>
                     </a>
                     <ul class="ml-menu">
                         <li class="{{ Request::is('admin/settings') ? 'active' : '' }}">
                             <a href="{{ route('admin.settings') }}">
-                                <span>Settings</span>
+                                <span>الاعدادات</span>
                             </a>
                         </li>
                         <li class="{{ Request::is('admin/changepassword') ? 'active' : '' }}">
                             <a href="{{ route('admin.changepassword') }}">
-                                <span>Change Password</span>
+                                <span>تغيير كلمة المرور</span>
                             </a>
                         </li>
                         <li class="{{ Request::is('admin/profile') ? 'active' : '' }}">
                             <a href="{{ route('admin.profile') }}">
-                                <span>Profile</span>
+                                <span>الملف الشخصي</span>
                             </a>
                         </li>
                         <li class="{{ Request::is('admin/message*') ? 'active' : '' }}">
                             <a href="{{ route('admin.message') }}">
-                                <span>Message</span>
+                                <span>الرسائل</span>
                             </a>
                         </li>
                     </ul>

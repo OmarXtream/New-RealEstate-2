@@ -20,68 +20,68 @@
         <div class="col-lg-8 col-md-4 col-sm-12 col-xs-12">
             <div class="card">
                 <div class="header bg-indigo">
-                    <h2>CREATE PROPERTY</h2>
+                    <h2>إنشاء عقار</h2>
                 </div>
                 <div class="body">
 
                     <div class="form-group form-float">
                         <div class="form-line">
                             <input type="text" name="title" class="form-control" value="{{old('title')}}">
-                            <label class="form-label">Property Title</label>
+                            <label class="form-label">عنوان العقار</label>
                         </div>
                     </div>
 
                     <div class="form-group form-float">
                         <div class="form-line">
                             <input type="number" class="form-control" name="price" required>
-                            <label class="form-label">Price</label>
+                            <label class="form-label">السعر</label>
                         </div>
                     </div>
 
                     <div class="form-group form-float">
                         <div class="form-line">
                             <input type="number" class="form-control" name="bedroom" required>
-                            <label class="form-label">Bedroom</label>
+                            <label class="form-label">غرف النوم</label>
                         </div>
                     </div>
 
                     <div class="form-group form-float">
                         <div class="form-line">
                             <input type="number" class="form-control" name="bathroom" required>
-                            <label class="form-label">Bathroom</label>
+                            <label class="form-label">دورات المياه</label>
                         </div>
                     </div>
 
                     <div class="form-group form-float">
                         <div class="form-line">
                             <input type="text" class="form-control" name="city" required>
-                            <label class="form-label">City</label>
+                            <label class="form-label">المدينة</label>
                         </div>
                     </div>
 
                     <div class="form-group form-float">
                         <div class="form-line">
                             <input type="text" class="form-control" name="address" required>
-                            <label class="form-label">Address</label>
+                            <label class="form-label">العنوان</label>
                         </div>
                     </div>
 
                     <div class="form-group form-float">
                         <div class="form-line">
                             <input type="number" class="form-control" name="area" required>
-                            <label class="form-label">Area</label>
+                            <label class="form-label">المنطقة</label>
                         </div>
                         <div class="help-info">Square Feet</div>
                     </div>
 
                     <div class="form-group">
                         <input type="checkbox" id="featured" name="featured" class="filled-in" value="1" />
-                        <label for="featured">Featured</label>
+                        <label for="featured">مميز؟</label>
                     </div>
 
                     <hr>
                     <div class="form-group">
-                        <label for="tinymce">Description</label>
+                        <label for="tinymce">الوصف</label>
                         <textarea name="description" id="tinymce">{{old('description')}}</textarea>
                     </div>
 
@@ -95,7 +95,7 @@
             </div>
             <div class="card">
                 <div class="header">
-                    <h2>GALLERY IMAGE</h2>
+                    <h2>صورة المعرض</h2>
                 </div>
                 <div class="body">
                     <input id="input-id" type="file" name="gallaryimage[]" class="file" data-preview-file-type="text" multiple>
@@ -105,17 +105,17 @@
         <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
             <div class="card">
                 <div class="header bg-indigo">
-                    <h2>SELECT</h2>
+                    <h2>اختيار</h2>
                 </div>
                 <div class="body">
 
                     <div class="form-group form-float">
                         <div class="form-line {{$errors->has('purpose') ? 'focused error' : ''}}">
-                            <label>Select Purpose</label>
+                            <label>اختر الغرض</label>
                             <select name="purpose" class="form-control show-tick">
-                                <option value="">-- Please select --</option>
-                                <option value="sale">Sale</option>
-                                <option value="rent">Rent</option>
+                                <option value="">-- اختر --</option>
+                                <option value="sale">بيع</option>
+                                <option value="rent">ايجار</option>
                             </select>
                         </div>
                     </div>
@@ -124,9 +124,9 @@
                         <div class="form-line {{$errors->has('type') ? 'focused error' : ''}}">
                             <label>Select type</label>
                             <select name="type" class="form-control show-tick">
-                                <option value="">-- Please select --</option>
-                                <option value="house">House</option>
-                                <option value="apartment">Apartment</option>
+                                <option value="">-- اختر --</option>
+                                <option value="house">بيت</option>
+                                <option value="apartment">شقة</option>
                             </select>
                         </div>
                     </div>
@@ -142,9 +142,9 @@
                     <div class="form-group form-float">
                         <div class="form-line">
                             <input type="text" class="form-control" name="video">
-                            <label class="form-label">Video</label>
+                            <label class="form-label">فيديو</label>
                         </div>
-                        <div class="help-info">Youtube Link</div>
+                        <div class="help-info">رابط يوتيوب</div>
                     </div>
 
                     {{-- <div class="clearfix">
@@ -167,7 +167,7 @@
             </div>
             <div class="card">
                 <div class="header bg-indigo">
-                    <h2>FLOOR PLAN</h2>
+                    <h2>تخطيط الارض</h2>
                 </div>
                 <div class="body">
                     <div class="form-group">
@@ -177,7 +177,7 @@
             </div>
             <div class="card">
                 <div class="header bg-indigo">
-                    <h2>FEATURED IMAGE</h2>
+                    <h2>الصورة المميزه</h2>
                 </div>
                 <div class="body">
                     <div class="form-group">
@@ -187,12 +187,12 @@
                     {{-- BUTTON --}}
                     <a href="{{route('admin.properties.index')}}" class="btn btn-danger btn-lg m-t-15 waves-effect">
                         <i class="material-icons left">arrow_back</i>
-                        <span>BACK</span>
+                        <span>الرجوع</span>
                     </a>
 
                     <button type="submit" class="btn btn-indigo btn-lg m-t-15 waves-effect">
                         <i class="material-icons">save</i>
-                        <span>SAVE</span>
+                        <span>حفظ</span>
                     </button>
                 </div>
             </div>

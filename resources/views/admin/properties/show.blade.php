@@ -18,51 +18,51 @@
             <div class="card">
 
                 <div class="header bg-indigo">
-                    <h2>SHOW PROPERTY</h2>
+                    <h2>عرض العقار</h2>
                 </div>
 
                 <div class="header">
                     <h2>
                         {{$property->title}}
                         <br>
-                        <small>Posted By <strong>{{$property->user->name}}</strong> on {{$property->created_at->toFormattedDateString()}}</small>
+                        <small>تم الرفع من قبل <strong>{{$property->user->name}}</strong> في {{$property->created_at->toFormattedDateString()}}</small>
                     </h2>
                 </div>
 
                 <div class="header">
                     <ul class="list-group">
                         <li class="list-group-item">
-                            <strong>Price : </strong>
+                            <strong>السعر : </strong>
                             <span class="right"> &dollar;{{$property->price}}</span>
                         </li>
                         <li class="list-group-item">
-                            <strong>Bedroom : </strong>
+                            <strong>غرف النوم : </strong>
                             <span class="right">{{$property->bedroom}}</span>
                         </li>
                         <li class="list-group-item">
-                            <strong>Bathroom : </strong>
+                            <strong>دورات المياه : </strong>
                             <span class="right">{{$property->bathroom}}</span>
                         </li>
                         <li class="list-group-item">
-                            <strong>City : </strong>
+                            <strong>المدينة : </strong>
                             <span class="right">{{$property->city}}</span>
                         </li>
                         <li class="list-group-item">
-                            <strong>Address : </strong>
+                            <strong>العنوان : </strong>
                             <span class="left">{{$property->address}}</span>
                         </li>
                     </ul>
                 </div>
 
                 <div class="body">
-                    <h5>Description</h5>
+                    <h5>الوصف</h5>
                     {!!$property->description!!}
                 </div>
 
             </div> 
             <div class="card">
                 <div class="header">
-                    <h2>MAP</h2>
+                    <h2>الخريطة</h2>
                 </div>
                 <div class="body">
                     <div id="gmap_markers" class="gmap"></div>
@@ -72,7 +72,7 @@
             @if($property->floor_plan)
             <div class="card">
                 <div class="header">
-                    <h2>FLOOR PLAN</h2>
+                    <h2>تخطيط الارض</h2>
                 </div>
                 @if($property->floor_plan && $property->floor_plan != 'default.png')
                 <div class="body">
@@ -85,7 +85,7 @@
             @if($videoembed)
             <div class="card">
                 <div class="header">
-                    <h2>PROPERTY VIDEO</h2>
+                    <h2>فيديو العقار</h2>
                 </div>
                 <div class="body text-center">
                     {!! $videoembed !!}
@@ -96,7 +96,7 @@
             @if(!$property->gallery->isEmpty())
             <div class="card">
                 <div class="header bg-red">
-                    <h2>GALLERY IMAGE</h2>
+                    <h2>صورة المعرض</h2>
                 </div>
                 <div class="body">
                     <div class="gallery-box">
@@ -113,7 +113,7 @@
             {{-- COMMENTS --}}
             <div class="card">
                 <div class="header">
-                    <h2>{{ $property->comments_count }} Comments</h2>
+                    <h2>{{ $property->comments_count }} التعليقات</h2>
                 </div>
                 <div class="body">
 
@@ -162,7 +162,7 @@
         <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
             <div class="card">
                 <div class="header bg-cyan">
-                    <h2>TYPE</h2>
+                    <h2>النوع</h2>
                 </div>
                 <div class="body">
                     <strong class="label bg-red">{{$property->type}}</strong> for <strong class="label bg-blue">{{$property->purpose}}</strong>
@@ -170,7 +170,7 @@
             </div>
             <div class="card">
                 <div class="header bg-green">
-                    <h2>FEATURES</h2>
+                    <h2>الخصائص</h2>
                 </div>
                 <div class="body">
                     @foreach($property->features as $feature)
@@ -181,7 +181,7 @@
 
             <div class="card">
                 <div class="header bg-amber">
-                    <h2>FEATURED IMAGE</h2>
+                    <h2>الصورة المميزه</h2>
                 </div>
                 <div class="body">
 
@@ -189,11 +189,11 @@
                     
                     <a href="{{route('admin.properties.index')}}" class="btn btn-danger btn-lg waves-effect">
                         <i class="material-icons left">arrow_back</i>
-                        <span>BACK</span>
+                        <span>رجوع</span>
                     </a>
                     <a href="{{route('admin.properties.edit',$property->slug)}}" class="btn btn-info btn-lg waves-effect">
                         <i class="material-icons">edit</i>
-                        <span>EDIT</span>
+                        <span>تعديل</span>
                     </a>
 
                 </div>

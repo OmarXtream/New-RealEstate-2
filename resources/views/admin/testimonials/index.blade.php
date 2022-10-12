@@ -14,7 +14,7 @@
     <div class="block-header">
         <a href="{{route('admin.testimonials.create')}}" class="waves-effect waves-light btn right m-b-15 addbtn">
             <i class="material-icons left">add</i>
-            <span>CREATE </span>
+            <span>إنشاء </span>
         </a>
     </div>
 
@@ -22,18 +22,18 @@
         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
             <div class="card">
                 <div class="header bg-indigo">
-                    <h2>TESTIMONIAL LIST</h2>
+                    <h2>قائمة الشهادات</h2>
                 </div>
                 <div class="body">
                     <div class="table-responsive">
                         <table class="table table-bordered table-striped table-hover dataTable js-exportable">
                             <thead>
                                 <tr>
-                                    <th>SL.</th>
-                                    <th>Image</th>
-                                    <th>Name</th>
-                                    <th>Testimonial</th>
-                                    <th width="100px">Action</th>
+                                    <th>#</th>
+                                    <th>الصورة</th>
+                                    <th>الاسم</th>
+                                    <th>الشهادة</th>
+                                    <th width="100px">-</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -103,8 +103,8 @@
                 if (result.value) {
                     document.getElementById('del-testimonial-'+id).submit();
                     swal(
-                    'Deleted!',
-                    'Testimonial has been deleted.',
+                    'تم الحذف!',
+                    'تم حذف الشهادة بنجاح.',
                     'success'
                     )
                 }
