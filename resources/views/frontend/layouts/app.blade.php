@@ -9,6 +9,17 @@
 
 <title>{{ config('app.name', 'Laravel Real Estate') }}</title>
 
+<meta name="description" content="نقدم مجموعة واسعة من افضل الحلول العقارية لتنعم بمسكن العمر من خلال عدة مشاريع وبطاقم فني واداري كبير وكفاءه عالية مدعوماً ومجهز بأحدث ماتوصلت اليه الابتكارات في المجال." />
+<meta name="keywords" content="realestate , عقارات , الروابي , شركة عقارات , alrawabiestates , ايجار , بيع , شقق , فلة , تأجير , بناء , عقار ">
+<meta name="author" content="alrawabiestates | الروابي">
+
+<meta property="og:title" content="الروابي - alrawabiestates" />
+<meta property="og:site_name" content="alrawabiestates" />
+<meta property="og:description" content="نقدم مجموعة واسعة من افضل الحلول العقارية لتنعم بمسكن العمر من خلال عدة مشاريع وبطاقم فني واداري كبير وكفاءه عالية مدعوماً ومجهز بأحدث ماتوصلت اليه الابتكارات في المجال." />
+<meta property="og:type" content="realestate" />
+<meta property="og:image" content="{{asset('frontend/images/favicon.ico')}}" />
+
+
 <!-- Fav Icon -->
 <link rel="icon" href="{{asset('frontend/images/favicon.ico')}}" type="image/x-icon">
 
