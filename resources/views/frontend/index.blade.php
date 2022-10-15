@@ -154,19 +154,38 @@
                         <div class="clients-logo">
                             <ul class="logo-list clearfix">
                                 <li>
-                                    <figure class="logo"><a href="index-2.html"><img src="frontend/images/clients/clients-1.png" alt=""></a></figure>
+                                    <figure class="logo"><a href="#"><img src="{{asset('frontend/partners/1.png')}}" alt=""></a></figure>
                                 </li>
                                 <li>
-                                    <figure class="logo"><a href="index-2.html"><img src="frontend/images/clients/clients-2.png" alt=""></a></figure>
+                                    <figure class="logo"><a href="#"><img src="{{asset('frontend/partners/2.png')}}" alt=""></a></figure>
                                 </li>
                                 <li>
-                                    <figure class="logo"><a href="index-2.html"><img src="frontend/images/clients/clients-3.png" alt=""></a></figure>
+                                    <figure class="logo"><a href="#"><img src="{{asset('frontend/partners/3.png')}}" alt=""></a></figure>
                                 </li>
                                 <li>
-                                    <figure class="logo"><a href="index-2.html"><img src="frontend/images/clients/clients-4.png" alt=""></a></figure>
+                                    <figure class="logo"><a href="#"><img src="{{asset('frontend/partners/4.png')}}" alt=""></a></figure>
                                 </li>
                                 <li>
-                                    <figure class="logo"><a href="index-2.html"><img src="frontend/images/clients/clients-5.png" alt=""></a></figure>
+                                    <figure class="logo"><a href="#"><img src="{{asset('frontend/partners/5.png')}}" alt=""></a></figure>
+                                </li>
+                                <li>
+                                    <figure class="logo"><a href="#"><img src="{{asset('frontend/partners/6.png')}}" alt=""></a></figure>
+                                </li>
+                                <li>
+                                    <figure class="logo"><a href="#"><img src="{{asset('frontend/partners/7.png')}}" alt=""></a></figure>
+                                </li>
+                                <li>
+                                    <figure class="logo"><a href="#"><img src="{{asset('frontend/partners/8.png')}}" alt=""></a></figure>
+                                </li>
+                                <li>
+                                    <figure class="logo"><a href="#"><img src="{{asset('frontend/partners/9.png')}}" alt=""></a></figure>
+                                </li>
+                                <li>
+                                    <figure class="logo"><a href="#"><img src="{{asset('frontend/partners/10.png')}}" alt=""></a></figure>
+                                </li>
+                                <li>
+                                    <figure class="logo"><a href="#"><img src="{{asset('frontend/partners/11.png')}}" alt=""></a></figure>
+
                                 </li>
                             </ul>
                         </div>
