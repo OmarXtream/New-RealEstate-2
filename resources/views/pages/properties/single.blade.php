@@ -79,6 +79,14 @@
 
                     </div>
                 </div>
+
+                <div class="right-column pull-right clearfix mr-3">
+                    <ul class="other-option pull-right clearfix">
+                        <li><a href="#" onclick="CopyURL()"><i class="icon-37"></i></a></li>
+                        <span id="share-label"></span>
+                        <li><a href="#"><i class="icon-13"></i></a></li>
+                    </ul>
+                </div>
                 <div class="right-column pull-right clearfix">
                     <div class="price-inner clearfix">
                         <ul class="category clearfix pull-left px-auto">
@@ -86,8 +94,6 @@
                             <li><span class="btn btn-small disabled b-r-20">غرف نوم: {{ $property->bedroom}} </span></li>
                             <li><span class="btn btn-small disabled b-r-20">دورات مياه: {{ $property->bathroom}} </span></li>
                             <li><span class="btn btn-small disabled b-r-20">منطقة: {{ $property->area}} Sq Ft</span></li>
-    
-
                         </ul>
                         <div class="price-box pull-right pr-2">
                             <h3>${{ $property->price }}</h3>
@@ -205,6 +211,17 @@
 @endsection
 
 @section('scripts')
+<script type="text/javascript" charset="utf-8">
+function CopyURL(){
+    navigator.clipboard.writeText(window.location.href);
+    toastr.options.positionClass = 'toast-bottom-left';
+    toastr.options.rtl = true;
+
+    toastr.success('تم النسخ بنجاح','للمشاركة',{
+                        closeButtor: true,
+                        progressBar: true 
+                    });}
+</script>    
 
     <script>
         $(function(){
