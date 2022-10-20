@@ -3,7 +3,7 @@
 @section('content')
 
     <div class="block-header">
-        <h2>DASHBOARD</h2>
+        <h2>لوحة التحكم</h2>
     </div>
 
 @endsection

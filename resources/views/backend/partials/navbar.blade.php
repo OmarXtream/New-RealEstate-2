@@ -11,7 +11,7 @@
                 <ul class="nav navbar-nav navbar-right">
 
                     <!-- Call Search -->
-                    <li><a href="javascript:void(0);" class="js-search" data-close="true"><i class="material-icons">search</i></a></li>
+                    <li><a href="javascript:void(0);" class="js-search" data-close="true"><i class="material-icons">البحث</i></a></li>
                     <!-- #END# Call Search -->
 
                     <!-- Notifications -->
@@ -21,7 +21,7 @@
                             <span class="label-count">{{ $countmessages }}</span>
                         </a>
                         <ul class="dropdown-menu">
-                            <li class="header">MESSAGES</li>
+                            <li class="header">الرسائل</li>
                             <li class="body">
                                 <ul class="menu">
                                     @foreach($navbarmessages as $message)
@@ -43,7 +43,7 @@
                                 </ul>
                             </li>
                             <li class="footer">
-                                <a href="{{ route('admin.message') }}">View All Messages</a>
+                                <a href="{{ route('admin.message') }}">مشاهدة جميع الرسائل</a>
                             </li>
                         </ul>
                     </li>
@@ -57,18 +57,18 @@
                         </a>
                         <ul class="dropdown-menu pull-right">
                             <li>
-                                <a href="{{route('admin.profile')}}"><i class="material-icons">person</i>Profile</a>
+                                <a href="{{route('admin.profile')}}"><i class="material-icons">person</i>الملف الشخصي</a>
                             </li>
 
                             <li role="seperator" class="divider"></li>
                             <li>
-                                <a href="{{ route('admin.message') }}"><i class="material-icons">message</i>Messages</a>
+                                <a href="{{ route('admin.message') }}"><i class="material-icons">message</i>الرسائل</a>
                             </li>
                             <li>
-                                <a href="{{ route('admin.changepassword') }}"><i class="material-icons">lock</i>Password</a>
+                                <a href="{{ route('admin.changepassword') }}"><i class="material-icons">lock</i>كلمة المرور</a>
                             </li>
                             <li>
-                                <a href="{{ route('home') }}" target="_blank"><i class="material-icons">home</i>Visit Site</a>
+                                <a href="{{ route('home') }}" target="_blank"><i class="material-icons">home</i>زيارة الموقع</a>
                             </li>
                             <li role="seperator" class="divider"></li>
 
