@@ -7,6 +7,12 @@ Route::get('/slider', 'FrontpageController@slider')->name('slider.index');
 Route::get('/InfoForm', 'InfoFormController@index')->name('InfoForm');
 Route::post('/InfoForm', 'InfoFormController@Create')->name('InfoForm.create');
 
+Route::get('/PRequests', 'PropertiesRequestsController@index')->name('PropertieRequest');
+Route::post('/PRequests', 'PropertiesRequestsController@Create')->name('PropertieRequest.create');
+
+Route::get('/PMarketing', 'PropertiesMarkatingController@index')->name('PropertiesMarkating');
+Route::post('/PMarketing', 'PropertiesMarkatingController@Create')->name('PropertiesMarkating.create');
+
 
 Route::get('/fav/{pid}', 'FavoriteController@Create')->name('favorite.create');
 Route::get('/fav/del/{fid}', 'FavoriteController@Delete')->name('favorite.delete');

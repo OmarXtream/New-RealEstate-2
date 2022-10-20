@@ -27,6 +27,14 @@
                                             <a href="{{ route('property') }}"><span>العقارات</span></a>
                                         </li>
 
+                                        <li class="{{ Request::is('PRequests*') ? 'active' : '' }}">
+                                            <a href="{{ route('PropertieRequest') }}"><span>طلب عقار</span></a>
+                                        </li>
+
+                                        <li class="{{ Request::is('PMarketing*') ? 'active' : '' }}">
+                                            <a href="{{ route('PropertiesMarkating') }}"><span>تسويق عقار</span></a>
+                                        </li>
+                                        
                                         <li class="{{ Request::is('agents*') ? 'active' : '' }}">
                                             <a href="{{ route('agents') }}"><span>الوسطاء</span></a>
                                         </li>
