@@ -20,12 +20,12 @@
                     </a>
                 </li>
 
-                {{-- <li class="{{ Request::is('admin/sliders*') ? 'active' : '' }}">
+                <li class="{{ Request::is('admin/sliders*') ? 'active' : '' }}">
                     <a href="{{ route('admin.sliders.index') }}">
                         <i class="material-icons">burst_mode</i>
-                        <span></span>
+                        <span>خلفية الموقع</span>
                     </a>
-                </li> --}}
+                </li>
                 <li class="{{ Request::is('admin/properties*') ? 'active' : '' }}">
                     <a href="{{ route('admin.properties.index') }}">
                         <i class="material-icons">home</i>
