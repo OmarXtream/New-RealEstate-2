@@ -16,6 +16,9 @@ use Toastr;
 use Auth;
 use File;
 
+use App\PropertiesMarkating;
+use App\PropertiesRequests;
+
 class PropertyController extends Controller
 {
 
@@ -336,6 +339,20 @@ class PropertyController extends Controller
         $propertie = Property::with('favorites')->where('id',$pid)->first();
 
         return view('admin.properties.favorites',compact('propertie'));
+    }
+
+    public function Requests()
+    {
+        $requests = PropertiesRequests::get(); 
+
+        return view('admin.properties.Requests', compact('requests'));
+    }
+
+    public function Marakating()
+    {
+        $markating = PropertiesMarkating::get(); 
+
+        return view('admin.properties.markating', compact('markating'));
     }
 
 }

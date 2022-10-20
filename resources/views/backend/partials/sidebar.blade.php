@@ -32,7 +32,18 @@
                         <span>العقارات</span>
                     </a>
                 </li>
-
+                <li class="{{ Request::is('admin/PRequests*') ? 'active' : '' }}">
+                    <a href="{{ route('admin.PropertieRequest') }}">
+                        <i class="material-icons">business</i>
+                        <span>طلبات العقار</span>
+                    </a>
+                </li>
+                <li class="{{ Request::is('admin/PMarketing*') ? 'active' : '' }}">
+                    <a href="{{ route('admin.PropertiesMarkating') }}">
+                        <i class="material-icons">share</i>
+                        <span>طلبات تسويق العقار</span>
+                    </a>
+                </li>
             
                 <li class="{{ Request::is('admin/features*') ? 'active' : '' }}">
                     <a href="{{ route('admin.features.index') }}">
