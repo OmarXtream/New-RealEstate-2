@@ -62,6 +62,12 @@
 
     <!-- SINGLE PROPERTY SECTION -->
     <section class="property-details property-details-one">
+        @if (session()->has('message'))
+        <div class="text-center alert alert-light">
+            <h3 style="font-weight: bold; color:#000">{{ session('message') }}</h3>
+        </div>
+        @endif
+
         <div class="auto-container">
             <div class="top-details clearfix">
                 <div class="left-column pull-left clearfix">
@@ -82,9 +88,12 @@
 
                 <div class="right-column pull-right clearfix mr-3">
                     <ul class="other-option pull-right clearfix">
-                        <li><a href="#" onclick="CopyURL()"><i class="icon-37"></i></a></li>
-                        <span id="share-label"></span>
-                        <li><a href="#"><i class="icon-13"></i></a></li>
+                        <li><a href="#" onclick="CopyURL()"><i class="icon-37" title="مشاركة"></i></a></li>
+                        @if(!$fav)
+                        <li><a href="{{route('favorite.create',$property->id)}}"><i class="icon-13" title="المفضلة"></i></a></li>
+                        @else
+                        <li><a href="{{route('favorite.delete',$property->id)}}"><i class="icon-13" title="الغاء من المفضلة"></i></a></li>
+                        @endif
                     </ul>
                 </div>
                 <div class="right-column pull-right clearfix">

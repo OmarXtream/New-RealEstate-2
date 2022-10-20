@@ -326,4 +326,16 @@ class PropertyController extends Controller
             $youtubelink
         );
     }
+
+
+    
+
+
+    public function favorites($pid)
+    {
+        $propertie = Property::with('favorites')->where('id',$pid)->first();
+
+        return view('admin.properties.favorites',compact('propertie'));
+    }
+
 }

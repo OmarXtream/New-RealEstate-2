@@ -37,4 +37,10 @@ class Property extends Model
         return $this->hasMany(Rating::class, 'property_id');
     }
 
+    public function favorites()
+    {
+        return $this->belongsToMany(User::class, 'favorites');
+    }
+
+
 }

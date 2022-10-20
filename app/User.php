@@ -31,11 +31,17 @@ class User extends Authenticatable
     {
         return $this->belongsTo(Role::class);
     }
-
+    
     public function posts()
     {
         return $this->hasMany(Post::class);
     }
+
+    public function Properties()
+    {
+        return $this->belongsToMany(Property::class, 'favorites');
+    }
+    
 
     public function hasRole()
     {

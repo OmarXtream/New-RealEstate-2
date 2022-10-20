@@ -8,6 +8,8 @@ Route::get('/InfoForm', 'InfoFormController@index')->name('InfoForm');
 Route::post('/InfoForm', 'InfoFormController@Create')->name('InfoForm.create');
 
 
+Route::get('/fav/{pid}', 'FavoriteController@Create')->name('favorite.create');
+Route::get('/fav/del/{fid}', 'FavoriteController@Delete')->name('favorite.delete');
 
 Route::get('/search', 'FrontpageController@search')->name('search');
 
@@ -76,6 +78,10 @@ Route::group(['prefix'=>'admin','namespace'=>'Admin','middleware'=>['auth','admi
 
     Route::get('InfoForm','InfoFormController@index')->name('InfoForm');
 
+    Route::get('favorites/{pid}','PropertyController@favorites')->name('favorites');
+
+
+    
 
 });
 

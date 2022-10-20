@@ -14,6 +14,7 @@ use App\Comment;
 use App\Rating;
 use App\Post;
 use App\User;
+use App\Favorite;
 
 use Carbon\Carbon;
 use Auth;
@@ -50,7 +51,9 @@ class PagesController extends Controller
 
         $cities = Property::select('city','city_slug')->distinct('city_slug')->get();
 
-        return view('pages.properties.single', compact('property','rating','relatedproperty','videoembed','cities'));
+
+        $fav = Favorite::where('property_id',$property->id)->where('user_id',Auth::user()->id)->exists();
+        return view('pages.properties.single', compact('property','rating','relatedproperty','videoembed','cities','fav'));
     }
 
 
