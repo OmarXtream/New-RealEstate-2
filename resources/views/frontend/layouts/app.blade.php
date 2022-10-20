@@ -17,7 +17,7 @@
 <meta property="og:site_name" content="alrawabiestates" />
 <meta property="og:description" content="نقدم مجموعة واسعة من افضل الحلول العقارية لتنعم بمسكن العمر من خلال عدة مشاريع وبطاقم فني واداري كبير وكفاءه عالية مدعوماً ومجهز بأحدث ماتوصلت اليه الابتكارات في المجال." />
 <meta property="og:type" content="realestate" />
-<meta property="og:image" content="{{asset('frontend/images/favicon.ico')}}" />
+<meta property="og:image" content="https://b.top4top.io/p_2484ltxet1.png" />
 
 
 <!-- Fav Icon -->
@@ -42,7 +42,7 @@
 <link href="{{asset('frontend/css/style.css')}}" rel="stylesheet">
 <link href="{{asset('frontend/css/responsive.css')}}" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
-
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 @yield('styles')
 
 </head>

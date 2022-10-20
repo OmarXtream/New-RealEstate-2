@@ -3,7 +3,7 @@
             <div class="footer-top bg-color-2">
                 <div class="auto-container">
                     <div class="row clearfix">
-                        <div class="col-lg-4 col-md-6 col-sm-12 footer-column">
+                        <div class="col-lg-3 col-md-6 col-sm-12 footer-column">
                             <div class="footer-widget about-widget">
                                 <div class="widget-title">
                                     <h3>معلومات عنا</h3>
@@ -17,7 +17,7 @@
                                  </div>
                             </div>
                         </div>
-                        <div class="col-lg-4 col-md-6 col-sm-12 footer-column">
+                        <div class="col-lg-3 col-md-6 col-sm-12 footer-column">
                             <div class="footer-widget links-widget ml-70">
                                 <div class="widget-title">
                                     <h3>القائمة</h3>
@@ -47,7 +47,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-4 col-md-6 col-sm-12 footer-column">
+                        <div class="col-lg-3 col-md-6 col-sm-12 footer-column">
                             <div class="footer-widget post-widget">
                                 <div class="widget-title">
                                     <h3>العقارات الأخيرة</h3>
@@ -64,6 +64,28 @@
                                 </div>
                             </div>
                         </div>
+
+                        <div class="col-lg-3 col-md-6 col-sm-12 footer-column">
+                            <div class="footer-widget links-widget ml-70">
+                                <div class="widget-title">
+                                    <h3>التواصل الاجتماعي</h3>
+                                </div>
+                                <div class="widget-content">
+                                    <ul class="links-list class">
+                                        <li class="uppercase">
+                                            <h5 class="mt-2"><a href="https://www.instagram.com/rawabireal/" target="_blank"><i class="fa-brands fa-instagram fa-lg"></i> إنستقرام</a></h5>
+                                            <h5 class="mt-2"><a href="https://www.twitter.com/rawabireal/" target="_blank"><i class="fa-brands fa-twitter fa-lg"></i> تويتر</a></h5>
+                                            <h5 class="mt-2"><a href="https://www.snapchat.com/add/rawabireal?share_id=LQ4Gu_ShYb8&locale=en-GB" target="_blank"><i class="fa-brands fa-snapchat fa-lg"></i> سناب شات</a></h5>
+
+                                        </li>
+                                     </ul>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+
                     </div>
                 </div>
             </div>
