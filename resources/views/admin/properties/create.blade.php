@@ -69,7 +69,7 @@
                     <div class="form-group form-float">
                         <div class="form-line">
                             <input type="number" class="form-control" name="area" required>
-                            <label class="form-label">المنطقة</label>
+                            <label class="form-label">المساحة الارضية</label>
                         </div>
                         <div class="help-info">Square Feet</div>
                     </div>
@@ -114,19 +114,19 @@
                             <label>اختر الغرض</label>
                             <select name="purpose" class="form-control show-tick">
                                 <option value="">-- اختر --</option>
-                                <option value="sale">بيع</option>
-                                <option value="rent">ايجار</option>
+                                <option value="بيع">بيع</option>
+                                <option value="ايجار">ايجار</option>
                             </select>
                         </div>
                     </div>
 
                     <div class="form-group form-float">
                         <div class="form-line {{$errors->has('type') ? 'focused error' : ''}}">
-                            <label>Select type</label>
+                            <label>اختر النوع</label>
                             <select name="type" class="form-control show-tick">
                                 <option value="">-- اختر --</option>
-                                <option value="house">بيت</option>
-                                <option value="apartment">شقة</option>
+                                <option value="بيت">بيت</option>
+                                <option value="شقة">شقة</option>
                             </select>
                         </div>
                     </div>

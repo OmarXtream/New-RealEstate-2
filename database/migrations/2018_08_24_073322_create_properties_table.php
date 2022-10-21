@@ -17,10 +17,10 @@ class CreatePropertiesTable extends Migration
             $table->increments('id');
             $table->string('title');
             $table->string('slug')->unique();
-            $table->double('price', 8, 2);
+            $table->integer('price');
             $table->boolean('featured')->default(false);
-            $table->enum('purpose', ['sale', 'rent']);
-            $table->enum('type', ['house', 'apartment']);
+            $table->enum('purpose', ['بيع', 'ايجار']);
+            $table->enum('type', ['بيت', 'شقة']);
             $table->string('image')->nullable();
             $table->integer('bedroom');
             $table->integer('bathroom');
