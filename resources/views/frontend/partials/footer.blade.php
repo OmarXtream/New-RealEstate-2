@@ -6,15 +6,20 @@
                         <div class="col-lg-3 col-md-6 col-sm-12 footer-column">
                             <div class="footer-widget about-widget">
                                 <div class="widget-title">
-                                    <h3>معلومات عنا</h3>
+                                    <h3>الرؤية</h3>
                                 </div>
                                 <div class="text">
-                                    @if(isset($footersettings[0]) && $footersettings[0]['aboutus'])
-                                    <p class="grey-text text-lighten-4">{{ $footersettings[0]['aboutus'] }}</p>
-                                    @else
-                                    <p class="grey-text text-lighten-4">إن عمارة الأرض من أولى المهام التي كلف بها الله عز وجل الإنسان ونحن في شركة الروابي العقارية جعلنا هذا التكليف تشريفاً لنا أن نكون ممن يعمرون الأرض من خلال كيان عقاري ناجح يدار برؤية اقتصادية وجدوى استثمارية تحقق المعادلات الصعبة للعمل الناجح.</p>
-                                    @endif
+                                    <p class="grey-text text-lighten-4">أن نكون الأكثر جدارة في مجال التطوير العقاري مميزة ذات تصاميم عصرية، وبشكل يحقق له الحياة التي يتمناها، تحقيقاً لشعارنا الذي نتبناه “نبني الحياة</p>
                                  </div>
+
+                                 <div class="widget-title mt-2">
+                                    <h3>الهدف</h3>
+                                </div>
+                                <div class="text">
+                                    <p class="grey-text text-lighten-4">أن نكون الشركة الرائدة في مجال التطوير والاستثمار العقاري من خلال تقديم منتجات هي خيار عملائنا الأول والأمثل</p>
+                                 </div>
+
+
                             </div>
                         </div>
                         <div class="col-lg-3 col-md-6 col-sm-12 footer-column">
@@ -45,6 +50,14 @@
                                         </li>
                                                         </ul>
                                 </div>
+
+                                <div class="widget-title mt-2">
+                                    <h3>الرسالة</h3>
+                                </div>
+                                <div class="text">
+                                    <p class="grey-text text-lighten-4">العمل على انجاز أفضل مشاريع التطوير العقاري التي تتمتع بأعلى درجات الجودة مع الالتزام بتطبيق أرفع المعايير والمواصفات وتقديم وحدات سكنية متميزة</p>
+                                 </div>
+
                             </div>
                         </div>
                         <div class="col-lg-3 col-md-6 col-sm-12 footer-column">
