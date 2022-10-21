@@ -73,7 +73,7 @@
                                                 <div class="price-box clearfix">
                                                     <div class="price-info pull-left">
                                                         <h6>{{ $property->type }} - {{ $property->purpose }}</h6>
-                                                        <h4>${{ $property->price }}</h4>
+                                                        <h4>{{ $property->price }} ريال</h4>
                                                     </div>
                                                     <div class="author-box pull-right">
                                                             <span>{{ ucfirst($property->city) }} - {{ ucfirst($property->address) }}</span>

@@ -129,8 +129,8 @@
                             <label>اختر الغرض</label>
                             <select name="purpose" class="form-control show-tick">
                                 <option value="">-- اختر --</option>
-                                <option value="sale" {{ $property->purpose=='sale' ? 'selected' : '' }}>بيع</option>
-                                <option value="rent" {{ $property->purpose=='rent' ? 'selected' : '' }}>ايجار</option>
+                                <option value="بيع" {{ $property->purpose=='بيع' ? 'selected' : '' }}>بيع</option>
+                                <option value="ايجار" {{ $property->purpose=='ايجار' ? 'selected' : '' }}>ايجار</option>
                             </select>
                         </div>
                     </div>
@@ -140,8 +140,8 @@
                             <label>Select type</label>
                             <select name="type" class="form-control show-tick">
                                 <option value="">-- اختر --</option>
-                                <option value="house" {{ $property->type=='house' ? 'selected' : '' }}>بيت</option>
-                                <option value="apartment" {{ $property->type=='apartment' ? 'selected' : '' }}>شقة</option>
+                                <option value="بيت" {{ $property->type=='بيت' ? 'selected' : '' }}>بيت</option>
+                                <option value="شقة" {{ $property->type=='شقة' ? 'selected' : '' }}>شقة</option>
                             </select>
                         </div>
                     </div>
