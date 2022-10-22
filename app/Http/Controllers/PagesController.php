@@ -52,7 +52,7 @@ class PagesController extends Controller
         $cities = Property::select('city','city_slug')->distinct('city_slug')->get();
 
 
-        $fav = Favorite::where('property_id',$property->id)->where('user_id',Auth::user()->id)->exists();
+        @$fav = Favorite::where('property_id',$property->id)->where('user_id',Auth::user()->id)->exists();
         return view('pages.properties.single', compact('property','rating','relatedproperty','videoembed','cities','fav'));
     }
 
