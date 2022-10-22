@@ -62,6 +62,11 @@
 
     <!-- SINGLE PROPERTY SECTION -->
     <section class="property-details property-details-one">
+        @if (session()->has('message'))
+        <div class="text-center alert alert-light">
+            <h3 style="font-weight: bold; color:#000">{{ session('message') }}</h3>
+        </div>
+        @endif
         <div class="auto-container">
             <div class="top-details clearfix">
                 <div class="left-column pull-left clearfix">
@@ -85,7 +90,7 @@
                             <li><a href="#">{{ $property->purpose }}</a></li>
                             <li><span class="btn btn-small disabled b-r-20">غرف نوم: {{ $property->bedroom}} </span></li>
                             <li><span class="btn btn-small disabled b-r-20">دورات مياه: {{ $property->bathroom}} </span></li>
-                            <li><span class="btn btn-small disabled b-r-20">منطقة: {{ $property->area}} Sq Ft</span></li>
+                            <li><span class="btn btn-small disabled b-r-20">المساحة الارضية: {{ $property->area}} متر مربع</span></li>
     
 
                         </ul>
@@ -93,6 +98,17 @@
                             <h3>{{ $property->price }} ريال</h3>
                         </div>
                     </div>
+                </div>
+
+                <div class="right-column pull-right clearfix mr-3">
+                    <ul class="other-option pull-right clearfix">
+                        <li><a href="#" onclick="CopyURL()"><i class="icon-37" title="مشاركة"></i></a></li>
+                        @if(!$fav)
+                        <li><a href="{{route('favorite.create',$property->id)}}"><i class="icon-13" title="المفضلة"></i></a></li>
+                        @else
+                        <li><a href="{{route('favorite.delete',$property->id)}}"><i class="icon-13" title="الغاء من المفضلة"></i></a></li>
+                        @endif
+                    </ul>
                 </div>
             </div>
             <div class="row clearfix">
@@ -200,6 +216,9 @@
                         </div>
                     </div>
                 </div>
+
+
+                
             </div>
         </div>
     </section>
@@ -212,7 +231,17 @@
 @endsection
 
 @section('scripts')
-
+<script type="text/javascript" charset="utf-8">
+    function CopyURL(){
+        navigator.clipboard.writeText(window.location.href);
+        toastr.options.positionClass = 'toast-bottom-left';
+        toastr.options.rtl = true;
+    
+        toastr.success('تم النسخ بنجاح','للمشاركة',{
+                            closeButtor: true,
+                            progressBar: true 
+                        });}
+    </script>
     <script>
         $(function(){
 
