@@ -51,7 +51,7 @@
                                             <input class="form-control" id="name" name="name" type="text" value="{{ old('name') }}" placeholder="الإسم">
                                         </div>
                                         <div class="col-lg-6 col-md-6 col-sm-12 form-group">
-                                            <input class="form-control" id="phone" name="phone" type="number" value="{{ old('phone') }}" placeholder="رقم الهاتف">
+                                            <input class="form-control" id="phone" name="phone" type="text" value="{{ old('phone') }}" placeholder="رقم الهاتف">
                                         </div>
                                     </div>
                             </div>
@@ -77,10 +77,10 @@
                                             <input class="form-control" id="baths" name="baths" type="number" value="{{ old('baths') }}" placeholder="دورات المياه">
                                         </div>
                                         <div class="col-lg-6 col-md-6 col-sm-12 form-group">
-                                            <input class="form-control" id="min_price" name="min_price" type="number" value="{{ old('min_price') }}" placeholder="أقل قيمة للعقار">
+                                            <input class="form-control" id="min_price" name="min_price" type="text" value="{{ old('min_price') }}" placeholder="أقل قيمة للعقار">
                                         </div>
                                         <div class="col-lg-6 col-md-6 col-sm-12 form-group">
-                                            <input class="form-control" id="max_price" name="max_price" type="number" value="{{ old('max_price') }}" placeholder="أعلى قيمة للعقار">
+                                            <input class="form-control" id="max_price" name="max_price" type="text" value="{{ old('max_price') }}" placeholder="أعلى قيمة للعقار">
                                         </div>
                                     </div>
                             </div>

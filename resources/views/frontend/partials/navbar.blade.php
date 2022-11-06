@@ -35,9 +35,9 @@
                                             <a href="{{ route('PropertiesMarkating') }}"><span>تسويق عقار</span></a>
                                         </li>
                                         
-                                        <li class="{{ Request::is('agents*') ? 'active' : '' }}">
+                                        {{-- <li class="{{ Request::is('agents*') ? 'active' : '' }}">
                                             <a href="{{ route('agents') }}"><span>الوسطاء</span></a>
-                                        </li>
+                                        </li> --}}
 
                                         {{-- <li class="{{ Request::is('gallery') ? 'active' : '' }}">
                                             <a href="{{ route('gallery') }}"><span>المعرض</span></a>
@@ -48,7 +48,7 @@
                                         </li> --}}
 
                                         <li class="{{ Request::is('InfoForm*') ? 'active' : '' }}">
-                                            <a href="{{ route('InfoForm') }}"><span>حلول عقارية</span></a>
+                                            <a href="{{ route('InfoForm') }}"><span>حلول تمويلية</span></a>
                                         </li>
 
                                         <li class="{{ Request::is('contact') ? 'active' : '' }}">

@@ -51,7 +51,7 @@
                                             <input class="form-control" id="name" name="name" type="text" value="{{ old('name') }}" placeholder="الإسم">
                                         </div>
                                         <div class="col-lg-6 col-md-6 col-sm-12 form-group">
-                                            <input class="form-control" id="phone" name="phone" type="number" value="{{ old('phone') }}" placeholder="رقم الهاتف">
+                                            <input class="form-control" id="phone" name="phone" type="text" value="{{ old('phone') }}" placeholder="رقم الهاتف">
                                         </div>
                                     </div>
                             </div>

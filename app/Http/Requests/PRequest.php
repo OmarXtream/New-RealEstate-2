@@ -25,22 +25,22 @@ class PRequest extends FormRequest
     {
         return [
             'name' => ['bail','required', 'string', 'max:255'],
-            'phone' => ['bail', 'required','integer'],
+            'phone' => ['bail', 'required'],
 
             'type' => ['bail','required', 'string', 'max:255'],
             'city' => ['bail','required', 'string', 'max:255'],
 
             'rooms' => ['bail', 'required','integer'],
             'baths' => ['bail', 'required','integer'],
-            'min_price' => ['bail', 'required','integer'],
-            'max_price' => ['bail', 'required','integer'],
+            'min_price' => ['bail', 'required'],
+            'max_price' => ['bail', 'required'],
 
-            'first_district' => ['bail','required', 'string', 'max:255'],
-            'Second_district' => ['bail','required', 'string', 'max:255'],
-            'Third_district' => ['bail','required', 'string', 'max:255'],
-            'Fourth_district' => ['bail','required', 'string', 'max:255'],
+            'first_district' => ['bail', 'string', 'max:255'],
+            'Second_district' => ['bail', 'string', 'max:255'],
+            'Third_district' => ['bail', 'string', 'max:255'],
+            'Fourth_district' => ['bail', 'string', 'max:255'],
 
-            'details' => ['bail','required', 'string'],
+            'details' => ['bail', 'string'],
 
         ];
     }

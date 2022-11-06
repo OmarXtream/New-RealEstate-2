@@ -9,7 +9,7 @@
             </div>
             <div class="auto-container">
                 <div class="content-box clearfix">
-                    <h1>حلول عقارية</h1>
+                    <h1>حلول تمويلية</h1>
                     <ul class="bread-crumb clearfix">
                         <li><a href="{{route('home')}}">الرئيسية</a></li>
                     </ul>
@@ -51,7 +51,7 @@
                                             <input class="form-control" id="name" name="name" type="text" value="{{ old('name') }}" placeholder="الإسم">
                                         </div>
                                         <div class="col-lg-6 col-md-6 col-sm-12 form-group">
-                                            <input class="form-control" id="phone" name="phone" type="number" value="{{ old('phone') }}" placeholder="رقم الهاتف">
+                                            <input class="form-control" id="phone" name="phone" type="text" value="{{ old('phone') }}" placeholder="رقم الهاتف">
                                         </div>
                                         <div class="col-lg-6 col-md-6 col-sm-12 form-group">
                                             <input class="form-control" id="Age" name="Age" type="number"  value="{{ old('Age') }}" placeholder="العمر">
@@ -76,13 +76,13 @@
                             <div class="form-inner">
                                     <div class="row clearfix">
                                         <div class="col-lg-6 col-md-6 col-sm-12 form-group">
-                                            <input id="commitments" value="{{ old('commitments') }}" placeholder="الإلتزامات الشهرية" name="commitments" type="number" class="form-control">
+                                            <input id="commitments" value="{{ old('commitments') }}" placeholder="الإلتزامات الشهرية" name="commitments" type="text" class="form-control">
                                         </div>
                                         <div class="col-lg-6 col-md-6 col-sm-12 form-group">
                                             <input id="bank" placeholder="البنك" value="{{ old('bank') }}" name="bank" type="text" class="form-control">
                                         </div>
                                         <div class="col-lg-6 col-md-6 col-sm-12 form-group">
-                                            <input id="salary" placeholder="الراتب" value="{{ old('salary') }}" name="salary" type="number" class="form-control">
+                                            <input id="salary" placeholder="الراتب" value="{{ old('salary') }}" name="salary" type="text" class="form-control">
                                         </div>
                                         <div class="col-lg-6 col-md-6 col-sm-12 form-group">
                                             <select name="supported" class="browser-default form-control">
