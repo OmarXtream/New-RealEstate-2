@@ -66,27 +66,27 @@
                     </a>
                 </li>
 
-                {{-- <li class="header">Blog</li>
+                <li class="header">المدونة</li>
                 <li class="{{ Request::is('admin/categories*') ? 'active' : '' }}">
                     <a href="{{ route('admin.categories.index') }}">
                         <i class="material-icons">category</i>
-                        <span>Categories</span>
+                        <span>الانواع</span>
                     </a>
                 </li>
                 <li class="{{ Request::is('admin/tags*') ? 'active' : '' }}">
                     <a href="{{ route('admin.tags.index') }}">
                         <i class="material-icons">label</i>
-                        <span>Tags</span>
+                        <span>المواضيع</span>
                     </a>
                 </li>
                 <li class="{{ Request::is('admin/posts*') ? 'active' : '' }}">
                     <a href="{{ route('admin.posts.index') }}">
                         <i class="material-icons">library_books</i>
-                        <span>Posts</span>
+                        <span>المنشورات</span>
                     </a>
-                </li> --}}
+                </li>
 
-                {{-- <li class="header"> </li> --}}
+                <li class="header"> </li>
                 {{-- <li class="{{ Request::is('admin/galleries*') ? 'active' : '' }}">
                     <a href="{{ route('admin.album') }}">
                         <i class="material-icons">view_list</i>

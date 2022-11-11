@@ -44,14 +44,14 @@ class CategoryController extends Controller
             if(!Storage::disk('public')->exists('category/slider')){
                 Storage::disk('public')->makeDirectory('category/slider');
             }
-            $slider = Image::make($image)->resize(1600, 480)->save();
-            Storage::disk('public')->put('category/slider/'.$imagename, $slider);
+            // $slider = Image::make($image)->resize(1600, 480)->save();
+            Storage::disk('public')->put('category/slider/'.$imagename, file_get_contents($image));
 
             if(!Storage::disk('public')->exists('category/thumb')){
                 Storage::disk('public')->makeDirectory('category/thumb');
             }
-            $thumb = Image::make($image)->resize(500, 330)->save();
-            Storage::disk('public')->put('category/thumb/'.$imagename, $thumb);
+            // $thumb = Image::make($image)->resize(500, 330)->save();
+            Storage::disk('public')->put('category/thumb/'.$imagename, file_get_contents($image));
         }else{
             $imagename = 'default.png';
         }

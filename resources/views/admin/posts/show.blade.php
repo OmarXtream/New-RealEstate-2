@@ -18,14 +18,14 @@
             <div class="card">
 
                 <div class="header bg-indigo">
-                    <h2>SHOW POST</h2>
+                    <h2>عرض منشور</h2>
                 </div>
 
                 <div class="header">
                     <h2>
                         {{$post->title}}
                         <br>
-                        <small>Posted By <strong>{{$post->user->name}}</strong> on {{$post->created_at->toFormattedDateString()}}</small>
+                        <small>تم النشر من قبل <strong>{{$post->user->name}}</strong> on {{$post->created_at->toFormattedDateString()}}</small>
                     </h2>
                 </div>
 
@@ -38,7 +38,7 @@
             {{-- COMMENTS --}}
             <div class="card">
                 <div class="header">
-                    <h2>{{ $post->comments_count }} Comments</h2>
+                    <h2>{{ $post->comments_count }} تعليقات</h2>
                 </div>
                 <div class="body">
                     @foreach($post->comments as $comment)
@@ -85,7 +85,7 @@
         <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
             <div class="card">
                 <div class="header bg-cyan">
-                    <h2>SELECTED CATEGORY</h2>
+                    <h2>الانواع المختاره</h2>
                 </div>
                 <div class="body">
                     @foreach($post->categories as $category)
@@ -95,7 +95,7 @@
             </div>
             <div class="card">
                 <div class="header bg-green">
-                    <h2>SELECTED TAGS</h2>
+                    <h2>المواضيع المختاره</h2>
                 </div>
                 <div class="body">
                     @foreach($post->tags as $tag)
@@ -106,7 +106,7 @@
 
             <div class="card">
                 <div class="header bg-amber">
-                    <h2>FEATURED IMAGE</h2>
+                    <h2>الصورة المميزه</h2>
                 </div>
                 <div class="body">
 
@@ -115,11 +115,11 @@
 
                     <a href="{{route('admin.posts.index')}}" class="btn btn-danger btn-lg waves-effect">
                         <i class="material-icons left">arrow_back</i>
-                        <span>BACK</span>
+                        <span>تراجع</span>
                     </a>
                     <a href="{{route('admin.posts.edit',$post->slug)}}" class="btn btn-info btn-lg waves-effect">
                         <i class="material-icons">edit</i>
-                        <span>EDIT</span>
+                        <span>تعديل</span>
                     </a>
 
                 </div>

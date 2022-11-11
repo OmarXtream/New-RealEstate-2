@@ -13,7 +13,7 @@
     <div class="block-header">
         <a href="{{route('admin.tags.index')}}" class="waves-effect waves-light btn btn-danger right m-b-15">
             <i class="material-icons left">arrow_back</i>
-            <span>BACK</span>
+            <span>رجوع</span>
         </a>
     </div>
 
@@ -21,7 +21,7 @@
         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
             <div class="card">
                 <div class="header">
-                    <h2>CREATE TAG</h2>
+                    <h2>انشاء موضوع</h2>
                 </div>
                 <div class="body">
                     <form action="{{route('admin.tags.store')}}" method="POST">
@@ -30,7 +30,7 @@
                         <div class="form-group form-float">
                             <div class="form-line">
                                 <input type="text" name="name" class="form-control">
-                                <label class="form-label">Tag</label>
+                                <label class="form-label">موضوع</label>
                             </div>
                         </div>
 

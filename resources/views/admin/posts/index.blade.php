@@ -14,7 +14,7 @@
     <div class="block-header">
         <a href="{{route('admin.posts.create')}}" class="waves-effect waves-light btn right m-b-15 addbtn">
             <i class="material-icons left">add</i>
-            <span>CREATE </span>
+            <span>إنشاء </span>
         </a>
     </div>
 
@@ -22,23 +22,23 @@
         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
             <div class="card">
                 <div class="header">
-                    <h2>POST LIST</h2>
+                    <h2>قائمة المنشورات</h2>
                 </div>
                 <div class="body">
                     <div class="table-responsive">
                         <table class="table table-bordered table-striped table-hover dataTable js-exportable">
                             <thead>
                                 <tr>
-                                    <th>SL.</th>
-                                    <th>Image</th>
-                                    <th>Title</th>
-                                    <th>Author</th>
-                                    <th>Category</th>
-                                    <th><i class="material-icons">visibility</i></th>
-                                    <th>Is Approved</th>
-                                    <th>Status</th>
-                                    <th><i class="material-icons small">comment</i></th>
-                                    <th width="150">Action</th>
+                                    <th>#</th>
+                                    <th>الصورة</th>
+                                    <th>العنوان</th>
+                                    <th>الكاتب</th>
+                                    <th>النوع</th>
+                                    <th><i class="material-icons">الظهور</i></th>
+                                    <th>مسموح به</th>
+                                    <th>الحالة</th>
+                                    <th><i class="material-icons small">التعليقات</i></th>
+                                    <th width="150">-</th>
                                 </tr>
                             </thead>
 
@@ -68,21 +68,21 @@
                                     <td>{{$post->view_count}}</td>
                                     <td>
                                         @if($post->is_approved == true)
-                                            <span class="badge bg-green">Approved</span>
+                                            <span class="badge bg-green">منشور</span>
                                         @else 
-                                            <span class="badge bg-pink">Pending</span>
+                                            <span class="badge bg-pink">تحت المراجعة</span>
                                         @endif
                                     </td>
                                     <td>
                                         @if($post->status == true)
-                                            <span class="badge bg-green">Published</span>
+                                            <span class="badge bg-green">منشور</span>
                                         @else 
-                                            <span class="badge bg-pink">Pending</span>
+                                            <span class="badge bg-pink">تحت المراجعة</span>
                                         @endif
                                     </td>
                                     <td>
                                         <span class="badge">
-                                            <i class="material-icons small left">comment</i>
+                                            <i class="material-icons small left">تعليق</i>
                                             {{ $post->comments_count }}
                                         </span>
                                     </td>
@@ -134,8 +134,8 @@
         function deletePost(id){
             
             swal({
-            title: 'Are you sure?',
-            text: "You won't be able to revert this!",
+            title: 'هل انت متاكد?',
+            text: "لا يمكن التراجع عن القرار!",
             type: 'warning',
             showCancelButton: true,
             confirmButtonColor: '#3085d6',
@@ -145,8 +145,8 @@
                 if (result.value) {
                     document.getElementById('del-post-'+id).submit();
                     swal(
-                    'Deleted!',
-                    'Post has been deleted.',
+                    'تم الحذف!',
+                    'تم حذف المنشور بنجاح.',
                     'success'
                     )
                 }

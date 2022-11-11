@@ -14,7 +14,7 @@
     <div class="block-header">
         <a href="{{route('admin.categories.create')}}" class="waves-effect waves-light btn right m-b-15 addbtn">
             <i class="material-icons left">add</i>
-            <span>CREATE </span>
+            <span>انشاء</span>
         </a>
     </div>
 
@@ -22,29 +22,29 @@
         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
             <div class="card">
                 <div class="header">
-                    <h2>CATEGORY LIST</h2>
+                    <h2>قائمة الانواع</h2>
                 </div>
                 <div class="body">
                     <div class="table-responsive">
                         <table class="table table-bordered table-striped table-hover dataTable js-exportable">
                             <thead>
                                 <tr>
-                                    <th>SL.</th>
-                                    <th>Image</th>
-                                    <th>Name</th>
-                                    <th>Post Num</th>
-                                    <th>Slug</th>
-                                    <th>Action</th>
+                                    <th>#</th>
+                                    <th>الصورة</th>
+                                    <th>العنوان</th>
+                                    <th>عدد المنشورات</th>
+                                    <th>الاختصار</th>
+                                    <th>-</th>
                                 </tr>
                             </thead>
                             <tfoot>
                                 <tr>
-                                    <th>SL.</th>
-                                    <th>Image</th>
-                                    <th>Name</th>
-                                    <th>Post Num</th>
-                                    <th>Slug</th>
-                                    <th>Action</th>
+                                    <th>#</th>
+                                    <th>الصورة</th>
+                                    <th>العنوان</th>
+                                    <th>عدد المنشورات</th>
+                                    <th>الاختصار</th>
+                                    <th>-</th>
                                 </tr>
                             </tfoot>
                             <tbody>
@@ -104,8 +104,8 @@
         function deleteCategory(id){
             
             swal({
-            title: 'Are you sure?',
-            text: "You won't be able to revert this!",
+            title: 'هل انت متاكد?',
+            text: "لا يمكن التراجع عن القرار!",
             type: 'warning',
             showCancelButton: true,
             confirmButtonColor: '#3085d6',

@@ -54,8 +54,8 @@ class PostController extends Controller
             if(!Storage::disk('public')->exists('posts')){
                 Storage::disk('public')->makeDirectory('posts');
             }
-            $postimage = Image::make($image)->resize(1600, 980)->save();
-            Storage::disk('public')->put('posts/'.$imagename, $postimage);
+            // $postimage = Image::make($image)->resize(1600, 980)->save();
+            Storage::disk('public')->put('posts/'.$imagename, file_get_contents($image));
 
         }else{
             $imagename = 'default.png';
