@@ -35,7 +35,7 @@
                                 <div class="price-box clearfix">
                                     <div class="price-info pull-left">
                                         <h6>تبدأ من</h6>
-                                        <h4>${{ $property->price }}</h4>
+                                        <h4>{{ $property->price }}</h4>
                                     </div>
                                     <ul class="other-option pull-right clearfix">
                                         <li><a href="{{ route('property.show',$property->slug) }}"><i class="icon-12"></i></a></li>
