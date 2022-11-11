@@ -43,9 +43,9 @@
                                             <a href="{{ route('gallery') }}"><span>المعرض</span></a>
                                         </li> --}}
 
-                                        {{-- <li class="{{ Request::is('blog*') ? 'active' : '' }}">
+                                        <li class="{{ Request::is('blog*') ? 'active' : '' }}">
                                             <a href="{{ route('blog') }}"><span>المدونة</span></a>
-                                        </li> --}}
+                                        </li>
 
                                         <li class="{{ Request::is('InfoForm*') ? 'active' : '' }}">
                                             <a href="{{ route('InfoForm') }}"><span>حلول تمويلية</span></a>
