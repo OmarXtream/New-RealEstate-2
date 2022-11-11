@@ -131,6 +131,7 @@
                                 <option value="">-- اختر --</option>
                                 <option value="بيع" {{ $property->purpose=='بيع' ? 'selected' : '' }}>بيع</option>
                                 <option value="ايجار" {{ $property->purpose=='ايجار' ? 'selected' : '' }}>ايجار</option>
+                                <option value="ملحق" {{ $property->purpose=='ملحق' ? 'selected' : '' }}>ملحق</option>
                             </select>
                         </div>
                     </div>
@@ -142,6 +143,8 @@
                                 <option value="">-- اختر --</option>
                                 <option value="بيت" {{ $property->type=='بيت' ? 'selected' : '' }}>بيت</option>
                                 <option value="شقة" {{ $property->type=='شقة' ? 'selected' : '' }}>شقة</option>
+                                <option value="ملحق" {{ $property->type=='ملحق' ? 'selected' : '' }}>ملحق</option>
+
                             </select>
                         </div>
                     </div>
@@ -211,7 +214,7 @@
 
             <div class="card">
                 <div class="header bg-indigo">
-                    <h2>FEATURED IMAGE</h2>
+                    <h2>صورة مميزة</h2>
                 </div>
                 <div class="body">
 
@@ -225,12 +228,12 @@
                     {{-- BUTTON --}}
                     <a href="{{route('admin.properties.index')}}" class="btn btn-danger btn-lg m-t-15 waves-effect">
                         <i class="material-icons left">arrow_back</i>
-                        <span>BACK</span>
+                        <span>تراجع</span>
                     </a>
 
                     <button type="submit" class="btn btn-indigo btn-lg m-t-15 waves-effect">
                         <i class="material-icons">save</i>
-                        <span>SAVE</span>
+                        <span>حفظ</span>
                     </button>
 
                 </div>

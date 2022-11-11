@@ -33,8 +33,10 @@
                                                                 <i class="far fa-compass"></i>
                                                                 <select name="type" class="wide">
                                                                    <option value="" data-display="اختر النوع" disabled selected>اختر النوع</option>
-                                                                   <option value="apartment">شقة</option>
-                                                                   <option value="house">بيت</option>
+                                                                   <option value="شقة">شقة</option>
+                                                                   <option value="بيت">بيت</option>
+                                                                   <option value="ملحق">ملحق</option>
+
                                                                 </select>
                                                             </div>
                                                         </div>

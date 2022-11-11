@@ -20,7 +20,7 @@ class CreatePropertiesTable extends Migration
             $table->integer('price');
             $table->boolean('featured')->default(false);
             $table->enum('purpose', ['بيع', 'ايجار']);
-            $table->enum('type', ['بيت', 'شقة']);
+            $table->enum('type', ['بيت', 'شقة','ملحق']);
             $table->string('image')->nullable();
             $table->integer('bedroom');
             $table->integer('bathroom');
