@@ -1,6 +1,7 @@
 @extends('frontend.layouts.app')
 
 @section('styles')
+<link href="{{asset('frontend/css/styles.css')}}" rel="stylesheet">
 
 @endsection
 
@@ -13,55 +14,23 @@
             </div>
             <div class="row">
 
-                <div class="col s12 m8">
-
+                <div class="container">
+                    <div class="row">
+                  
                     @foreach($posts as $post)
-                        <div class="card horizontal">
-                            <div>
-                                <div class="card-content">
-                                    @if(Storage::disk('public')->exists('posts/'.$post->image) && $post->image)
-                                        <div class="card-image blog-content-image">
-                                            <img src="{{Storage::url('posts/'.$post->image)}}" alt="{{$post->title}}">
-                                        </div>
-                                    @endif
-                                    <span class="card-title">
-                                        <a href="{{ route('blog.show',$post->slug) }}">{{ $post->title }}</a>
-                                    </span>
-                                    {!! str_limit($post->body,120) !!}
-                                </div>
-                                <div class="card-action blog-action clearfix">
-                                    <a href="{{ route('blog.author',$post->user->username) }}" class="btn-flat">
-                                        <i class="material-icons">person</i>
-                                        <span>{{$post->user->name}}</span>
-                                    </a>
-                                    <a href="#" class="btn-flat disabled">
-                                        <i class="material-icons">watch_later</i>
-                                        <span>{{$post->created_at->diffForHumans()}}</span>
-                                    </a>
-                                    @foreach($post->categories as $key => $category)
-                                        <a href="{{ route('blog.categories',$category->slug) }}" class="btn-flat">
-                                            <i class="material-icons">folder</i>
-                                            <span>{{$category->name}}</span>
-                                        </a>
-                                    @endforeach
-                                    @foreach($post->tags as $key => $tag)
-                                        <a href="{{ route('blog.tags',$tag->slug) }}" class="btn-flat">
-                                            <i class="material-icons">label</i>
-                                            <span>{{$tag->name}}</span>
-                                        </a>
-                                    @endforeach
-                                    
-                                    <a href="{{ route('blog.show',$post->slug) . '#comments' }}" class="btn-flat">
-                                        <i class="material-icons">comment</i>
-                                        <span>{{$post->comments_count}}</span>
-                                    </a>
-                                    <a href="#" class="btn-flat disabled">
-                                        <i class="material-icons">visibility</i>
-                                        <span>{{$post->view_count}}</span>
-                                    </a>
-                                </div>
-                            </div>
+                    <div class="col-4 s12 m8 mb-2">
+                    <div class="card" style="width: 18rem;">
+                        @if(Storage::disk('public')->exists('posts/'.$post->image) && $post->image)
+                        <img class="card-img-top" src="{{Storage::url('posts/'.$post->image)}}" alt="{{$post->title}}">
+                        @endif
+
+                        <div class="card-body">
+                          <h5 class="card-title">{{ $post->title }}</h5>
+                          <p class="card-text">{!! str_limit($post->body,120) !!}</p>
+                          <a href="{{ route('blog.show',$post->slug) }}" class="btn btn-primary">تفاصيل أكثر</a>
                         </div>
+                      </div>
+                    </div>
                     @endforeach
 
 
@@ -70,12 +39,8 @@
                     </div>
         
                 </div>
+            </div>
 
-                <div class="col s12 m4">
-
-                    @include('pages.blog.sidebar')
-
-                </div>
 
             </div>
         </div>

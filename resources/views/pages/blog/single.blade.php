@@ -6,7 +6,7 @@
 
 @section('content')
 
-    <section class="section">
+    <section class="section mt-3">
         <div class="container">
             <div class="row">
 
@@ -18,112 +18,87 @@
                                 <img src="{{Storage::url('posts/'.$post->image)}}" alt="{{$post->title}}">
                             @endif
                         </div>
-                        <div class="card-content">
-                            <span class="card-title" title="{{$post->title}}">{{ $post->title }}</span>
-                            {!! $post->body !!}
-                        </div>
-                        <div class="card-action blog-action">
-                            <a href="{{ route('blog.author',$post->user->username) }}" class="btn-flat">
-                                <i class="material-icons">person</i>
-                                <span>{{$post->user->name}}</span>
-                            </a>
-                            <a href="#" class="btn-flat disabled">
-                                <i class="material-icons">watch_later</i>
-                                <span>{{$post->created_at->diffForHumans()}}</span>
-                            </a>
-                            @foreach($post->categories as $key => $category)
-                                <a href="{{ route('blog.categories',$category->slug) }}" class="btn-flat">
-                                    <i class="material-icons">folder</i>
-                                    <span>{{$category->name}}</span>
-                                </a>
-                            @endforeach
-                            @foreach($post->tags as $key => $tag)
-                                <a href="{{ route('blog.tags',$tag->slug) }}" class="btn-flat">
-                                    <i class="material-icons">label</i>
-                                    <span>{{$tag->name}}</span>
-                                </a>
-                            @endforeach
-
-                            <a href="#" class="btn-flat disabled">
-                                <i class="material-icons">visibility</i>
-                                <span>{{$post->view_count}}</span>
-                            </a>
-                        </div>
 
                     </div>
 
-                    <div class="card" id="comments">
-                        <div class="p-15 grey lighten-4">
-                            <h5 class="m-0">{{ $post->comments_count }} تعليق</h5>
-                        </div>
+                    <div class="card mt-5 mb-3" id="comments">
                         <div class="single-narebay p-15">
 
-                            @foreach($post->comments as $comment)
-
-                                @if($comment->parent_id == null)
-                                    <div class="comment">
-                                        <div class="author-image">
-                                            <span style="background-image:url({{ Storage::url('users/'.$comment->users->image) }});"></span>
-                                        </div>
-                                        <div class="content">
-                                            <div class="author-name">
-                                                <strong>{{ $comment->users->name }}</strong>
-                                                <span class="time">{{ $comment->created_at->diffForHumans() }}</span>
-
-                                                @auth
-                                                    <span class="right replay" data-commentid="{{ $comment->id }}">Replay</span>
-                                                @endauth
-
-                                            </div>
-                                            <div class="author-comment">
-                                                {{ $comment->body }}
-                                            </div>
-                                        </div>
-                                        <div id="comment-{{$comment->id}}"></div>
-                                    </div>
-                                @endif
-
-                                @if($comment->children->count() > 0)
-                                    @foreach($comment->children as $comment)
-                                        <div class="comment children">
+                            <div class="discription-box content-widget">
+                                <div class="title-box text-center">
+                                    <h4>{{ $post->comments_count }} تعليقات </h4>
+                                </div>
+                                <div class="text">
+                                    @foreach($post->comments as $comment)
+    
+                                    @if($comment->parent_id == NULL)
+                                        <div class="comment text-center">
                                             <div class="author-image">
                                                 <span style="background-image:url({{ Storage::url('users/'.$comment->users->image) }});"></span>
                                             </div>
                                             <div class="content">
                                                 <div class="author-name">
-                                                    <strong>{{ $comment->users->name }}</strong>
+                                                    <strong style="color:#0f172b;">{{ $comment->users->name }} -</strong>
                                                     <span class="time">{{ $comment->created_at->diffForHumans() }}</span>
+    
                                                 </div>
                                                 <div class="author-comment">
                                                     {{ $comment->body }}
                                                 </div>
                                             </div>
+                                            <hr>
+                                            <div id="procomment-{{$comment->id}}"></div>
+                                        </div>
+                                    @endif
+    
+                                    @foreach($comment->children as $commentchildren)
+                                        <div class="comment children">
+                                            <div class="author-image">
+                                                <span style="background-image:url({{ Storage::url('users/'.$commentchildren->users->image) }});"></span>
+                                            </div>
+                                            <div class="content">
+                                                <div class="author-name">
+                                                    <strong>{{ $commentchildren->users->name }}</strong>
+                                                    <span class="time">{{ $commentchildren->created_at->diffForHumans() }}</span>
+                                                </div>
+                                                <div class="author-comment">
+                                                    {{ $commentchildren->body }}
+                                                </div>
+                                            </div>
                                         </div>
                                     @endforeach
-                                @endif
-
-                            @endforeach
-
+    
+                                @endforeach
+    
+                                </div>
+                            </div>
+    
                             @auth
-                                <div class="comment-box">
-                                    <h6>Leave a comment</h6>
-                                    <form action="{{ route('blog.comment',$post->id) }}" method="POST">
-                                        @csrf
-                                        <input type="hidden" name="parent" value="0">
 
-                                        <textarea name="body" class="box"></textarea>
-                                        <input type="submit" class="btn indigo" value="Comment">
-                                    </form>
-                                </div>
+                            <div class="form-inner">
+                                <form class="default-form" action="{{ route('blog.comment',$post->id) }}" method="POST">
+                                    @csrf
+                                    <input type="hidden" name="parent" value="0">
+    
+    
+                                    <div class="form-group">
+                                        <textarea name="body" placeholder="التعليق"></textarea>
+                                    </div>
+                                    <div class="form-group message-btn">
+                                        <button type="submit" class="theme-btn btn-one">إرسال</button>
+                                    </div>
+                                </form>
+                            </div>
                             @endauth
-
+    
                             @guest 
-                                <div class="comment-login">
-                                    <h6>سجل دخولك لتعليق</h6>
-                                    <a href="{{ route('login') }}" class="btn indigo">دخول</a>
-                                </div>
-                            @endguest
-                            
+                            <div class="text-center">
+                                <a href="{{ route('login') }}">
+                                <h6 class="text-bold" style="color:#000">سجل الدخول لترك تعليق</h6>
+                                </a>
+                            </div>
+                        @endguest
+                                
                         </div>
                     </div>
                     
@@ -131,8 +106,16 @@
 
                 <div class="col s12 m4">
 
-                    @include('pages.blog.sidebar')
-                    
+                    <div class="card mt-5">
+                        <div class="card-content">
+                            <h3 class="font-18 m-t-0 bold uppercase mt-2 mb-2">{{ $post->title }}</h3>
+                            <ul class="collection">
+                                    
+                                {!! $post->body !!}
+
+                            </ul>
+                        </div>
+                    </div>                    
                 </div>
 
             </div>
