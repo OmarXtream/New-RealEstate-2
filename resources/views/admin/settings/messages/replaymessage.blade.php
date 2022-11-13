@@ -13,7 +13,7 @@
     <div class="block-header">
         <a href="{{route('admin.message')}}" class="waves-effect waves-light btn btn-danger right m-b-15">
             <i class="material-icons left">arrow_back</i>
-            <span>BACK</span>
+            <span>رجوع</span>
         </a>
     </div>
 
@@ -21,7 +21,7 @@
         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
             <div class="card">
                 <div class="header bg-indigo">
-                    <h2>REPLAY MESSAGE</h2>
+                    <h2>رد رسالة</h2>
                 </div>
                 <div class="body">
                     @if($message->user_id)
@@ -34,26 +34,26 @@
                             <input type="hidden" name="email" value="{{ auth()->user()->email }}">
 
                             <div class="form-group form-float">
-                                <h5>Replay To: {{ $message->email }}</h5>
+                                <h5>رد إلى: {{ $message->email }}</h5>
                             </div>
 
                             <div class="form-group">
                                 <div class="form-line">
                                     <input type="number" name="phone" class="form-control">
-                                    <label class="form-label">Phone</label>
+                                    <label class="form-label">رقم الهاتف</label>
                                 </div>
                             </div>
 
                             <div class="form-group">
                                 <div class="form-line">
                                     <textarea name="message" rows="4" class="form-control no-resize"></textarea>
-                                    <label class="form-label">Message</label>
+                                    <label class="form-label">الرسالة</label>
                                 </div>
                             </div>
 
                             <button type="submit" class="btn btn-indigo btn-lg m-t-15 waves-effect">
                                 <i class="material-icons">replay</i>
-                                <span>Replay</span>
+                                <span>رد</span>
                             </button>
                         </form>
 

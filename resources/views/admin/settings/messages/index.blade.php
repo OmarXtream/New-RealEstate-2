@@ -16,7 +16,7 @@
         <div class="col-xs-12">
             <div class="card">
                 <div class="header bg-indigo">
-                    <h2>MESSAGES</h2>
+                    <h2>الرسائل</h2>
                 </div>
                 <div class="body">
 
@@ -24,12 +24,12 @@
                         <table class="table table-bordered table-striped table-hover dataTable js-exportable">
                             <thead>
                                 <tr>
-                                    <th>SL.</th>
-                                    <th>Name</th>
-                                    <th>Email</th>
-                                    <th>Phone</th>
-                                    <th>Message</th>
-                                    <th width="150px">Action</th>
+                                    <th>#</th>
+                                    <th>الاسم</th>
+                                    <th>البريد الالكتروني</th>
+                                    <th>رقم الهاتف</th>
+                                    <th>الرسالة</th>
+                                    <th width="150px">-</th>
                                 </tr>
                             </thead>
 
