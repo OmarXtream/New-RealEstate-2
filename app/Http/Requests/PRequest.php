@@ -35,12 +35,12 @@ class PRequest extends FormRequest
             'min_price' => ['bail', 'required'],
             'max_price' => ['bail', 'required'],
 
-            'first_district' => ['bail', 'string', 'max:255'],
-            'Second_district' => ['bail', 'string', 'max:255'],
-            'Third_district' => ['bail', 'string', 'max:255'],
-            'Fourth_district' => ['bail', 'string', 'max:255'],
+            // 'first_district' => ['bail', 'string', 'max:255'],
+            // 'Second_district' => ['bail', 'string', 'max:255'],
+            // 'Third_district' => ['bail', 'string', 'max:255'],
+            // 'Fourth_district' => ['bail', 'string', 'max:255'],
 
-            'details' => ['bail', 'string'],
+            // 'details' => ['bail', 'string'],
 
         ];
     }

@@ -108,7 +108,7 @@
                                             <input class="form-control" id="Fourth_district" name="Fourth_district" type="text" value="{{ old('Fourth_district') }}" placeholder="الحي الرابع">
                                         </div>
                                         <div class="col-lg-12 col-md-12 col-sm-12 form-group">
-                                            <textarea id="details" name="details" class="form-control">{{ old('details') }} تفاصيل اكثر:</textarea>
+                                            <textarea id="details" name="details" class="form-control">{{ old('details') }}</textarea>
                                         </div>
                                     </div>
                             </div>
