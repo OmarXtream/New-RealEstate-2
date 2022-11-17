@@ -91,7 +91,8 @@
                             <li><span class="btn btn-small disabled b-r-20">غرف نوم: {{ $property->bedroom}} </span></li>
                             <li><span class="btn btn-small disabled b-r-20">دورات مياه: {{ $property->bathroom}} </span></li>
                             <li><span class="btn btn-small disabled b-r-20">المساحة الارضية: {{ $property->area}} متر مربع</span></li>
-    
+                            <li><span class="btn btn-small disabled b-r-20">المدينة: {{ $property->city}}</span></li>
+
 
                         </ul>
                         <div class="price-box pull-right pr-2">
@@ -139,6 +140,17 @@
                             @endif
                             </div>
                         </div>
+
+
+                        <div class="discription-box content-widget">
+                            <div class="title-box text-center">
+                                <h4>وصف العقار</h4>
+                            </div>
+                            <div class="text text-right">
+                                {!! $property->description !!}
+                            </div>
+                        </div>
+
                         @if($property->features)
                         <div class="discription-box content-widget">
                             <div class="title-box text-center">
