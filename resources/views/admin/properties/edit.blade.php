@@ -131,19 +131,20 @@
                                 <option value="">-- اختر --</option>
                                 <option value="بيع" {{ $property->purpose=='بيع' ? 'selected' : '' }}>بيع</option>
                                 <option value="ايجار" {{ $property->purpose=='ايجار' ? 'selected' : '' }}>ايجار</option>
-                                <option value="ملحق" {{ $property->purpose=='ملحق' ? 'selected' : '' }}>ملحق</option>
+
                             </select>
                         </div>
                     </div>
 
                     <div class="form-group form-float">
                         <div class="form-line {{$errors->has('type') ? 'focused error' : ''}}">
-                            <label>Select type</label>
+                            <label>-- اختر --</label>
                             <select name="type" class="form-control show-tick">
                                 <option value="">-- اختر --</option>
                                 <option value="بيت" {{ $property->type=='بيت' ? 'selected' : '' }}>بيت</option>
                                 <option value="شقة" {{ $property->type=='شقة' ? 'selected' : '' }}>شقة</option>
                                 <option value="ملحق" {{ $property->type=='ملحق' ? 'selected' : '' }}>ملحق</option>
+                                <option value="عمارة" {{ $property->purpose=='عمارة' ? 'selected' : '' }}>عمارة</option>
 
                             </select>
                         </div>

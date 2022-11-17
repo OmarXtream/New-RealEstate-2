@@ -128,6 +128,7 @@
                                 <option value="بيت">بيت</option>
                                 <option value="شقة">شقة</option>
                                 <option value="ملحق">ملحق</option>
+                                <option value="عمارة">عمارة</option>
 
                             </select>
                         </div>
