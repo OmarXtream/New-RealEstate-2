@@ -100,11 +100,11 @@
                         <span>الاعدادات</span>
                     </a>
                     <ul class="ml-menu">
-                        <li class="{{ Request::is('admin/settings') ? 'active' : '' }}">
+                        {{-- <li class="{{ Request::is('admin/settings') ? 'active' : '' }}">
                             <a href="{{ route('admin.settings') }}">
                                 <span>الاعدادات</span>
                             </a>
-                        </li>
+                        </li> --}}
                         <li class="{{ Request::is('admin/changepassword') ? 'active' : '' }}">
                             <a href="{{ route('admin.changepassword') }}">
                                 <span>تغيير كلمة المرور</span>
