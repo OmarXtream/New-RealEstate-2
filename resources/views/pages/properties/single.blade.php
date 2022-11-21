@@ -141,7 +141,6 @@
                             </div>
                         </div>
 
-
                         <div class="discription-box content-widget">
                             <div class="title-box text-center">
                                 <h4>وصف العقار</h4>
@@ -188,6 +187,17 @@
                         @endif
 
                         <div class="discription-box content-widget">
+                            @if(Session::has('errors'))
+                            <div class="text-center alert alert-light">
+                              <h5 style="font-weight: bold;">فضلاً قم بملىء كل الحقول</h5>
+                            </div>
+                            @endif
+                            @if (session()->has('message'))
+                            <div class="text-center alert alert-light">
+                                <h3 style="font-weight: bold;">{{ session('message') }}</h3>
+                            </div>
+                            @endif
+                
                             <div class="title-box text-center">
                                 <h4>{{ $property->comments_count }} تعليقات </h4>
                             </div>
@@ -203,11 +213,14 @@
                                             <div class="author-name">
                                                 <strong style="color:#0f172b;">{{ $comment->users->name }} -</strong>
                                                 <span class="time">{{ $comment->created_at->diffForHumans() }}</span>
-
                                             </div>
                                             <div class="author-comment">
                                                 {{ $comment->body }}
                                             </div>
+                                           
+                                           @if(Auth::user()->role_id == 1)
+                                            <span><form method="post" action="{{route('property.RemoveComment')}}">@csrf<input type="hidden" name="id" value="{{$comment->id}}"><button type="submit" class="btn btn-danger">حذف</button></form></span>
+                                            @endif
                                         </div>
                                         <hr>
                                         <div id="procomment-{{$comment->id}}"></div>
@@ -223,6 +236,7 @@
                                             <div class="author-name">
                                                 <strong>{{ $commentchildren->users->name }}</strong>
                                                 <span class="time">{{ $commentchildren->created_at->diffForHumans() }}</span>
+
                                             </div>
                                             <div class="author-comment">
                                                 {{ $commentchildren->body }}
