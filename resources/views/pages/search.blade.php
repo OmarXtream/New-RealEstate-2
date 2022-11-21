@@ -59,7 +59,7 @@
 
                             <div class="select-box" style="text-align: right;">
                                 <select name="bedroom" class="wide" >
-                                    <option value="" disabled selected>اختر غرف النوم</option>
+                                    <option value="" disabled selected>اختر غرف</option>
                                     @foreach($bedroomdistinct as $bedroom)
                                         <option value="{{$bedroom->bedroom}}">{{$bedroom->bedroom}}</option>
                                     @endforeach

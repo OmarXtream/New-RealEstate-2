@@ -37,7 +37,7 @@
                             <div class="row">
                                 <div class="input-field col s6">
                                     <input id="bedroom" name="bedroom" type="number" class="form-control">
-                                    <label for="bedroom">غرف النوم</label>
+                                    <label for="bedroom">غرف</label>
                                 </div>
                                 <div class="input-field col s6">
                                     <input id="bathroom" name="bathroom" type="number" class="form-control">

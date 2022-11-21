@@ -70,7 +70,7 @@
                                     <div class="post">
                                         <figure class="post-thumb"><a href="{{ route('property.show',$property->slug) }}"><img src="{{Storage::url('property/'.$property->image)}}" alt=""></a></figure>
                                         <h5><a href="{{ route('property.show',$property->slug) }}">{{ str_limit($property->title,40) }}</a></h5>
-                                        <p>: غرف النوم  {{ $property->bedroom }} دورات المياه: {{ $property->bathroom }} </p>
+                                        <p>: غرف  {{ $property->bedroom }} دورات المياه: {{ $property->bathroom }} </p>
                                     </div>
                                     @endforeach
                 

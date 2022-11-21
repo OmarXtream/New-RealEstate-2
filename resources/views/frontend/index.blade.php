@@ -44,7 +44,7 @@
                                 </div>
                                 <p>{{ str_limit( $property->title, 18 ) }}</p>
                                 <ul class="more-details clearfix">
-                                    <li><i class="icon-14"></i>غرف النوم: {{ $property->bedroom}}</li>
+                                    <li><i class="icon-14"></i>غرف: {{ $property->bedroom}}</li>
                                     <li><i class="icon-15"></i>دورات المياه: {{ $property->bathroom}}</li>
                                     <li><i class="icon-16"></i>المساحة الارضية: {{ $property->area}}</li>
                                 </ul>

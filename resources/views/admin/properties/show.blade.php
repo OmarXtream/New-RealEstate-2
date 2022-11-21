@@ -36,7 +36,7 @@
                             <span class="right"> &dollar;{{$property->price}}</span>
                         </li>
                         <li class="list-group-item">
-                            <strong>غرف النوم : </strong>
+                            <strong>غرف : </strong>
                             <span class="right">{{$property->bedroom}}</span>
                         </li>
                         <li class="list-group-item">

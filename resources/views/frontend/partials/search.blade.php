@@ -54,7 +54,7 @@
 
                                                     <div class="col-lg-3 col-md-6 col-sm-12 column">
                                                         <div class="form-group">
-                                                            <label>غرفة نوم</label>
+                                                            <label>غرفة</label>
                                                             <div class="select-box">
                                                                 <select name="bedroom" class="wide">
                                                                    <option value="" disabled selected>عدد الغرف</option>
@@ -116,7 +116,7 @@
 
                                                     <div class="col-lg-3 col-md-6 col-sm-12 column">
                                                         <div class="form-group">
-                                                            <label>غرفة نوم</label>
+                                                            <label>غرفة</label>
                                                             <div class="select-box">
                                                                 <select name="bedroom" class="wide">
                                                                    <option value="" disabled selected>عدد الغرف</option>

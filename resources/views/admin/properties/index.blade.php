@@ -35,7 +35,7 @@
                                     <th>المالك</th>
                                     <th>النوع</th>
                                     <th>الغرض</th>
-                                    <th>غرف النوم</th>
+                                    <th>غرف</th>
                                     <th>دورات المياه</th>
                                     <th><i class="material-icons small">التعليقات</i></th>
                                     <th><i class="material-icons small">stars</i></th>
