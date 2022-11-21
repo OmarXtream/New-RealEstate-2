@@ -216,13 +216,13 @@ class PagesController extends Controller
             'message'   => $message
         ]);
             
-        $adminname  = User::find(1)->name;
-        $mailto     = $request->mailto;
+        // $adminname  = User::find(1)->name;
+        // $mailto     = $request->mailto;
 
-        Mail::to($mailto)->send(new Contact($message,$adminname,$mailfrom));
+        // Mail::to($mailto)->send(new Contact($message,$adminname,$mailfrom));
 
         if($request->ajax()){
-            return response()->json(['message' => 'Message send successfully.']);
+            return response()->json(['message' => 'تم الإرسال بنجاح.']);
         }
 
     }
@@ -302,6 +302,24 @@ class PagesController extends Controller
             "<iframe width=\"$w\" height=\"$h\" src=\"//www.youtube.com/embed/$2\" frameborder=\"0\" allowfullscreen></iframe>",
             $youtubelink
         );
+    }
+
+
+    public function RemoveComment(Request $request)
+    {
+        if(Auth::user()->role_id == 1){
+            
+        $request->validate([
+            'id'  => 'required|exists:comments'
+        ]);
+        $comment = Comment::find($request->id);
+        $comment->delete();
+        
+        return redirect()->back()->with('message', 'تم حذف التعليق بنجاح');
+
+        }else{
+        return redirect()->back()->with('message', 'ليس لديك صلاحية الحذف');
+        }
     }
     
 }

@@ -37,7 +37,6 @@
                             <input type="hidden" name="user_id" value="{{ auth()->id() }}">
                             @endauth
 
-                            <input type="hidden" name="mailto" value="{{ $contactsettings[0]['email'] ?? 'p4alam@gmail.com' }}">
                             <div class="row clearfix">
                                 <div class="col-lg-6 col-md-6 col-sm-12 form-group">
                                     
@@ -55,6 +54,7 @@
                                 <div class="col-lg-12 col-md-12 col-sm-12 form-group message-btn">
                                     <button class="theme-btn btn-one" type="submit" id="msgsubmitbtn" name="submit-form">إرسال</button>
                                 </div>
+                                <h1 class="text-center" id="result"></h1>
                             </div>
                         </form>
                     </div>
@@ -166,7 +166,6 @@
 
 @section('scripts')
     <script>
-        $('textarea#message').characterCounter();
 
         $(function(){
             $(document).on('submit','#contact-us',function(e){
@@ -175,18 +174,18 @@
                 var data = $(this).serialize();
                 var url = "{{ route('contact.message') }}";
                 var btn = $('#msgsubmitbtn');
-
+                
                 $.ajax({
                     type: 'POST',
                     url: url,
                     data: data,
                     beforeSend: function() {
                         $(btn).addClass('disabled');
-                        $(btn).empty().append('<span>LOADING...</span><i class="material-icons right">rotate_right</i>');
+                        $(btn).empty().append('جاري الإرسال');
                     },
                     success: function(data) {
                         if (data.message) {
-                            M.toast({html: data.message, classes:'green darken-4'})
+                            $('#result').empty().append(data.message);
                         }
                     },
                     error: function(xhr) {
@@ -195,7 +194,7 @@
                     complete: function() {
                         $('form#contact-us')[0].reset();
                         $(btn).removeClass('disabled');
-                        $(btn).empty().append('<span>SEND</span><i class="material-icons right">send</i>');
+                        $(btn).empty().append('إرسال');
                     },
                     dataType: 'json'
                 });
