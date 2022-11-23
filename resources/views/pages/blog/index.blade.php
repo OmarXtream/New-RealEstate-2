@@ -35,7 +35,7 @@
                                     <h4><a style="color: black !important;" href="{{ route('blog.show',$post->slug) }}">{{ $post->title }}</a></h4>
                                     <ul class="post-info clearfix">
                                         <li class="author-box">
-                                            <figure class="author-thumb"><img src="assets/images/news/author-1.jpg" alt=""></figure>
+                                            {{-- <figure class="author-thumb"><img src="assets/images/news/author-1.jpg" alt=""></figure> --}}
                                             <h5 style="color: black !important;"><a style="color: black !important;" href="{{ route('blog.show',$post->slug) }}">{{$post->user->name}}</a></h5>
                                         </li>
                                         <li>{{$post->created_at}}</li>

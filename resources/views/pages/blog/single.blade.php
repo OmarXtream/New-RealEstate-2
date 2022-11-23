@@ -1,7 +1,12 @@
 @extends('frontend.layouts.app')
 
 @section('styles')
-
+<style>
+p {
+color: black !important;
+font-weight: bold;   
+}
+</style>
 @endsection
 
 @section('content')
