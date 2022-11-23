@@ -26,9 +26,9 @@
                     @foreach($posts as $post)
                     <div class="col-lg-6 col-md-12 col-sm-12 news-block">
                         <div class="news-block-two wow fadeInLeft animated animated" data-wow-delay="00ms" data-wow-duration="1500ms">
-                            <div class="inner-box align-items-center img-fluid">
-                                <div class="image-box img-fluid">
-                                    <a href="{{ route('blog.show',$post->slug) }}"><img صclass="img-fluid" src="{{Storage::url('posts/'.$post->image)}}" alt="{{$post->title}}"></a>
+                            <div class="inner-box align-items-center">
+                                <div class="image-box">
+                                    <a href="{{ route('blog.show',$post->slug) }}"><img style="height: 100%" class="img-fluid" src="{{Storage::url('posts/'.$post->image)}}" alt="{{$post->title}}"></a>
                                 </div>
                                 <div class="content-box">
                                     <h4><a style="color: black !important;" href="{{ route('blog.show',$post->slug) }}">{{ $post->title }}</a></h4>
