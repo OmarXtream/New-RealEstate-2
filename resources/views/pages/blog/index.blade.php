@@ -40,7 +40,7 @@
                                         </li>
                                         <li>{{$post->created_at}}</li>
                                     </ul>
-                                    <p>{!! str_limit($post->body,120) !!}</p>
+                                    <p>{{ str_limit($post->body,120) }}</p>
                                     <div class="btn-box">
                                         <a href="{{ route('blog.show',$post->slug) }}" class="theme-btn btn-two">تفاصيل أكثر</a>
                                     </div>
