@@ -28,7 +28,7 @@
                         <div class="news-block-two wow fadeInLeft animated animated" data-wow-delay="00ms" data-wow-duration="1500ms">
                             <div class="inner-box align-items-center img-fluid">
                                 <div class="image-box img-fluid">
-                                    <figure class="image"><a href="{{ route('blog.show',$post->slug) }}"><img class="img-fluid" src="{{Storage::url('posts/'.$post->image)}}" alt="{{$post->title}}"></a></figure>
+                                    <a href="{{ route('blog.show',$post->slug) }}"><img class="img-fluid" src="{{Storage::url('posts/'.$post->image)}}" alt="{{$post->title}}"></a>
                                     <a href="{{ route('blog.show',$post->slug) }}" class="feature">تدوينة حديثه</a>
                                 </div>
                                 <div class="content-box">
