@@ -7,6 +7,23 @@ color: black !important;
 font-weight: bold;   
 }
 
+/*  JUST FOR BETTER VIEW */
+.content__container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  width: 100%;
+}
+.share__btn__container{
+  border: 2px solid rgb(75,149,225);
+  width: 60%;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 </style>
 @endsection
 
@@ -111,6 +128,25 @@ font-weight: bold;
                         @endguest
 
                         </div>
+                        <div class="comments-area mt-4">
+                            <div class="group-title">
+                                <h4 class="text-right">مشاركة المنشور</h4>
+                            </div>
+                            <div class="comment-box text-center">
+                                <ul class="social-links clearfix">
+                                    <a 
+                                                                     class="twitter-share-button"
+                                                                     target="_blank"
+                                                                              href="https://twitter.com/intent/tweet?text=لا تفوتك هذي التدوينة الرهيبه !"
+                                                                    data-size="large"
+                                                                    >
+                                                                      تويتر
+                                                                    </a>  
+                                                                    <a href="https://www.facebook.com/sharer/sharer.php?u={{Request::url()}}" target="_blank" rel="noopener noreferrer"> <i style="font-size:48px;" class="fa-brands fa-facebook fa-lg"></i></a>                       
+                                                                   </ul>
+                            </div>
+                        </div>
+        
                     </div>
                 </div>
             
@@ -122,7 +158,10 @@ font-weight: bold;
 @endsection
 
 @section('scripts')
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
 <script>
+    
     $(document).on('click','span.right.replay',function(e){
         e.preventDefault();
         
