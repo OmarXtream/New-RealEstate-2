@@ -169,7 +169,8 @@ font-weight: bold;
                                                                       تويتر
                                                                     </a>  
                                                                     <a class="facebook__btn mr-1 ml-1" href="https://www.facebook.com/sharer/sharer.php?u={{Request::url()}}" target="_blank" rel="noopener noreferrer">فيس بوك</a>                       
-                                                                   
+                                                                    <br>
+
                                                                     <a 
                                                                     href="https://www.linkedin.com/sharing/share-offsite/?url={{Request::url()}}" 
                                                                     target="_blank" 
