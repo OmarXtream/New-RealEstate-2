@@ -6,6 +6,37 @@ p,h1,h2,h3,h4,h5 {
 color: black !important;
 font-weight: bold;   
 }
+.linkedin__btn{
+  background: rgb(31,65,130);
+  color: #FFFFFF;
+}
+
+.whatsapp__btn{
+  background: #4AC357;
+  color: #FFFFFF;
+}
+
+.linkedin__btn:hover{
+  background: rgba(31,65,130,0.8);
+  
+}
+.facebook__btn{
+  background: #395693;
+  color: #FFFFFF;
+  padding: 12px 20px;
+  text-decoration: none;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.twitter__btn{
+  background: #1D9BF0;
+  color: #FFFFFF;
+  padding: 12px 20px;
+  text-decoration: none;
+  border-radius: 20px;
+  cursor: pointer;
+}
 
 /*  JUST FOR BETTER VIEW */
 .content__container{
@@ -134,16 +165,37 @@ font-weight: bold;
                             </div>
                             <div class="comment-box text-center">
                                 <ul class="social-links clearfix">
-                                    <a 
-                                                                     class="twitter-share-button"
-                                                                     target="_blank"
-                                                                              href="https://twitter.com/intent/tweet?text=لا تفوتك هذي التدوينة الرهيبه !"
-                                                                    data-size="large"
-                                                                    >
+                                    <a class="twitter__btn" target="_blank" href="https://twitter.com/intent/tweet?text=لا تفوتك هذي التدوينة الرهيبه !" data-size="large">
                                                                       تويتر
                                                                     </a>  
-                                                                    <a href="https://www.facebook.com/sharer/sharer.php?u={{Request::url()}}" target="_blank" rel="noopener noreferrer"> <i style="font-size:48px;" class="fa-brands fa-facebook fa-lg"></i></a>                       
-                                                                   </ul>
+                                                                    <a class="facebook__btn mr-1 ml-1" href="https://www.facebook.com/sharer/sharer.php?u={{Request::url()}}" target="_blank" rel="noopener noreferrer">فيس بوك</a>                       
+                                                                   
+                                                                    <a 
+                                                                    href="https://www.linkedin.com/sharing/share-offsite/?url={{Request::url()}}" 
+                                                                    target="_blank" 
+                                                                    rel="noopener noreferrer"
+                                                                    class="linkedin__btn mr-1 ml-1"
+                                                                    style="padding: 12px 20px;
+                                                                    text-decoration: none;
+                                                                    border-radius: 20px;
+                                                                    cursor: pointer;"
+                                                                    >
+                                                                    لينكد إن
+                                                                    </a>
+
+                                                                    <a 
+                                                                    href="whatsapp://send?text={{Request::url()}}" 
+                                                                    target="_blank" 
+                                                                    rel="noopener noreferrer"
+                                                                    class="whatsapp__btn mr-1 ml-1"
+                                                                    style="padding: 12px 20px;
+                                                                    text-decoration: none;
+                                                                    border-radius: 20px;
+                                                                    cursor: pointer;"
+                                                                    >
+                                                                    واتس اب
+                                                                    </a>
+                                                                </ul>
                             </div>
                         </div>
         
