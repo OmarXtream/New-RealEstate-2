@@ -94,7 +94,7 @@
                                                     </div>
 
                                         <div class="col-lg-12 col-md-12 col-sm-12 form-group">
-                                            <textarea id="notes" name="notes" class="form-control">{{ old('notes') }}</textarea>
+                                            <textarea placeholder="الملاحظات" id="notes" name="notes" class="form-control">{{ old('notes') }}</textarea>
                                         </div>
             
                                     </div>
