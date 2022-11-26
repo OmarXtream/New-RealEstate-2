@@ -2,11 +2,11 @@
 
 @section('styles')
 <style>
-p,h1,h2,h3,h4,h5 {
-color: black !important;
-font-weight: bold;   
-}
-</style>
+    p,h1,h2,h3,h4,h5 {
+    color: black !important;
+    font-weight: bold;   
+    }
+    </style>
 @endsection
 
 @section('content')
@@ -116,37 +116,36 @@ font-weight: bold;
                             </div>
                             <div class="comment-box text-center">
                                 <ul class="social-links clearfix">
-                                    <a class="twitter__btn" target="_blank" href="https://twitter.com/intent/tweet?text=لا تفوتك هذي التدوينة الرهيبه !" data-size="large">
+                                    <div class="row">
+                                    <div class="col-6 mt-2 mb-2">
+                                    <a class="badge badge-pill badge-info mr-1 ml-1" style="padding: 20px; font-size: 1.1em;   background: #1D9BF0; color: #FFFFFF;" target="_blank" href="https://twitter.com/intent/tweet?text=لا تفوتك هذي التدوينة الرهيبه !" data-size="large">
                                                                       تويتر
-                                                                    </a>  
-                                                                    <a class="facebook__btn mr-1 ml-1" href="https://www.facebook.com/sharer/sharer.php?u={{Request::url()}}" target="_blank" rel="noopener noreferrer">فيس بوك</a>                       
-                                                                    <br>
+                                                                    </a>  </div>
+                                                                    <div class="col-6 mt-2 mb-2"><a class="badge badge-pill badge-primary mr-1 ml-1" style="padding: 20px; font-size: 1.1em;" href="https://www.facebook.com/sharer/sharer.php?u={{Request::url()}}" target="_blank" rel="noopener noreferrer">فيس بوك</a></div>                       
 
+                                                                    <div class="col-6 mt-2 mb-2">
                                                                     <a 
                                                                     href="https://www.linkedin.com/sharing/share-offsite/?url={{Request::url()}}" 
                                                                     target="_blank" 
                                                                     rel="noopener noreferrer"
-                                                                    class="linkedin__btn mr-1 ml-1"
-                                                                    style="padding: 12px 20px;
-                                                                    text-decoration: none;
-                                                                    border-radius: 20px;
-                                                                    cursor: pointer;"
+                                                                    class="badge badge-pill badge-secondary mr-1 ml-1"
+                                                                    style="padding: 20px; font-size: 1.1em;"
                                                                     >
                                                                     لينكد إن
                                                                     </a>
-
+                                                                </div>
+                                                                <div class="col-6 mt-2 mb-2">
                                                                     <a 
                                                                     href="whatsapp://send?text={{Request::url()}}" 
                                                                     target="_blank" 
                                                                     rel="noopener noreferrer"
-                                                                    class="whatsapp__btn mr-1 ml-1"
-                                                                    style="padding: 12px 20px;
-                                                                    text-decoration: none;
-                                                                    border-radius: 20px;
-                                                                    cursor: pointer;"
+                                                                    class="badge badge-pill badge-success mr-1 ml-1"
+                                                                    style="padding: 20px; font-size: 1.1em;"
                                                                     >
                                                                     واتس اب
                                                                     </a>
+                                                                </div>
+                                                            </div>
                                                                 </ul>
                             </div>
                         </div>
