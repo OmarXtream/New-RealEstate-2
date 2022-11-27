@@ -6,6 +6,59 @@
     color: black !important;
     font-weight: bold;   
     }
+
+
+    
+.frame{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  height: 80px;
+  width: 350px;
+  position: relative;
+   box-shadow:
+   -7px -7px 20px 0px #fff9,
+   -4px -4px 5px 0px #fff9,
+   7px 7px 20px 0px #0002,
+   4px 4px 5px 0px #0001,
+   inset 0px 0px 0px 0px #fff9,
+   inset 0px 0px 0px 0px #0001,
+   inset 0px 0px 0px 0px #fff9,        inset 0px 0px 0px 0px #0001;
+ transition:box-shadow 0.6s cubic-bezier(.79,.21,.06,.81);
+   border-radius: 10px;
+}
+
+.share-button{
+  height: 35px;
+  width: 35px;
+  border-radius: 3px;
+  background: #e0e5ec;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  -webkit-tap-highlight-color: transparent;
+  box-shadow:
+   -7px -7px 20px 0px #fff9,
+   -4px -4px 5px 0px #fff9,
+   7px 7px 20px 0px #0002,
+   4px 4px 5px 0px #0001,
+   inset 0px 0px 0px 0px #fff9,
+   inset 0px 0px 0px 0px #0001,
+   inset 0px 0px 0px 0px #fff9,        inset 0px 0px 0px 0px #0001;
+ transition:box-shadow 0.6s cubic-bezier(.79,.21,.06,.81);
+  font-size: 16px;
+  color: rgba(42, 52, 84, 1);
+  text-decoration: none;
+}
+.share-button:active{
+  box-shadow:  4px 4px 6px 0 rgba(255,255,255,.5),
+              -4px -4px 6px 0 rgba(116, 125, 136, .2), 
+    inset -4px -4px 6px 0 rgba(255,255,255,.5),
+    inset 4px 4px 6px 0 rgba(116, 125, 136, .3);
+}
     </style>
 @endsection
 
@@ -110,47 +163,26 @@
                         @endguest
 
                         </div>
-                        <div class="comments-area mt-4">
                             <div class="group-title">
                                 <h4 class="text-right">مشاركة المنشور</h4>
                             </div>
-                            <div class="comment-box text-center">
-                                <ul class="social-links clearfix">
-                                    <div class="row">
-                                    <div class="col-6 mt-2 mb-2">
-                                    <a class="badge badge-pill badge-info mr-1 ml-1" style="padding: 20px; font-size: 1.1em;   background: #1D9BF0; color: #FFFFFF;" target="_blank" href="https://twitter.com/intent/tweet?text=لا تفوتك هذي التدوينة الرهيبه !" data-size="large">
-                                                                      تويتر
-                                                                    </a>  </div>
-                                                                    <div class="col-6 mt-2 mb-2"><a class="badge badge-pill badge-primary mr-1 ml-1" style="padding: 20px; font-size: 1.1em;" href="https://www.facebook.com/sharer/sharer.php?u={{Request::url()}}" target="_blank" rel="noopener noreferrer">فيس بوك</a></div>                       
 
-                                                                    <div class="col-6 mt-2 mb-2">
-                                                                    <a 
-                                                                    href="https://www.linkedin.com/sharing/share-offsite/?url={{Request::url()}}" 
-                                                                    target="_blank" 
-                                                                    rel="noopener noreferrer"
-                                                                    class="badge badge-pill badge-secondary mr-1 ml-1"
-                                                                    style="padding: 20px; font-size: 1.1em;"
-                                                                    >
-                                                                    لينكد إن
-                                                                    </a>
-                                                                </div>
-                                                                <div class="col-6 mt-2 mb-2">
-                                                                    <a 
-                                                                    href="whatsapp://send?text={{Request::url()}}" 
-                                                                    target="_blank" 
-                                                                    rel="noopener noreferrer"
-                                                                    class="badge badge-pill badge-success mr-1 ml-1"
-                                                                    style="padding: 20px; font-size: 1.1em;"
-                                                                    >
-                                                                    واتس اب
-                                                                    </a>
-                                                                </div>
-                                                            </div>
-                                                                </ul>
+                                <div class ="frame mb-5 mx-auto">
+                                    <a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u={{Request::url()}}" class="share-button">
+                                 <i class="fab fa-facebook-f" style="color: #3b5998;"></i>
+                                </a>
+                                    <a target="_blank" href="https://twitter.com/intent/tweet?text=لا تفوتك هذي التدوينة الرهيبه ! {{Request::url()}}" class="share-button">
+                                  <i class="fab fa-twitter" style="color: #00acee;"></i>
+                                </a>
+                                    <a target="_blank" href="whatsapp://send?text={{Request::url()}}" class="share-button">
+                                 <i class="fab fa-whatsapp" style="color: #ea4c89;"></i>
+                                </a>
+                                    <a target="_blank" href="https://www.linkedin.com/sharing/share-offsite/?url={{Request::url()}}" class="share-button">
+                                 <i class="fab fa-linkedin-in" style="color:#0e76a8;"></i>
+                                </a>
+                                </div>
                             </div>
-                        </div>
-        
-                    </div>
+
                 </div>
             
             </div>
@@ -161,7 +193,6 @@
 @endsection
 
 @section('scripts')
-<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 <script>
     
