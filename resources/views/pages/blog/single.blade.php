@@ -72,7 +72,7 @@
                         <div class="news-block-one">
                             <div class="inner-box">
                                 <div class="image-box">
-                                    <figure class="image"><img src="{{Storage::url('posts/'.$post->image)}}" alt="{{$post->title}}"></figure>
+                                    <figure class="image img-fluid" style="height: 400px;"><img src="{{Storage::url('posts/'.$post->image)}}" alt="{{$post->title}}"></figure>
                                     <span class="category">تدوينة حديثه</span>
                                 </div>
                                 <div class="lower-content">
@@ -90,10 +90,10 @@
                                     <div class="post-tags">
                                         <ul class="tags-list clearfix">
                                             @foreach($post->categories as $key => $category)
-                                                <li><a href="javascript:void(0)">{{$category->name}}</a></li>
+                                                <li class="mx-2"><a href="javascript:void(0)">{{$category->name}}</a></li>
                                         @endforeach
                                         @foreach($post->tags as $key => $tag)
-                                            <a href="{{ route('blog.tags',$tag->slug) }}" class="btn-flat">
+                                            <a class="mx-2" href="{{ route('blog.tags',$tag->slug) }}" class="btn-flat">
                                                 <li><a href="javascript:void(0)">{{$tag->name}}</a></li>
                                             </a>
                                         @endforeach
