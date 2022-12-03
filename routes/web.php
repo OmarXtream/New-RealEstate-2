@@ -44,6 +44,11 @@ Route::get('/contact', 'PagesController@contact')->name('contact');
 Route::post('/contact', 'PagesController@messageContact')->name('contact.message');
 
 
+Route::get('/thanks', function(){
+    return view('pages/thanks'); 
+})->name('thanks');
+
+
 Auth::routes();
 
 Route::group(['prefix'=>'admin','namespace'=>'Admin','middleware'=>['auth','admin'],'as'=>'admin.'], function(){

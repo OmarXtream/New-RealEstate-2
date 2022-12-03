@@ -33,7 +33,7 @@ class PropertiesMarkatingController extends Controller
                 return redirect()->back()
                 ->withErrors(['حدث خطأ ما , حاول مره أخرى']);
             }else{
-                return view('pages/thanks');
+                return redirect('/thanks');
 
             }
 
