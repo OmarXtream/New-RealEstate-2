@@ -38,7 +38,7 @@ class PropertiesRequestsController extends Controller
                 return redirect()->back()
                 ->withErrors(['حدث خطأ ما , حاول مره أخرى']);
             }else{
-              return redirect()->back()->with('message', 'شكرا لكم , سيتم التواصل معكم');
+                return view('pages/thanks');
 
             }
 
