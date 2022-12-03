@@ -50,7 +50,7 @@ class PropertyController extends Controller
             'city'      => 'required',
             'address'   => 'required',
             'area'      => 'required',
-            'image'     => 'required|image|mimes:jpeg,jpg,png',
+            'image'     => 'required|mimes:jpeg,jpg,png',
             'floor_plan'=> 'image|mimes:jpeg,jpg,png',
             'description'        => 'required',
           //  'location_latitude'  => 'required',
