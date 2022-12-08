@@ -96,7 +96,9 @@ Route::group(['prefix'=>'admin','namespace'=>'Admin','middleware'=>['auth','admi
     
     Route::get('/PMarketing', 'PropertyController@Marakating')->name('PropertiesMarkating');
     
-    
+    Route::get('userCreate','DashboardController@userCreate')->name('userCreate');
+    Route::post('userCreate','DashboardController@createUser')->name('userCreate.send');
+
 
 });
 

@@ -65,6 +65,13 @@
                         <span>الشهادات</span>
                     </a>
                 </li>
+                
+                <li class="{{ Request::is('admin/userCreate*') ? 'active' : '' }}">
+                    <a href="{{ route('admin.userCreate') }}">
+                        <i class="material-icons">person_add</i>
+                        <span>إنشاء مستخدم</span>
+                    </a>
+                </li>
 
                 <li class="header">المدونة</li>
                 <li class="{{ Request::is('admin/categories*') ? 'active' : '' }}">
