@@ -104,8 +104,8 @@
                 if (result.value) {
                     document.getElementById('del-slider-'+id).submit();
                     swal(
-                    'Deleted!',
-                    'Slider has been deleted.',
+                    ' تم الحذف!  ',
+                    'تم حذف الصورة بنجاح.',
                     'success'
                     )
                 }
