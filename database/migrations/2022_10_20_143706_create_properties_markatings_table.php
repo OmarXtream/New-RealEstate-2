@@ -27,7 +27,7 @@ class CreatePropertiesMarkatingsTable extends Migration
 
             $table->integer('price');
 
-            $table->text('details');
+            $table->text('details')->nullable();
 
             $table->timestamps();
         });

@@ -34,7 +34,7 @@ class PMarkat extends FormRequest
             'baths' => ['bail', 'required','integer'],
             'price' => ['bail', 'required','integer'],
             
-            'details' => ['bail','required', 'string'],
+            // 'details' => ['bail','required', 'string'],
 
         ];
     }
