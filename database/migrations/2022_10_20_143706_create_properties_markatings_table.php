@@ -17,7 +17,7 @@ class CreatePropertiesMarkatingsTable extends Migration
             $table->increments('id');
 
             $table->string('name');
-            $table->integer('phone');
+            $table->string('phone');
 
             $table->string('type');
 
