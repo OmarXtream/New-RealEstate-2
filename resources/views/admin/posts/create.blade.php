@@ -100,7 +100,7 @@
 @push('scripts')
 
     <script src="{{ asset('backend/plugins/bootstrap-select/js/bootstrap-select.js') }}"></script>
-    <script src="http://cdn.ckeditor.com/4.16.2/standard/ckeditor.js"></script>
+    <script src="https://cdn.ckeditor.com/4.16.2/standard/ckeditor.js"></script>
 
     <script>
         CKEDITOR.replace( 'summary-ckeditor', {
