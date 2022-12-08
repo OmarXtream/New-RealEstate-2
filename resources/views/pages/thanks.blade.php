@@ -29,7 +29,7 @@
     
                    
                     
-                    <h1 class="mx-auto">شكرا لكم , سيتم التواصل معكم</h1>
+                    <h1 class="mx-auto" style="color: black">شكرا لكم , سيتم التواصل معكم</h1>
 
                 </div>
             </div>
