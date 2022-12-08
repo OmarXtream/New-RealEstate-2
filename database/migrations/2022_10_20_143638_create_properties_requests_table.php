@@ -34,6 +34,8 @@ class CreatePropertiesRequestsTable extends Migration
 
             $table->text('details')->nullable();
 
+            $table->text('notes')->nullable();
+
             $table->timestamps();
 
         });

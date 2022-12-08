@@ -348,6 +348,17 @@ class PropertyController extends Controller
         return view('admin.properties.Requests', compact('requests'));
     }
 
+    public function adminNotes(Request $request)
+    {
+        $req = PropertiesRequests::findOrFail($request->rid);
+
+        if(isset($request->notes)){
+            $req->update(['notes' => $request->notes]);
+        }
+
+        return redirect()->back()->with('message', 'تم تحديث الملاحظات بنجاح');
+    }
+
     public function Marakating()
     {
         $markating = PropertiesMarkating::get(); 

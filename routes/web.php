@@ -10,6 +10,7 @@ Route::post('/InfoForm', 'InfoFormController@Create')->name('InfoForm.create');
 Route::get('/PRequests', 'PropertiesRequestsController@index')->name('PropertieRequest');
 Route::post('/PRequests', 'PropertiesRequestsController@Create')->name('PropertieRequest.create');
 
+
 Route::get('/PMarketing', 'PropertiesMarkatingController@index')->name('PropertiesMarkating');
 Route::post('/PMarketing', 'PropertiesMarkatingController@Create')->name('PropertiesMarkating.create');
 
@@ -93,7 +94,8 @@ Route::group(['prefix'=>'admin','namespace'=>'Admin','middleware'=>['auth','admi
     Route::get('favorites/{pid}','PropertyController@favorites')->name('favorites');
 
     Route::get('/PRequests', 'PropertyController@Requests')->name('PropertieRequest');
-    
+    Route::post('/PRequests', 'PropertyController@adminNotes')->name('PropertieRequest.notes');
+
     Route::get('/PMarketing', 'PropertyController@Marakating')->name('PropertiesMarkating');
     
     Route::get('userCreate','DashboardController@userCreate')->name('userCreate');
