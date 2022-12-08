@@ -35,7 +35,6 @@ class InfoRequest extends FormRequest
             'salary' => ['bail', 'required','integer'],
 
             'supported' => ['bail', 'required','integer','between:1,2'],
-            'notes' => ['bail','required', 'string'],
 
         ];
     }

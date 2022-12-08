@@ -25,7 +25,7 @@ class CreateInfoFormsTable extends Migration
 
             $table->integer('supported')->comment('1 => no , 2=> yes ');
 
-            $table->String('notes');
+            $table->String('notes')->nullable();
 
             $table->timestamps();
         });

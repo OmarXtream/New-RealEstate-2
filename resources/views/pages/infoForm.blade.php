@@ -51,21 +51,33 @@
                                     @csrf
                                             <div class="row clearfix">
                                         <div class="col-lg-6 col-md-6 col-sm-12 form-group">
-                                            <input class="form-control" id="name" name="name" type="text" value="{{ old('name') }}" placeholder="الإسم">
+                                            <input class="form-control @if ($errors->has('name')) is-invalid @endif" id="name" name="name" type="text" value="{{ old('name') }}" placeholder="* الإسم">
+                                            @if ($errors->has('name'))
+                                            <span class="text-danger">{{ $errors->first('name') }}</span>
+                                            @endif
                                         </div>
                                         <div class="col-lg-6 col-md-6 col-sm-12 form-group">
-                                            <input class="form-control" id="phone" name="phone" type="text" value="{{ old('phone') }}" placeholder="رقم الهاتف">
+                                            <input class="form-control @if ($errors->has('phone')) is-invalid @endif" id="phone" name="phone" type="text" value="{{ old('phone') }}" placeholder="*  رقم الهاتف">
+                                            @if ($errors->has('phone'))
+                                            <span class="text-danger">{{ $errors->first('phone') }}</span>
+                                            @endif
                                         </div>
                                         <div class="col-lg-6 col-md-6 col-sm-12 form-group">
-                                            <input class="form-control" id="Age" name="Age" type="number"  value="{{ old('Age') }}" placeholder="العمر">
+                                            <input class="form-control @if ($errors->has('Age')) is-invalid @endif" id="Age" name="Age" type="number"  value="{{ old('Age') }}" placeholder="* العمر">
+                                            @if ($errors->has('Age'))
+                                            <span class="text-danger">{{ $errors->first('Age') }}</span>
+                                            @endif
                                         </div>
                                         <div class="col-lg-6 col-md-6 col-sm-12 form-group">
-                                            <select name="type" class="browser-default form-control">
-                                                <option value="" disabled selected>قطاع الوظيفة</option>
+                                            <select name="type" class="browser-default form-control @if ($errors->has('type')) is-invalid @endif">
+                                                <option value="" disabled selected>* قطاع الوظيفة</option>
                                                 <option value="1">قطاع عسكري</option>
                                                 <option value="2">قطاع مدني</option>
                                                 <option value="3">قطاع خاص</option>
                                             </select>
+                                            @if ($errors->has('type'))
+                                            <span class="text-danger">{{ $errors->first('type') }}</span>
+                                            @endif
                                             </div>
                                     </div>
                             </div>
@@ -79,25 +91,40 @@
                             <div class="form-inner">
                                     <div class="row clearfix">
                                         <div class="col-lg-6 col-md-6 col-sm-12 form-group">
-                                            <input id="commitments" value="{{ old('commitments') }}" placeholder="الإلتزامات الشهرية" name="commitments" type="text" class="form-control">
+                                            <input id="commitments" value="{{ old('commitments') }}" placeholder="* الإلتزامات الشهرية" name="commitments" type="text" class="form-control @if ($errors->has('commitments')) is-invalid @endif">
+                                            @if ($errors->has('commitments'))
+                                            <span class="text-danger">{{ $errors->first('commitments') }}</span>
+                                            @endif
                                         </div>
                                         <div class="col-lg-6 col-md-6 col-sm-12 form-group">
-                                            <input id="bank" placeholder="البنك" value="{{ old('bank') }}" name="bank" type="text" class="form-control">
+                                            <input id="bank" placeholder="* البنك" value="{{ old('bank') }}" name="bank" type="text" class="form-control @if ($errors->has('bank')) is-invalid @endif">
+                                            @if ($errors->has('bank'))
+                                            <span class="text-danger">{{ $errors->first('bank') }}</span>
+                                            @endif
                                         </div>
                                         <div class="col-lg-6 col-md-6 col-sm-12 form-group">
-                                            <input id="salary" placeholder="الراتب" value="{{ old('salary') }}" name="salary" type="text" class="form-control">
+                                            <input id="salary" placeholder="* الراتب" value="{{ old('salary') }}" name="salary" type="text" class="form-control @if ($errors->has('salary')) is-invalid @endif">
+                                            @if ($errors->has('salary'))
+                                            <span class="text-danger">{{ $errors->first('salary') }}</span>
+                                            @endif
                                         </div>
                                         <div class="col-lg-6 col-md-6 col-sm-12 form-group">
-                                            <select name="supported" class="browser-default form-control">
-                                                <option value="" disabled selected>مدعوم من سكني؟</option>
+                                            <select name="supported" class="browser-default form-control @if ($errors->has('supported')) is-invalid @endif">
+                                                <option value="" disabled selected>* مدعوم من سكني؟</option>
                                                 <option value="1">لا</option>
                                                 <option value="2">نعم</option>
             
                                             </select>
+                                            @if ($errors->has('supported'))
+                                            <span class="text-danger">{{ $errors->first('supported') }}</span>
+                                            @endif
                                                     </div>
 
                                         <div class="col-lg-12 col-md-12 col-sm-12 form-group">
-                                            <textarea placeholder="الملاحظات" id="notes" name="notes" class="form-control">{{ old('notes') }}</textarea>
+                                            <textarea placeholder="الملاحظات" id="notes" name="notes" class="form-control @if ($errors->has('notes')) is-invalid @endif">{{ old('notes') }}</textarea>
+                                            @if ($errors->has('notes'))
+                                            <span class="text-danger">{{ $errors->first('notes') }}</span>
+                                            @endif
                                         </div>
             
                                     </div>
