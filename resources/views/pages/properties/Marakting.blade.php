@@ -54,12 +54,14 @@
                                             <input class="form-control @if ($errors->has('name')) is-invalid @endif" id="name" name="name" type="text" value="{{ old('name') }}" placeholder="* الإسم">
                                             @if ($errors->has('name'))
                                             <span class="text-danger">{{ $errors->first('name') }}</span>
-                                            @endif                                        </div>
+                                            @endif                                    
+                                            </div>
                                         <div class="col-lg-6 col-md-6 col-sm-12 form-group">
                                             <input class="form-control @if ($errors->has('phone')) is-invalid @endif" id="phone" name="phone" type="text" value="{{ old('phone') }}" placeholder="*  رقم الهاتف">
                                             @if ($errors->has('phone'))
                                             <span class="text-danger">{{ $errors->first('phone') }}</span>
-                                            @endif                                        </div>
+                                            @endif                                
+                                                </div>
                                     </div>
                             </div>
                         </div>
