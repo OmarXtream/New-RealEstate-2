@@ -18,10 +18,10 @@
             <div class="card">
                 <div class="header bg-indigo">
                     <h2>
-                        SLIDER LIST
+                        قائمة صور المعرض
                         <a href="{{route('admin.sliders.create')}}" class="btn waves-effect waves-light right headerightbtn">
                             <i class="material-icons left">add</i>
-                            <span>CREATE </span>
+                            <span>انشاء </span>
                         </a>
                     </h2>
                 </div>
@@ -30,11 +30,11 @@
                         <table class="table table-bordered table-striped table-hover dataTable js-exportable">
                             <thead>
                                 <tr>
-                                    <th>SL.</th>
-                                    <th>Image</th>
-                                    <th>Title</th>
-                                    <th>Description</th>
-                                    <th width="100px">Action</th>
+                                    <th>#</th>
+                                    <th>الصورة</th>
+                                    <th>العنوان</th>
+                                    <th>الوصف</th>
+                                    <th width="100px">-</th>
                                 </tr>
                             </thead>
                             <tbody>
