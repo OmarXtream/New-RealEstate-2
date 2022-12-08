@@ -93,13 +93,13 @@
         function deleteSlider(id){
             
             swal({
-            title: 'Are you sure?',
-            text: "You won't be able to revert this!",
+            title: 'هل انت متاكد?',
+            text: "لن يمكنك الاسترجاع!",
             type: 'warning',
             showCancelButton: true,
             confirmButtonColor: '#3085d6',
             cancelButtonColor: '#d33',
-            confirmButtonText: 'Yes, delete it!'
+            confirmButtonText: 'تأكيد الحذف!'
             }).then((result) => {
                 if (result.value) {
                     document.getElementById('del-slider-'+id).submit();
