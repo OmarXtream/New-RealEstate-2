@@ -41,7 +41,7 @@ body {
 
 body {
   font-size:16px;
-  color:#93959e;
+  color:#000;
   line-height:26px;
   font-weight:400;
   background:#;
@@ -144,7 +144,7 @@ textarea:focus{
 p{
   position: relative;
   font-family: 'JF Flat Regular', sans-serif;
-  color: #93959e;
+  color: #000;
   font-weight: 400;
   margin: 0px;
   transition: all 500ms ease;
@@ -1272,7 +1272,7 @@ img {
   height: 100%;
   max-height: 100%;
   overflow-y: auto;
-  background: #061a3a;
+  background: black;
   padding: 0px 0px;
   z-index: 5;
   opacity: 0;
@@ -2005,8 +2005,6 @@ div#mCSB_1_container{
 
 .feature-block-one .inner-box .image-box .image::after {
   position: absolute;
-  top: 50%;
-  left: 50%;
   z-index: 1;
   display: block;
   content: '';
@@ -2208,7 +2206,7 @@ div#mCSB_1_container{
   font-size: 14px;
   line-height: 24px;
   font-weight: 500;
-  color: #93959e;
+  color: #000;
   margin-bottom: 0px;
 }
 
@@ -2238,7 +2236,7 @@ div#mCSB_1_container{
   border: 1px solid #e5e7ec;
   border-radius: 4px;
   font-size: 20px;
-  color: #a6a7af;
+  color: #000;
   text-align: center;
 }
 
@@ -2274,7 +2272,7 @@ div#mCSB_1_container{
   width: 33.333%;
   font-size: 14px;
   line-height: 24px;
-  color: #93959e;
+  color: #000;
   padding-left: 28px;
 }
 
@@ -5736,14 +5734,12 @@ div#mCSB_1_container{
 .image_block_2 .image-box{
   position: relative;
   display: block;
-  padding-left: 130px;
 }
 
 .image_block_2 .image-box .image{
   position: relative;
   display: block;
   overflow: hidden;
-  border-radius: 10px;
 }
 
 .image_block_2 .image-box .image img{
@@ -8023,8 +8019,7 @@ div#mCSB_1_container{
 
 .property-details .slider-content .slider-pager .thumb-box li figure img{
   width: 100%;
-  border-radius: 10px;
-}
+ }
 
 .property-details .slider-content .slider-pager .thumb-box li figure:before{
   position: absolute;

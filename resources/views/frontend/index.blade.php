@@ -8,7 +8,7 @@
                     <h5>العقارات</h5>
                     <h2>العقارات المميزه</h2>
                 </div>
-                <div class="three-item-carousel owl-carousel owl-theme owl-dots-none nav-style-one">
+                <div class="three-item-carousel owl-carousel owl-theme owl-dots-none nav-style-two">
                     @foreach($properties as $property)
 
                     <div class="feature-block-one">
@@ -27,29 +27,41 @@
                                 <div class="author-info clearfix">
                                     <div class="author pull-left">
                                         <figure class="author-thumb"><img src="{{Storage::url('users/'.$property->user->image)}}" alt=""></figure>
-                                        <h6>{{ $property->user->name }}</h6>
-                                    </div>
-                                    <div class="buy-btn pull-right"><a href="{{ route('property.show',$property->slug) }}">{{ ucfirst($property->type) }} - {{ $property->purpose }}</a></div>
+                                     </div>
+                                  
+                                     <div class="buy-btn pull-right"><a href="{{ route('property.show',$property->slug) }}">{{ ucfirst($property->type) }} - {{ $property->purpose }}</a></div>
+                                     <div class="title-text"><h4><a href="{{ route('property.show',$property->slug) }}">{{ str_limit( $property->title, 18 ) }}</a></h4></div>
+
                                 </div>
-                                <div class="title-text"><h4><a href="{{ route('property.show',$property->slug) }}">{{ str_limit( $property->title, 18 ) }}</a></h4></div>
-                                <div class="price-box clearfix">
+                                 <div class="price-box clearfix">
                                     <div class="price-info pull-left">
                                         <h6>تبدأ من</h6>
-                                        <h4>{{ $property->price }}</h4>
+                                              <h4 dir="rtl">   {{ $property->price }} ريال </h4> 
                                     </div>
                                     <ul class="other-option pull-right clearfix">
                                         <li><a href="{{ route('property.show',$property->slug) }}"><i class="icon-12"></i></a></li>
                                         <li><a href="{{ route('property.show',$property->slug) }}"><i class="icon-13"></i></a></li>
                                     </ul>
                                 </div>
-                                <p>{{ str_limit( $property->title, 18 ) }}</p>
-                                <ul class="more-details clearfix">
-                                    <li><i class="icon-14"></i>غرف: {{ $property->bedroom}}</li>
-                                    <li><i class="icon-15"></i>دورات المياه: {{ $property->bathroom}}</li>
-                                    <li><i class="icon-16"></i>المساحة الارضية: {{ $property->area}}</li>
-                                </ul>
+                                 <ul class="more-details clearfix" dir="rtl">
+                                 <center>
+
+                                    <i class="icon-14"> غرف: {{ $property->bedroom}}  </i>
+                                    &nbsp;
+                                    &nbsp;
+                                    &nbsp;
+
+                                    <i class="icon-15"> دورات المياه : {{ $property->bathroom}}  </i>
+                                    <br>
+                                      <i class="icon-16"> المساحة الارضية: {{ $property->area}} </i> 
+</center>
+
+                                 </ul>
+                                 <center>
+
                                 <div class="btn-box"><a href="{{ route('property.show',$property->slug) }}" class="theme-btn btn-two">تفاصيل أكثر</a></div>
-                            </div>
+                                </center>
+    </div>
                         </div>
                     </div>
                     @endforeach
@@ -141,7 +153,7 @@
 
         <!-- clients-section -->
         <section class="clients-section bg-color-1">
-            <div class="pattern-layer" style="background-image: url(frontend/images/shape/shape-1.png);"></div>
+            <div class="pattern-layer" style="background-image: url(frontend/images/shape/);"></div>
             <div class="auto-container">
                 <div class="row clearfix">
                     <div class="col-lg-4 col-md-12 col-sm-12 title-column">
@@ -151,8 +163,7 @@
                         </div>
                     </div>
                     <div class="col-lg-8 col-md-12 col-sm-12 inner-column">
-                        <div class="clients-logo">
-                            <ul class="logo-list clearfix">
+                             <ul class="logo-list clearfix">
                                 <li>
                                     <figure class="logo"><a href="#"><img src="{{asset('frontend/partners/1.png')}}" alt=""></a></figure>
                                 </li>

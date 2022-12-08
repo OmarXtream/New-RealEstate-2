@@ -21,6 +21,8 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
 <body>
+<div id="particle-canvas">
+
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light navbar-laravel">
             <div class="container">
@@ -70,6 +72,7 @@
         <main class="py-4">
             @yield('content')
         </main>
+    </div>
     </div>
 </body>
 </html>

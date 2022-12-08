@@ -71,7 +71,7 @@
 }
 
 .rtl .mobile-menu .nav-logo{
-  text-align: right;
+  text-align: center;
 }
 
 .rtl .mobile-menu .navigation li > a:before{
@@ -107,10 +107,8 @@
 }
 
 .rtl .main-header .logo-box{
-  float: right;
-  margin-right: 0px;
-  margin-left: 100px;
-}
+  float: center;
+  }
 
 .rtl .main-header.style-three .menu-right-content .social-links, 
 .rtl .main-header.style-three .menu-right-content .btn-box{
