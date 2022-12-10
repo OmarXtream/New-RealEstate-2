@@ -58,6 +58,8 @@ Route::group(['prefix'=>'admin','namespace'=>'Admin','middleware'=>['auth','admi
     Route::resource('tags','TagController');
     Route::resource('categories','CategoryController');
     Route::resource('posts','PostController');
+    Route::post('postsIMG', 'PostController@upload')->name('posts.upload.image');
+    
     Route::resource('features','FeatureController');
     Route::resource('properties','PropertyController');
     Route::post('properties/gallery/delete','PropertyController@galleryImageDelete')->name('gallery-delete');
