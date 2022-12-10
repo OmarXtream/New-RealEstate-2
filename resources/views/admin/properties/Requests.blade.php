@@ -39,6 +39,8 @@
                                     <th>الحي الرابع</th>
 
                                     <th width="100px">التفاصيل</th>
+                                    <th width="100px">ملاحظات ادارية</th>
+
                                 </tr>
                             </thead>
                             <tbody>
@@ -62,8 +64,46 @@
                                     <td>{{$rq->Fourth_district}}</td>
 
                                     <td col="2">{{$rq->details}}</td>
+                                    <td><button type="button" class="btn btn-info" onclick="openModel('req-{{$rq->id}}')"><i class="material-icons">info</i></button></td>
 
                                 </tr>
+
+                                <div class="modal fade" id="req-{{$rq->id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog" role="document">
+                                      <div class="modal-content">
+                                        <div class="modal-header">
+                                          <h5 class="modal-title" id="exampleModalLabel">{{$rq->name}}</h5>
+                                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                          </button>
+                                        </div>
+                                        <div class="modal-body">
+                                          
+                                            <div class="auto-container">
+                                                <div class="row align-items-center clearfix">
+                    
+                                            <div class="col-lg-12 col-md-12 col-sm-12 form-group">
+                                                <h5 class="text-center">الملاحظات الادارية</h5>
+                                                <form action="{{route('admin.PropertieRequest.notes')}}" method="POST">
+                                                    @csrf
+                                                    <input type="hidden" name="rid" value="{{$rq->id}}">
+                                                <textarea placeholder="الملاحظات الادارية" id="notes" name="notes" class="form-control border border-primary">{{$rq->notes}}</textarea>
+                                                @if ($errors->has('notes'))
+                                                <span class="text-danger">{{ $errors->first('notes') }}</span>
+                                                @endif
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                        </div>
+                                        <div class="modal-footer">
+                                          <button type="button" class="btn btn-secondary" data-dismiss="modal">اغلاق</button>
+                                          <button type="submit" class="btn btn-primary">حفظ</button>
+                                        </form>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
                                 @empty
                                 <h2>لا يوجد اي طلبات حالياً</h2>
                                 @endforelse
@@ -93,5 +133,10 @@
 
     <!-- Custom Js -->
     <script src="{{ asset('backend/js/pages/tables/jquery-datatable.js') }}"></script>
+    <script>
+    function openModel(id){
+        $("#"+id).modal('show');
+        }
 
+    </script>
 @endpush

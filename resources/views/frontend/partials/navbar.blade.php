@@ -4,7 +4,7 @@
 <!-- main header -->
         <header class="main-header header-style-two">            
             <!-- header-lower -->
-            <div class="header-top">
+             <div class="header-top">
                 <div class="top-inner clearfix">
                     <div class="left-column pull-left">
                         <ul class="info clearfix">
@@ -82,7 +82,45 @@
                                             <a href="{{ route('contact') }}"><span> تواصل معنا </span></span></a>
                                         </li>
                   
-                        
+                        @auth
+                        <li class="dropdown"><a href="#!"><span>{{ ucfirst(Auth::user()->username) }}</span></a>
+                            <ul>
+                            @if(Auth::user()->role_id == 1)
+                                <li><a href="{{ route('admin.dashboard') }}">لوحة التحكم</a></li>
+                            @elseif(Auth::user()->role_id == 2)
+                                <li><a href="{{ route('agent.properties.create') }}">إنشاء عقار</a></li>
+                                <li><a href="{{ route('agent.properties.index') }}">قائمة عقاراتي</a></li>
+
+                            @elseif(Auth::user()->role_id == 3)
+                            @endif
+                            <li>
+                            <a class="dropdownitem indigo-text" href="{{ route('logout') }}"
+                            onclick="event.preventDefault();
+                            document.getElementById('logout-form').submit();">
+                            <i class="material-icons"></i>خروج
+                            </a>
+
+                            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                @csrf
+                            </form>
+
+                            </ul>
+                        </li>     
+
+                        @endauth
+                                    </ul>
+                                </div>
+                            </nav>
+                        </div>
+                        <div class="menu-right-content clearfix">
+                                    <ul class="navigation clearfix">
+                            @guest
+                            <div class="sign-box">
+                                <a href="{{route('login')}}"><i class="fas fa-user-plus"></i>دخول</a>
+                            </div>
+                            @endguest
+    
+                        </div>
                     </div>
                 </div>
             </div>

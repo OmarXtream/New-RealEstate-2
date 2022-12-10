@@ -15,10 +15,10 @@
             <div class="card">
                 <div class="header bg-indigo">
                     <h2>
-                        EDIT SLIDER
+                        تعديل معرض
                         <a href="{{route('admin.sliders.index')}}" class="waves-effect waves-light btn right headerightbtn">
                             <i class="material-icons left">arrow_back</i>
-                            <span>BACK</span>
+                            <span>رجوع</span>
                         </a>
                     </h2>
                 </div>

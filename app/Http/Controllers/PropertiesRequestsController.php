@@ -7,6 +7,8 @@ use App\Http\Requests\PRequest;
 
 use App\PropertiesRequests;
 
+use Mail;
+
 class PropertiesRequestsController extends Controller
 {
     public function index()
@@ -38,6 +40,23 @@ class PropertiesRequestsController extends Controller
                 return redirect()->back()
                 ->withErrors(['حدث خطأ ما , حاول مره أخرى']);
             }else{
+                $data = array(
+                    'name' => $request['name'],
+                    'phone' => $request['phone'],
+                    'type' => $request['type'],
+                    'city' => $request['city'],
+                    'rooms' => $request['rooms'],
+                    'baths' => $request['baths'],
+                    'min_price' => $request['min_price'],
+                    'max_price' => $request['max_price'],
+                    'details' => $request['details'],
+                        
+                );
+                Mail::send('mail', $data, function($message) {
+                   $message->to('o20121900@gmail.com', 'ادارة الروابي')->subject('طلب عقاري جديد');
+                   $message->from('admin@rawabireal.com','طلبات العقار الإلكترونية');
+                });
+          
                 return redirect('/thanks');
 
             }

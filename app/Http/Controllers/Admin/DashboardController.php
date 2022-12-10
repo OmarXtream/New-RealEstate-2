@@ -22,6 +22,8 @@ use Toastr;
 use Auth;
 use Hash;
 
+use Validator;
+
 class DashboardController extends Controller
 {
     public function index()
@@ -248,5 +250,37 @@ class DashboardController extends Controller
 
         Toastr::success('message', 'Mail send successfully.');
         return back();
+    }
+
+    public function createUser(Request $request){
+
+        $this->validate($request, [
+            'name'      => 'required|string|max:255',
+            'email'     => 'required|string|email|max:255|unique:users',
+            'password'  => 'required|string|min:6',
+        ]);
+
+        $username   = strtok($request['name'], " "); 
+
+        $user = User::create([
+            'name'      => $request['name'],
+            'email'     => $request['email'],
+            'password'  => Hash::make($request['password']),
+            'username'  => $username,
+            'role_id'   => 3 //normal user
+        ]);
+
+        if(!$user->save()){
+            return redirect()->back()
+            ->withErrors(['حدث خطأ ما , حاول مره أخرى']);
+        }else{
+            return redirect()->back()->with('message', 'تم إنشاء الحساب بنجاح');
+        }
+    }
+
+
+    public function userCreate(){
+        return view('admin.createUser');
+
     }
 }
