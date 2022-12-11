@@ -7,15 +7,20 @@
             </div>
             <div class="auto-container">
                 <div class="inner-box">
+     
                     <div class="content-box">
                         <h2>البحث عن عقارات للبيع والإيجار</h2>
+                        <br>
                         <p>مع الروابي يمكنك ان تشتري او تبيع عقاراتك بكل سهولة.</p>
+                        <br>
+
                         <div class="button-box">
+                            <br>
                             <a href="{{route('property')}}" class="theme-btn btn-one">البحث عن عقار</a>
                         </div>
                     </div>
                     <figure class="image-box">
-                        <img src="https://k.top4top.io/p_246729yd21.jpg" alt="" style="width:1920PX;height:100%;"></figure>
+                        <img src="https://k.top4top.io/p_246729yd21.jpg" alt="" style="width:1920PX;100%;"></figure>
                 </div> 
             </div>
         </div>
@@ -29,11 +34,17 @@
             </div>
             <div class="auto-container">
                 <div class="inner-box">
+                <br>
+
+                <br>
+
+                <br>
+
                     <div class="content-box">
                         <h2>{{ $slider->title }} </h2>
                         <p>{{ $slider->description }}</p>
                     </div>
-                    <figure class="image-box"><img src="{{Storage::url('slider/'.$slider->image)}}" alt="" style="width:1920PX;height:680PX;"></figure>
+                    <figure class="image-box"><img src="{{Storage::url('slider/'.$slider->image)}}" alt="" style="width:1920PX;height:100%;"></figure>
                 </div> 
             </div>
         </div>

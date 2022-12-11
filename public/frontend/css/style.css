@@ -1735,7 +1735,7 @@ div#mCSB_1_container{
   text-transform: uppercase;
   background-color: #D3D3D3;
   border-radius: 5px 5px 0px 0px;
-  width: 120px;
+  width: 100px;
   padding: 10px 10px;
   cursor: pointer;
   transition: all 500ms ease;
@@ -5674,7 +5674,7 @@ div#mCSB_1_container{
 .banner-style-three .pattern-box .pattern-1{
   position: absolute;
   top: 85px;
-  left: 50%;
+  left: 100%;
   width: 437px;
   height: 437px;
   border: 100px solid rgba(255,255,255,0.05);
@@ -6995,11 +6995,12 @@ div#mCSB_1_container{
 
 .page-title-two .pattern-layer .pattern-1{
   position: absolute;
-  left: 0px;
-  bottom: 0px;
-  width: 504px;
-  height: 171px;
-  background-repeat: no-repeat;
+  top: 85px;
+  left: 100%;
+  width: 437px;
+  height: 437px;
+  border: 100px solid rgba(255,255,255,0.05);
+  border-radius: 50%;
 }
 
 .page-title-two .pattern-layer .pattern-2{
