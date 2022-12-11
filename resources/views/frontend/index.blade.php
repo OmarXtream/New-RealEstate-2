@@ -118,7 +118,7 @@
                 <!-- chooseus-section end -->
         
         <!-- testimonial-style-two -->
-        {{-- <section class="testimonial-style-two" style="background-image: url({{asset('frontend/images/shape/shape-1.png')}});">
+        <section class="testimonial-style-two" style="background-image: url({{asset('frontend/images/shape/shape-1.png')}});">
             <div class="auto-container">
                 <div class="sec-title" style="text-align: center">
                     <h5>الشهائد والتوصيات</h5>
@@ -147,7 +147,7 @@
                     </div>
                 </div>
             </div>
-        </section> --}}
+        </section>  
         <!-- testimonial-style-two end -->
 
 

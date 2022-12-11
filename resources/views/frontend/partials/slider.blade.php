@@ -15,7 +15,7 @@
                         </div>
                     </div>
                     <figure class="image-box">
-                        <img src="https://k.top4top.io/p_246729yd21.jpg" alt="" style="width:100%;height:100%;"></figure>
+                        <img src="https://k.top4top.io/p_246729yd21.jpg" alt="" style="width:1920PX;height:100%;"></figure>
                 </div> 
             </div>
         </div>
@@ -33,7 +33,7 @@
                         <h2>{{ $slider->title }} </h2>
                         <p>{{ $slider->description }}</p>
                     </div>
-                    <figure class="image-box"><img src="{{Storage::url('slider/'.$slider->image)}}" alt="" style="width:100%;height:100%;"></figure>
+                    <figure class="image-box"><img src="{{Storage::url('slider/'.$slider->image)}}" alt="" style="width:1920PX;height:680PX;"></figure>
                 </div> 
             </div>
         </div>

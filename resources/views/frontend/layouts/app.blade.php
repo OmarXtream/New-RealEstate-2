@@ -162,6 +162,7 @@
                     });
                 @endforeach
             @endif
+            
         </script>
 
         @yield('scripts')
@@ -178,5 +179,8 @@
     })();
     </script>
     </body><!-- End of .page_wrapper -->
+   
+ 
+
     </html>
     
