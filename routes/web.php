@@ -103,6 +103,9 @@ Route::group(['prefix'=>'admin','namespace'=>'Admin','middleware'=>['auth','admi
     Route::get('userCreate','DashboardController@userCreate')->name('userCreate');
     Route::post('userCreate','DashboardController@createUser')->name('userCreate.send');
 
+    Route::get('/excel','ExcelController@index')->name('import.excel');
+    Route::post('/excel','ExcelController@uploadContent')->name('import.excel.upload');
+
 
 });
 
