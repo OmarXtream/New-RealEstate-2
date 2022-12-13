@@ -4,26 +4,7 @@
             <div class="footer-top bg-color-2">
                 <div class="auto-container">
                     <div class="row clearfix">
-                        <div class="col-lg-3 col-md-6 col-sm-12 footer-column">
-                            <div class="footer-widget about-widget">
-                                <div class="widget-title">
-                                    <h3>الرؤية</h3>
-                                </div>
-                                <div class="text">
-                                    <p class="grey-text text-lighten-4">أن نكون الأكثر جدارة في مجال التطوير العقاري مميزة ذات تصاميم عصرية، وبشكل يحقق له الحياة التي يتمناها، تحقيقاً لشعارنا الذي نتبناه “نبني الحياة</p>
-                                 </div>
-
-                                 <div class="widget-title mt-2">
-                                    <h3>الهدف</h3>
-                                </div>
-                                <div class="text">
-                                    <p class="grey-text text-lighten-4">أن نكون الشركة الرائدة في مجال التطوير والاستثمار العقاري من خلال تقديم منتجات هي خيار عملائنا الأول والأمثل</p>
-                                 </div>
-
-
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-6 col-sm-12 footer-column">
+                        <div class="col-lg-4 col-md-6 col-sm-12 footer-column">
                             <div class="footer-widget links-widget ml-70">
                                 <div class="widget-title">
                                     <h3>القائمة</h3>
@@ -52,16 +33,11 @@
                                                         </ul>
                                 </div>
 
-                                <div class="widget-title mt-2">
-                                    <h3>الرسالة</h3>
-                                </div>
-                                <div class="text">
-                                    <p class="grey-text text-lighten-4">العمل على انجاز أفضل مشاريع التطوير العقاري التي تتمتع بأعلى درجات الجودة مع الالتزام بتطبيق أرفع المعايير والمواصفات وتقديم وحدات سكنية متميزة</p>
-                                 </div>
+                           
 
                             </div>
                         </div>
-                        <div class="col-lg-3 col-md-6 col-sm-12 footer-column">
+                        <div class="col-lg-4 col-md-6 col-sm-12 footer-column">
                             <div class="footer-widget post-widget">
                                 <div class="widget-title">
                                     <h3>العقارات الأخيرة</h3>
@@ -79,7 +55,7 @@
                             </div>
                         </div>
 
-                        <div class="col-lg-3 col-md-6 col-sm-12 footer-column">
+                        <div class="col-lg-4 col-md-6 col-sm-12 footer-column">
                             <div class="footer-widget links-widget ml-70">
                                 <div class="widget-title">
                                     <h3>التواصل الاجتماعي</h3>
