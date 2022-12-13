@@ -64,7 +64,7 @@
 
 @section('content')
 
-    <section class="section mt-3">
+    <section class="section mt-5">
         <div class="auto-container">
             <div class="row clearfix">
                 <div class="col-lg-12 col-md-12 col-sm-12 content-side">

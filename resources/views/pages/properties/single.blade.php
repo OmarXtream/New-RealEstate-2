@@ -48,7 +48,7 @@
 @endsection
 
 @section('content')
-<section class="page-title-two bg-color-1 centred">
+<section class="page-title-two bg-color-1 centred mt-5">
             <div class="pattern-layer">
                 <div class="pattern" style="background-image: url(frontend/images/shape/shape-9.png);"></div>
              </div>
