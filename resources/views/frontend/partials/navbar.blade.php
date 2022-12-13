@@ -45,7 +45,7 @@
             <div class="header-lower">
                 <div class="outer-box">
                     <div class="main-box">
-                        <div class="logo-box">
+                        <div class="logo-box float-left">
                             <figure class="logo"><a href="{{ route('home') }}"><img src="{{asset('frontend/images/logo.png')}}" alt=""></a></figure>
                         </div>
                         <div class="menu-area clearfix">
