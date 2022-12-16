@@ -16,14 +16,16 @@ class CreateInfoFormsTable extends Migration
         Schema::create('info_forms', function (Blueprint $table) {
             $table->increments('id');
             $table->String('name');
-            $table->integer('phone');
-            $table->integer('type')->comment('1 => military , 2=> civil , 3 => private');
+            $table->String('phone');
+            $table->integer('type')->comment('1 => military , 2=> civil , 3 => private')->nullable();
 
-            $table->String('commitments');
-            $table->String('bank');
-            $table->integer('salary');
+            $table->String('Age')->nullable();
 
-            $table->integer('supported')->comment('1 => no , 2=> yes ');
+            $table->String('commitments')->nullable();
+            $table->String('bank')->nullable();
+            $table->String('salary')->nullable();
+
+            $table->integer('supported')->comment('1 => no , 2=> yes ')->nullable();
 
             $table->String('notes')->nullable();
 
