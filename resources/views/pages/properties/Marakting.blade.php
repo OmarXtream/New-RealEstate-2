@@ -30,8 +30,8 @@
         <section class="contact-section">
             @if(Session::has('errors'))
             <div class="text-center alert alert-light">
-                <h5 style="font-weight: bold;color:black">فضلاً قم بملىء كل الحقول</h5>
-            @if($errors->any())
+                <h5 style="font-weight: bold;">* فضلاً قم بملىء كل الحقول</h5>
+                @if($errors->any())
             {!! implode('', $errors->all('<p style="color:red">:message</p>')) !!}
             @endif
             </div>
@@ -123,7 +123,7 @@
                             <div class="form-inner">
                                     <div class="row clearfix">
                                         <div class="col-lg-12 col-md-12 col-sm-12 form-group">
-                                            <textarea id="details" name="details" class="form-control @if ($errors->has('details')) is-invalid @endif">{{ old('details') }} </textarea>
+                                            <textarea id="details" name="details" class="form-control @if ($errors->has('details')) is-invalid @endif" placeholder="تفاصيل إضافيه">{{ old('details') }}</textarea>
                                             @if ($errors->has('details'))
                                             <span class="text-danger">{{ $errors->first('details') }}</span>
                                             @endif

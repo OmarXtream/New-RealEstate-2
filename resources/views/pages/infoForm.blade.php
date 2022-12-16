@@ -29,7 +29,7 @@
         <section class="contact-section">
             @if(Session::has('errors'))
             <div class="text-center alert alert-light">
-                <h5 style="font-weight: bold;color:black">فضلاً قم بملىء كل الحقول</h5>
+                <h5 style="font-weight: bold;color:black">* فضلاً قم بملىء كل الحقول</h5>
             @if($errors->any())
             {!! implode('', $errors->all('<p style="color:red">:message</p>')) !!}
             @endif
@@ -126,7 +126,7 @@
                                                     </div>
 
                                         <div class="col-lg-12 col-md-12 col-sm-12 form-group">
-                                            <textarea placeholder="الملاحظات" id="notes" name="notes" class="form-control @if ($errors->has('notes')) is-invalid @endif">{{ old('notes') }}</textarea>
+                                            <textarea id="notes" name="notes" class="form-control @if ($errors->has('notes')) is-invalid @endif" placeholder="تفاصيل إضافيه">{{ old('notes') }}</textarea>
                                             @if ($errors->has('notes'))
                                             <span class="text-danger">{{ $errors->first('notes') }}</span>
                                             @endif
