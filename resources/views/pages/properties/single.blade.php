@@ -95,7 +95,7 @@
                             <li class="float-right"><a href="#">{{ $property->purpose }}</a></li>
                             <li class="float-right"><span class="btn btn-small disabled b-r-20">التعليقات: {{ $property->comments_count }}</span></li>
                             <li class="float-right"><span class="btn btn-small disabled b-r-20">غرف نوم: {{ $property->bedroom}}</span></li>
-                            <li class="float-right "><span class="btn btn-small disabled b-r-20">دورات مياه: {{ $property->bathroom}}</span></li>
+                            <li class="float-right"><span class="btn btn-small disabled b-r-20">دورات مياه: {{ $property->bathroom}}</span></li>
                             <li class="float-right"><span class="btn btn-small disabled b-r-20">المساحة: {{ $property->area}}</span></li>
                             <li class="float-right"><span class="btn btn-small disabled b-r-20">المدينة: {{ $property->city}}</span></li>
 
