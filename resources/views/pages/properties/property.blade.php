@@ -7,7 +7,6 @@
 @endsection
 
 @section('content')
-        <!--Page Title-->
            <!--Page Title-->
            <section class="page-title-two bg-color-1 centred mt-5">
             <div class="pattern-layer">
@@ -29,6 +28,7 @@
             </div>
         </section>
         <!--End Page Title-->
+        
         <section class="property-page-section property-list">
             <div class="auto-container">
                 <div class="row clearfix">
@@ -44,7 +44,7 @@
 
                                     @foreach($cities as $city)
                                     <div class="buy-btn pull-right text-center"><a class="category" href="{{ route('property.city',$city->city_slug) }}"><h4 class="category">{{ $city->city }}</h4></a></div>
-                                    <hr>
+                                    <br>
                                 @endforeach
             
                                 </div>
@@ -61,13 +61,13 @@
                                         <div class="inner-box">
         
                                             @if(Storage::disk('public')->exists('property/'.$property->image) && $property->image)
-                                            <div class="image-box">
-                                                <figure class="image"><img class="img-fluid" src="{{Storage::url('property/'.$property->image)}}" alt="{{$property->title}}"></figure>
+                                            <div class="image-box img-fluid" style="height: 100%">
+                                                <a href="{{ route('property.show',$property->slug) }}"><img style="height: 100%" class="img-fluid" src="{{Storage::url('property/'.$property->image)}}" alt="{{$property->title}}"></a>
                                                 <div class="batch"><i class="icon-11"></i></div>
                                             </div>
                                             @else
                                             <div class="image-box">
-                                                <figure class="image"><img src="frontend/images/resource/deals-3.jpg" alt=""></figure>
+                                                <a href="{{ route('property.show',$property->slug) }}"><img style="height: 100%" class="img-fluid" src="{{$property->image}}" alt="{{$property->title}}"></a>
                                                 <div class="batch"><i class="icon-11"></i></div>
                                             </div>
         
