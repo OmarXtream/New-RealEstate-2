@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class InfoForm extends Model
 {
-    protected $fillable = ['id','name','phone','type','commitments','bank','salary','supported','notes'];
+    protected $fillable = ['id','name','Age','phone','type','commitments','bank','salary','supported','notes'];
 
 
     public function typeText(){
