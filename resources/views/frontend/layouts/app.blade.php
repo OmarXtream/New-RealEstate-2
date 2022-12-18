@@ -57,7 +57,7 @@
         <!-- preloader -->
         <div class="loader-wrap">
             <div class="preloader">
-                <div class="preloader-close"><i class="far fa-times"></i></div>
+                <div class="preloader-close"><i class="fa fa-times"></i></div>
                 <div id="handle-preloader" class="handle-preloader">
                     <div class="animation-preloader">
                         <div class="spinner"></div>
