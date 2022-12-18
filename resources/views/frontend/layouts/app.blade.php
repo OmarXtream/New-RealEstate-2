@@ -7,7 +7,7 @@
 
 <meta name="csrf-token" content="{{ csrf_token() }}">
 
-<title>{{ config('app.name', 'Laravel Real Estate') }}</title>
+<title>{{ config('app.name', 'Real Estate') }}</title>
 
 <meta name="description" content="نقدم مجموعة واسعة من افضل الحلول العقارية لتنعم بمسكن العمر من خلال عدة مشاريع وبطاقم فني واداري كبير وكفاءه عالية مدعوماً ومجهز بأحدث ماتوصلت اليه الابتكارات في المجال." />
 <meta name="keywords" content="realestate , عقارات , الروابي , شركة عقارات , alrawabiestates , ايجار , بيع , شقق , فلة , تأجير , بناء , عقار ">

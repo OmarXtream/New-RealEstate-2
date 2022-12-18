@@ -2,9 +2,8 @@
     <div class="banner-carousel owl-theme owl-carousel owl-nav-none owl-dots-none">
 
         <div class="slide-item">
-            <div class="pattern-box">
-                <div class="pattern-3"></div>
-            </div>
+            <div class="image-layer" style="background-image:url(https://k.top4top.io/p_246729yd21.jpg)"></div>
+
             <div class="auto-container">
                 <div class="inner-box">
      
@@ -29,9 +28,7 @@
         @foreach($sliders as $slider)
 
         <div class="slide-item">
-            <div class="pattern-box">
-                <div class="pattern-1"></div>
-            </div>
+            <div class="image-layer" style="background-image:url({{Storage::url('slider/'.$slider->image)}})"></div>
             <div class="auto-container">
                 <div class="inner-box">
                 <br>
