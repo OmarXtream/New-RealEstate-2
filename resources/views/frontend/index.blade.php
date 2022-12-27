@@ -6,7 +6,7 @@
             <div class="auto-container">
                 <div class="sec-title">
                     <h5>العقارات</h5>
-                    <h2>العقارات المميزه</h2>
+                    <h2 style="color: black;">العقارات المميزه</h2>
                 </div>
                 <div class="three-item-carousel owl-carousel owl-theme owl-dots-none nav-style-two">
                     @foreach($properties as $property)

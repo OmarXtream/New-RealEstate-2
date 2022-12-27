@@ -12,9 +12,9 @@
                 <div class="top-inner clearfix">
                     <div class="left-column pull-left">
                         <ul class="info clearfix">
-                            <li><i class="far fa-map-marker-alt"></i>جدة - حي الصفاء</li>
-                            <li><i class="far fa-clock"></i>Mon - Sat  9.00 - 18.00</li>
-                            <li><i class="far fa-phone"></i><a href="tel:2512353256">+251-235-3256</a></li>
+                            <li><i class="fa fa-map-marker-alt"></i>جدة - حي الصفاء</li>
+                            <li><i class="fa fa-clock"></i>10 الصباح - 10 المساء</li>
+                            <li><i class="fa fa-phone"></i><a href="tel:+966533522993">966533522993+</a></li>
                         </ul>
                     </div>
                     
@@ -29,7 +29,7 @@
 
                         @guest
                             <div class="sign-box">
-                                <a href="{{route('login')}}"><i class="fas fa-user-plus"></i>دخول</a>
+                                <a href="{{route('login')}}"><i class="fas fa-user-plus"></i> دخول</a>
                             </div>
                             @endguest
 
