@@ -45,8 +45,8 @@
             <div class="header-lower">
                 <div class="outer-box">
                     <div class="main-box">
-                        <div class="logo-box float-left">
-                            <figure class="logo"><a href="{{ route('home') }}"><img src="{{asset('frontend/images/logo.png')}}" alt=""></a></figure>
+                        <div class="logo-box float-left d-none d-md-block d-lg-block" style="width:214px !important; height:170px !important;">
+                            <figure class="logo mt-2"><a href="{{ route('home') }}"><img style="width:120px !important; height:115px !important;" src="{{asset('frontend/images/logo.png')}}" alt=""></a></figure>
                         </div>
                         <div class="menu-area clearfix">
                             <!--Mobile Navigation Toggler-->
@@ -112,8 +112,8 @@
                         <div class="logo-box">
                             <figure class="logo"><a href="{{route('home')}}"><img src="frontend/images/logo.png" alt=""></a></figure>
                         </div>
-                        <div class="menu-area clearfix">
-                            <nav class="main-menu clearfix">
+                        <div class="menu-area clearfix" style="color: black !important">
+                            <nav class="main-menu clearfix" style="color: black !important">
                                 <!--Keep This Empty / Menu will come through Javascript-->
                             </nav>
                         </div>

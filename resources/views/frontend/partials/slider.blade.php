@@ -61,8 +61,8 @@
                             <div class="tab-btn-box">
                                 <ul class="tab-btns tab-buttons centred clearfix">
                                     <li class="tab-btn active-btn" data-tab="#tab-1">هدفنا</li>
-                                    <li class="tab-btna ctive-btn" data-tab="#tab-2">رسالتنا</li>
-                                    <li class="tab-btn active-btn" data-tab="#tab-3">رؤيتنا</li>
+                                    <li class="tab-btn" data-tab="#tab-2">رسالتنا</li>
+                                    <li class="tab-btn" data-tab="#tab-3">رؤيتنا</li>
                                 </ul>
                             </div>
 
@@ -77,6 +77,29 @@
                                             <center>
                                     <p>                 أن نكون الأكثر جدارة في مجال التطوير العقاري مميزة ذات تصاميم عصرية،
                                          وبشكل يحقق له الحياة التي يتمناها، تحقيقاً لشعارنا الذي نتبناه “نبني الحياة         </p>
+                               <br>
+</center>
+
+                                </div>
+                                        </div>
+
+                                        <div class="switch_btn_one ">
+                                        ...
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                                <div class="tab" id="tab-2">
+                                    <div class="inner-box">
+
+                                        <div class="top-search">
+                                        <div class="text">
+                                            <br>
+                                            <center>
+                                    <p>  العمل على انجاز أفضل مشاريع التطوير العقاري التي تتمتع بأعلى درجات الجودة مع الالتزام بتطبيق أرفع المعايير والمواصفات وتقديم وحدات سكنية متميزة
+                                                  </p>
                                <br>
 </center>
 

@@ -121,7 +121,7 @@
         <section class="testimonial-style-two" style="background-image: url({{asset('frontend/images/shape/shape-1.png')}});">
             <div class="auto-container">
                 <div class="sec-title" style="text-align: center">
-                    <h5>الشهائد والتوصيات</h5>
+                    <h5>الشهادات والتوصيات</h5>
                     <h2>ماذا يقول عنا عملائنا؟</h2>
                 </div>
                 <div class="row clearfix">
