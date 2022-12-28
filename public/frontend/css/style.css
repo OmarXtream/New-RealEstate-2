@@ -571,7 +571,7 @@ img {
   top:0px;
   width:100%;
   z-index:0;
-  background: #D3D3D3;
+  background: #fff;
   border-bottom: 1px solid rgba(0,0,0,0.1);
   transition:all 500ms ease;
   -moz-transition:all 500ms ease;
