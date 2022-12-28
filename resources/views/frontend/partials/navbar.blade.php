@@ -12,7 +12,7 @@
                 <div class="top-inner clearfix">
                     <div class="left-column pull-left">
                         <ul class="info clearfix">
-                            <li><i class="fa fa-map-marker-alt"></i>جدة - حي الصفاء</li>
+                            <li><i class="fa fa-map-marker-alt"></i>جدة - الفيصلية</li>
                             <li><i class="fa fa-clock"></i>10 الصباح - 10 المساء</li>
                             <li><i class="fa fa-phone"></i><a href="tel:+966533522993">966533522993+</a></li>
                         </ul>
