@@ -53,7 +53,7 @@ class PropertiesRequestsController extends Controller
                         
                 );
                 Mail::send('mail', $data, function($message) {
-                   $message->to('o20121900@gmail.com', 'ادارة الروابي')->subject('طلب عقاري جديد');
+                   $message->to('rawabireal@gmail.com', 'ادارة الروابي')->subject('طلب عقاري جديد');
                    $message->from('admin@rawabireal.com','طلبات العقار الإلكترونية');
                 });
           
