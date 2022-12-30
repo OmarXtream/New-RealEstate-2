@@ -30,6 +30,7 @@
                                         <li class="uppercase {{ Request::is('contact') ? 'underline' : '' }}">
                                             <a href="{{ route('contact') }}" class="grey-text text-lighten-3">تواصل معنا</a>
                                         </li>
+
                                                         </ul>
                                 </div>
 
@@ -91,6 +92,9 @@
                             © 2022 Developer puzzle.
                         @endif
                             </div>
+                            <ul class="footer-nav pull-right clearfix">
+                                <li><a href="{{ route('policy') }}">سياسة الخصوصية</a></li>
+                            </ul>
                                     </div>
                 </div>
             </div>

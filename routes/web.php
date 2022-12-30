@@ -2,6 +2,11 @@
 
 // FRONT-END ROUTES
 Route::get('/', 'FrontpageController@index')->name('home');
+
+Route::get('policy', function(){
+    return view('pages.policy');
+})->name('policy');
+
 Route::get('/slider', 'FrontpageController@slider')->name('slider.index');
 
 Route::get('/InfoForm', 'InfoFormController@index')->name('InfoForm');
