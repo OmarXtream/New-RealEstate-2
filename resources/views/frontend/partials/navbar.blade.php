@@ -40,7 +40,7 @@
 
 
             
-            <div class="header-lower">
+            <div class="header-lower" style="height: 130px">
                 <div class="outer-box">
                     <div class="main-box">
                         <div class="logo-box float-left d-none d-md-block d-lg-block" style="width:214px !important; height:170px !important;">
