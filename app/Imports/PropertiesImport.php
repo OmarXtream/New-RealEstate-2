@@ -4,8 +4,12 @@ namespace App\Imports;
 
 use App\Property;
 use Maatwebsite\Excel\Concerns\ToModel;
+use Maatwebsite\Excel\Concerns\WithHeadingRow;
 
-class PropertiesImport implements ToModel
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Hash;
+
+class PropertiesImport implements ToModel,WithHeadingRow
 {
     /**
     * @param array $row
@@ -14,8 +18,42 @@ class PropertiesImport implements ToModel
     */
     public function model(array $row)
     {
-        return new Property([
-            //
+
+
+         $property = Property::firstOrCreate([
+        'title' => $row['title'],
+        'slug' => str_slug($row['title']),
+        'price' => $row['price'],
+        'purpose' => $row['purpose'],
+        'type' => $row['type'],
+        'image' => $row['image'],
+        'bedroom' => $row['bedroom'],
+        'bathroom' => $row['bathroom'],
+        'city' => $row['city'],
+        'city_slug' => str_slug($row['city']),
+        'address' => $row['address'],
+        'area' => $row['area'],
+        'agent_id' => 1,
+        'description' => $row['description'],
+        'video' => $row['video'],
+        'floor_plan' => $row['floor_plan'],
         ]);
+        $property->save();
+        //upload multiple imgs
+        $imgArray = explode(',', $row['imgs']);
+        foreach ($imgArray as $img)
+        {
+        if(!empty($img)){
+            $property->gallery()->create([
+                'property_id' => $property->id,
+                'name' => $img,
+            ]);
+        }
+
+        }
+
+
+        return $property;
+
     }
 }
