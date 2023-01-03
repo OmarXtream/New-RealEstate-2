@@ -15,6 +15,20 @@
     <div class="block-header"></div>
 
     <div class="row clearfix">
+        @if(Session::has('errors'))
+        <div class="text-center alert alert-light">
+            <h5 style="font-weight: bold;color:black">* فضلاً قم بملىء كل الحقول</h5>
+        @if($errors->any())
+        {!! implode('', $errors->all('<p style="color:red">:message</p>')) !!}
+        @endif
+        </div>
+        @endif
+        @if (session()->has('message'))
+        <div class="text-center alert alert-light">
+            <h3 style="font-weight: bold; color:black">{{ session('message') }}</h3>
+        </div>
+        @endif
+
         <form action="{{route('admin.properties.store')}}" method="POST" enctype="multipart/form-data">
         @csrf
         <div class="col-lg-8 col-md-4 col-sm-12 col-xs-12">
@@ -222,7 +236,7 @@
     <script src="{{asset('backend/plugins/tinymce/tinymce.js')}}"></script>
     <script>
         $(function () {
-            $("#input-id").fileinput();
+            $("#input-id").fileinput({'showUpload':false});
         });
 
         $(function () {
