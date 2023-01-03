@@ -35,7 +35,7 @@
         <section class="blog-list sec-pad-2">
             <div class="auto-container">
                 <div class="row clearfix">
-                    @foreach($posts as $post)
+                    @forelse($posts as $post)
                     <div class="col-lg-6 col-md-12 col-sm-12 news-block">
                         <div class="news-block-two wow fadeInLeft animated animated" data-wow-delay="00ms" data-wow-duration="1500ms">
                             <div class="inner-box align-items-center img-fluid">
@@ -58,7 +58,9 @@
                             </div>
                         </div>
                     </div>
-                    @endforeach
+                    @empty
+                    <h1 class="text-center mb-5">لا يوجد اي منشورات حالياً</h1>
+                    @endforelse
 
                 </div>
             </div>

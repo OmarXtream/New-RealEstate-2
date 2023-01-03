@@ -164,9 +164,11 @@
                                 <h4>مميزات العقار</h4>
                             </div>
                             <div class="text">
+                                <center>
                                 @foreach($property->features as $feature)
                                 <p>{{$feature->name}}</p>
                                 @endforeach
+                            </center>
                             </div>
                         </div>
                         @endif
@@ -189,7 +191,9 @@
                                 <h4>مقطع فيديو للعقار</h4>
                             </div>
                             <div class="text">
+                                <center>
                                 {!! $videoembed !!}
+                            </center>
                             </div>
                         </div>
                         @endif
@@ -289,16 +293,13 @@
                     <div class="property-sidebar default-sidebar">
                         <div class="author-widget sidebar-widget">
                             <div class="author-box">
-                                <figure class="author-thumb"><img src="{{Storage::url('users/'.$property->user->image)}}" alt=""></figure>
                                 <div class="inner">
-                                    <h4>{{ $property->user->name }}</h4>
-                                    <ul class="info clearfix">
-                                        <li><i class="fas fa-map-marker-alt"></i>{{ $property->user->email }}</li>
-                                        {{-- <li><a href="{{ route('agents.show',$property->agent_id) }}">التواصل مع الوسيط</a></li> --}}
-                                    </ul>
+                                    <h3 class="font-weight-bold">طلب العقار</h3>
                                 </div>
                             </div>
                             <div class="form-inner">
+                                <p class="text-center mx-auto mb-2" dir="rtl">فضلاً قم بكتابة تفاصيل طلبك للعقار </p>
+
                                 <form class="default-form agent-message-box" action="" method="POST">
                                     @csrf
                                     <input type="hidden" name="agent_id" value="{{ $property->user->id }}">
@@ -315,7 +316,7 @@
                                         <input type="number" name="phone" placeholder="رقم الهاتف" required="">
                                     </div>
                                     <div class="form-group">
-                                        <textarea name="message" placeholder="الرسالة"></textarea>
+                                        <textarea name="message" placeholder=" (اسم العقار وتفاصيل طلبه) "></textarea>
                                     </div>
                                     <div class="form-group message-btn">
                                         <button id="msgsubmitbtn" type="submit" class="theme-btn btn-one">إرسال</button>
