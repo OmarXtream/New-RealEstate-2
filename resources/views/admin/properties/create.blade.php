@@ -235,8 +235,10 @@
     <script src="{{ asset('backend/plugins/bootstrap-select/js/bootstrap-select.js') }}"></script>
     <script src="{{asset('backend/plugins/tinymce/tinymce.js')}}"></script>
     <script>
-        $(function () {
-            $("#input-id").fileinput({'showUpload':false});
+        $("#input-id").fileinput({
+        'showUpload': false,
+        'language': 'ar',
+
         });
 
         $(function () {
