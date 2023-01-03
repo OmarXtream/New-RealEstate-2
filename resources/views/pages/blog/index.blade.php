@@ -59,7 +59,7 @@
                         </div>
                     </div>
                     @empty
-                    <h1 class="text-center mb-5">لا يوجد اي منشورات حالياً</h1>
+                    <h1 class="text-center mb-5" style="color: black">لا يوجد اي منشورات حالياً</h1>
                     @endforelse
 
                 </div>

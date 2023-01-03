@@ -104,7 +104,7 @@
             </div>
 
             <!--sticky Header-->
-            <div class="sticky-header">
+            <div class="sticky-header" style="color: black !important;">
                 <div class="outer-box">
                     <div class="main-box">
                         <div class="logo-box">
