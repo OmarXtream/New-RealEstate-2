@@ -2,6 +2,10 @@
 
 @section('styles')
 <style>
+    p,h2,h3,h4,h5 {
+    color: black !important;
+    font-weight: bold;   
+    }
     #map {
         height: 320px;
     }
@@ -294,7 +298,7 @@
                         <div class="author-widget sidebar-widget">
                             <div class="author-box">
                                 <div class="inner">
-                                    <h3 class="font-weight-bold">طلب العقار</h3>
+                                    <h3 style="color:black" class="font-weight-bold">طلب العقار</h3>
                                 </div>
                             </div>
                             <div class="form-inner">

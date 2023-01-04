@@ -28,6 +28,7 @@
                                     <th>الاسم</th>
                                     <th>البريد الالكتروني</th>
                                     <th>رقم الهاتف</th>
+                                    <th>العقار</th>
                                     <th>الرسالة</th>
                                     <th width="150px">-</th>
                                 </tr>
@@ -40,6 +41,12 @@
                                     <td>{{$message->name}}</td>
                                     <td>{{$message->email}}</td>
                                     <td>{{$message->phone}}</td>
+                                    @if($message->property)
+                                    <td><a target="_blank" href="{{ route('property.show',$message->property->slug) }}"> {{$message->property->title}} </a></td>
+                                    @else
+                                    <td>-</td>
+                                    @endif
+
                                     <td>{{ str_limit($message->message,40,'...') }}</td>
                                     <td>
                                         @if($message->status == 0)

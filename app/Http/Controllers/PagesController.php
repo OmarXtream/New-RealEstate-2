@@ -174,7 +174,8 @@ class PagesController extends Controller
     public function messageAgent(Request $request)
     {
         $request->validate([
-            'agent_id'  => 'required',
+            'agent_id'  => 'required|exists:users',
+            'property_id'  => 'required|exists:properties',
             'name'      => 'required',
             'email'     => 'required',
             'phone'     => 'required',
