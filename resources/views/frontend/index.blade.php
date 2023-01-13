@@ -5,7 +5,7 @@
         <section class="feature-style-two sec-pad">
             <div class="auto-container">
                 <div class="sec-title">
-                    <h5>العقارات</h5>
+                    <h4 style="color: #C98816">العقارات</h4>
                     <h2 style="color: black;">العقارات المميزه</h2>
                 </div>
                 <div class="three-item-carousel owl-carousel owl-theme owl-dots-none nav-style-two">
@@ -39,7 +39,6 @@
                                               <h4 dir="rtl">   {{ $property->price }} ريال </h4> 
                                     </div>
                                     <ul class="other-option pull-right clearfix">
-                                        <li><a href="{{ route('property.show',$property->slug) }}"><i class="icon-12"></i></a></li>
                                         <li><a href="{{ route('property.show',$property->slug) }}"><i class="icon-13"></i></a></li>
                                     </ul>
                                 </div>
@@ -78,7 +77,7 @@
                     <div class="auto-container">
                         <div class="upper-box clearfix">
                             <div class="sec-title">
-                                <h5>خدماتنا</h5>
+                                <h4 style="color: #C98816">خدماتنا</h4>
                                 <h2>لماذا تختارنا؟</h2>
                             </div>
                         </div>
@@ -121,7 +120,7 @@
         <section class="testimonial-style-two" style="background-image: url({{asset('frontend/images/shape/shape-1.png')}});">
             <div class="auto-container">
                 <div class="sec-title" style="text-align: center">
-                    <h5>الشهادات والتوصيات</h5>
+                    <h4 style="color: black">الشهادات والتوصيات</h4>
                     <h2>ماذا يقول عنا عملائنا؟</h2>
                 </div>
                 <div class="row clearfix">
@@ -158,7 +157,7 @@
                 <div class="row clearfix">
                     <div class="col-lg-4 col-md-12 col-sm-12 title-column">
                         <div class="sec-title">
-                            <h5>شركائنا</h5>
+                            <h4 style="color: #C98816">شركائنا</h4>
                             <h2>في الروابي نفتخر بشركاء النجاح الذين يقدمون الدعم لنا في المشروعات العقارية والتجارية المختلفة </h2>
                         </div>
                     </div>
