@@ -64,9 +64,13 @@
                                 <div class="widget-content">
                                     <ul class="links-list class">
                                         <li class="uppercase">
-                                            <h5 class="mt-2"><a href="https://www.instagram.com/rawabireal/" target="_blank"><i class="fa-brands fa-instagram fa-lg"></i> إنستقرام</a></h5>
-                                            <h5 class="mt-2"><a href="https://www.twitter.com/rawabireal/" target="_blank"><i class="fa-brands fa-twitter fa-lg"></i> تويتر</a></h5>
-                                            <h5 class="mt-2"><a href="https://www.snapchat.com/add/rawabireal?share_id=LQ4Gu_ShYb8&locale=en-GB" target="_blank"><i class="fa-brands fa-snapchat fa-lg"></i> سناب شات</a></h5>
+                                            <div class="row mt-2">
+                                                
+                                            <div class="col-4"><h5><a href="https://www.instagram.com/rawabireal/" target="_blank"><i class="fa-brands fa-instagram fa-lg"></i> </a></h5></div>
+                                            <div class="col-4"><h5><a href="https://www.twitter.com/rawabireal/" target="_blank"><i class="fa-brands fa-twitter fa-lg"></i> </a></h5></div>
+                                            <div class="col-4"><h5><a href="https://www.snapchat.com/add/rawabireal?share_id=LQ4Gu_ShYb8&locale=en-GB" target="_blank"><i class="fa-brands fa-snapchat fa-lg"></i></a></h5></div>
+
+                                        </div>
 
                                         </li>
                                      </ul>
