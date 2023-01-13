@@ -2,7 +2,7 @@
 
 @section('styles')
 <style>
-    p,h2,h3,h4,h5 {
+    p,h2,h3,h4,h5,h6 {
     color: black !important;
     font-weight: bold;   
     }
@@ -92,7 +92,7 @@
 
                     </div>
                 </div>
-                <div class="right-column pull-right clearfix" dir="rtl">
+                <div class="right-column pull-right clearfix pl-5" dir="rtl">
                     <div class="price-inner clearfix">
 
                         <ul class="category clearfix pull-left px-auto">
@@ -111,7 +111,7 @@
                     </div>
                 </div>
 
-                <div class="right-column pull-right clearfix mr-3">
+                <div class="right-column pull-right clearfix mr-3 pr-3">
                     <ul class="other-option pull-right clearfix">
                         <li><a href="#" onclick="CopyURL()"><i class="icon-37" title="مشاركة"></i></a></li>
                         @if(!$fav)
