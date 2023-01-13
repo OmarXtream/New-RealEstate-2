@@ -136,7 +136,7 @@
                                     </div>
                                     <div class="author-info">
                                         <figure class="author-thumb"><img src="{{Storage::url('testimonial/'.$testimonial->image)}}" alt=""></figure>
-                                        <h4>{{$testimonial->name}}</h4>
+                                        <h4 style="color: black">{{$testimonial->name}}</h4>
                                     </div>
                                 </div>
                             </div>
