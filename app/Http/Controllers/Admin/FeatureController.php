@@ -4,7 +4,8 @@ namespace App\Http\Controllers\Admin;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-
+use Illuminate\Support\Facades\Storage;
+use Intervention\Image\Facades\Image;
 use App\Feature;
 use Toastr;
 
@@ -28,18 +29,35 @@ class FeatureController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'name' => 'required|unique:features|max:255'
+            'name' => 'required|unique:features|max:255',
+            'icon' => 'required'
+
         ]);
 
+
+        $icon = $request->file('icon');
+        $slug  = str_slug($request->name);
         $tag = new Feature();
         $tag->name = $request->name;
+        if(isset($icon)){
+            $currentDate = Carbon::now()->toDateString();
+            $imagename = $slug.'-'.$currentDate.'-'.uniqid().'.'.$icon->getClientOriginalExtension();
+
+            if(!Storage::disk('public')->exists('posts')){
+                Storage::disk('public')->makeDirectory('posts');
+            }
+            Storage::disk('public')->put('posts/'.$imagename, file_get_contents($icon));
+        } 
+
+
+      
+        $tag->icon = $imagename;
         $tag->slug = str_slug($request->name);
         $tag->save();
-
         Toastr::success('message', 'Feature created successfully.');
         return redirect()->route('admin.features.index');
     }
-
+    
 
     public function edit($id)
     {

@@ -30,6 +30,7 @@
                             <thead>
                                 <tr>
                                     <th>#</th>
+                                    <th>الصورة</th>
                                     <th>الاسم</th>
                                     <th>الاختصار</th>
                                     <th>-</th>
@@ -47,6 +48,12 @@
                                 @foreach( $features as $key => $feature )
                                 <tr>
                                     <td>{{$key+1}}</td>
+                                    <td>
+                                        @if(Storage::disk('public')->exists('category/thumb/'.$feature->icon))
+                                            <img src="{{Storage::url('category/thumb/'.$feature->icon)}}" alt="{{$feature->name}}" width="60" class="img-responsive img-rounded">
+                                        @endif
+                                    </td>
+
                                     <td>{{$feature->name}}</td>
                                     <td>{{$feature->slug}}</td>
                                     <td class="text-center">
