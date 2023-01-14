@@ -272,9 +272,10 @@
 
                                 <div class="single-slider">
 
-                                    <a class="lightbox" href="{{Storage::url('property/gallery/'.$gallery->name)}}">
                                     <figure class="image-box"><img src="{{Storage::url('property/gallery/'.$gallery->name)}}" alt=""></figure>
-                                    </a>
+                                    <a href="{{Storage::url('property/gallery/'.$gallery->name)}}" class="lightbox-image" data-fancybox="gallery"><i class="icon-31"></i></a>
+
+                                </a>
 
                                 </div>
                                 @endforeach
