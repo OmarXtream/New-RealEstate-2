@@ -272,8 +272,17 @@
 
                                 <div class="single-slider">
 
-                                    <figure class="image-box"><img src="{{Storage::url('property/gallery/'.$gallery->name)}}" alt=""></figure>
-                                    <a href="{{Storage::url('property/gallery/'.$gallery->name)}}" class="lightbox-image" data-fancybox="gallery"><i class="icon-31"></i></a>
+                                    <div class="gallery-block-one">
+                                        <div class="inner-box">
+                                            <div class="image-box">
+                                                <figure class="image"><img src="{{Storage::url('property/gallery/'.$gallery->name)}}" alt=""></figure>
+                                                <a href="{{Storage::url('property/gallery/'.$gallery->name)}}" class="lightbox-image" data-fancybox="gallery"><i class="icon-31"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                            
+                                    {{-- <figure class="image-box"><img src="{{Storage::url('property/gallery/'.$gallery->name)}}" alt=""></figure>
+                                    <a href="{{Storage::url('property/gallery/'.$gallery->name)}}" class="lightbox-image" data-fancybox="gallery"><i class="icon-31"></i></a> --}}
 
                                 </a>
 
@@ -475,6 +484,7 @@
             </div>
         </div>
     </section>
+
 
     {{-- RATING --}}
     @php
