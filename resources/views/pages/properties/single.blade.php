@@ -274,8 +274,8 @@
 
                                 <div class="gallery-block-two">
                                     <div class="inner-box">
-                                        <figure class="image"><img src="{{Storage::url('property/gallery/'.$gallery->name)}}" alt=""></figure>
-                                        <a href="{{Storage::url('property/gallery/'.$gallery->name)}}" class="lightbox-image" data-fancybox="gallery"><i class="icon-31"></i></a>
+                                        
+                                        <a href="{{Storage::url('property/gallery/'.$gallery->name)}}" class="lightbox-image" data-fancybox="gallery"><figure class="image"><img src="{{Storage::url('property/gallery/'.$gallery->name)}}" alt=""></figure></a>
 
                                     </div>
                                 </div>
