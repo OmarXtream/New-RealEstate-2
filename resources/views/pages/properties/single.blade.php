@@ -2,6 +2,91 @@
 
 @section('styles')
 <style>
+ .btn-share {
+	 --btn-color: #f2b241;
+	 position: relative;
+	 padding: 16px 32px;
+	 font-family: Roboto, sans-serif;
+	 font-weight: 500;
+	 font-size: 16px;
+	 line-height: 1;
+	 color: white;
+	 background: none;
+	 border: none;
+	 outline: none;
+	 overflow: hidden;
+	 cursor: pointer;
+	 filter: drop-shadow(0 2px 8px rgba(39, 94, 254, 0.32));
+	 transition: 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+ .btn-share::before {
+	 position: absolute;
+	 content: "";
+	 top: 0;
+	 left: 0;
+	 z-index: -1;
+	 width: 100%;
+	 height: 100%;
+	 background: var(--btn-color);
+	 border-radius: 24px;
+	 transition: 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+ .btn-share .btn-text, .btn-share .btn-icon {
+	 display: inline-flex;
+	 vertical-align: middle;
+	 transition: 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+ .btn-share .btn-text {
+	 transition-delay: 0.05s;
+}
+ .btn-share .btn-icon {
+	 margin-left: 8px;
+	 transition-delay: 0.1s;
+}
+ .btn-share .social-icons {
+	 position: absolute;
+	 top: 50%;
+	 left: 0;
+	 right: 0;
+	 display: flex;
+	 margin: 0;
+	 padding: 0;
+	 list-style-type: none;
+	 transform: translateY(-50%);
+}
+ .btn-share .social-icons li {
+	 flex: 1;
+}
+ .btn-share .social-icons li a {
+	 display: inline-flex;
+	 vertical-align: middle;
+	 transform: translateY(55px);
+	 transition: 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+ .btn-share .social-icons li a:hover {
+	 opacity: 0.5;
+}
+ .btn-share:hover::before {
+	 transform: scale(1.2);
+}
+ .btn-share:hover .btn-text, .btn-share:hover .btn-icon {
+	 transform: translateY(-55px);
+}
+ .btn-share:hover .social-icons li a {
+	 transform: translateY(0);
+}
+ .btn-share:hover .social-icons li:nth-child(1) a {
+	 transition-delay: 0.15s;
+}
+ .btn-share:hover .social-icons li:nth-child(2) a {
+	 transition-delay: 0.2s;
+}
+ .btn-share:hover .social-icons li:nth-child(3) a {
+	 transition-delay: 0.25s;
+}
+ 
+
+
     p,h2,h3,h4,h5,h6 {
     color: black !important;
     font-weight: bold;   
@@ -113,7 +198,60 @@
 
                 <div class="right-column pull-right clearfix mr-3 pr-3">
                     <ul class="other-option pull-right clearfix">
-                        <li><a href="#" onclick="CopyURL()"><i class="icon-37" title="مشاركة"></i></a></li>
+                        <li><a href="#" onclick="CopyURL()"><i class="fa fa-link" title="مشاركة"></i></a></li>
+                        <button class="btn-share mr-3 ml-3" style="padding-right:3rem!important;padding-left:3rem!important; ">
+                            <span class="btn-text"> مشاركة </span
+                            ><span class="btn-icon">
+                              <svg
+                                t="1580465783605"
+                                class="icon"
+                                viewBox="0 0 1024 1024"
+                                version="1.1"
+                                xmlns="http://www.w3.org/2000/svg"
+                                p-id="9773"
+                                width="18"
+                                height="18"
+                              >
+                                <path
+                                  d="M767.99994 585.142857q75.995429 0 129.462857 53.394286t53.394286 129.462857-53.394286 129.462857-129.462857 53.394286-129.462857-53.394286-53.394286-129.462857q0-6.875429 1.170286-19.456l-205.677714-102.838857q-52.589714 49.152-124.562286 49.152-75.995429 0-129.462857-53.394286t-53.394286-129.462857 53.394286-129.462857 129.462857-53.394286q71.972571 0 124.562286 49.152l205.677714-102.838857q-1.170286-12.580571-1.170286-19.456 0-75.995429 53.394286-129.462857t129.462857-53.394286 129.462857 53.394286 53.394286 129.462857-53.394286 129.462857-129.462857 53.394286q-71.972571 0-124.562286-49.152l-205.677714 102.838857q1.170286 12.580571 1.170286 19.456t-1.170286 19.456l205.677714 102.838857q52.589714-49.152 124.562286-49.152z"
+                                  p-id="9774"
+                                  fill="#ffffff"
+                                ></path>
+                              </svg>
+                            </span>
+                            <ul class="social-icons">
+                              <li>
+                                <a href="https://twitter.com/intent/tweet?text= مشاركة العقار {{Request::url()}}" target="_blank"
+                                  ><svg
+                                    t="1580195676506"
+                                    class="icon"
+                                    viewBox="0 0 1024 1024"
+                                    version="1.1"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    p-id="2099"
+                                    width="18"
+                                    height="18"
+                                  >
+                                    <path
+                                      d="M962.267429 233.179429q-38.253714 56.027429-92.598857 95.451429 0.585143 7.972571 0.585143 23.990857 0 74.313143-21.723429 148.260571t-65.974857 141.970286-105.398857 120.32-147.456 83.456-184.539429 31.158857q-154.843429 0-283.428571-82.870857 19.968 2.267429 44.544 2.267429 128.585143 0 229.156571-78.848-59.977143-1.170286-107.446857-36.864t-65.170286-91.136q18.870857 2.852571 34.889143 2.852571 24.576 0 48.566857-6.290286-64-13.165714-105.984-63.707429t-41.984-117.394286l0-2.267429q38.838857 21.723429 83.456 23.405714-37.741714-25.161143-59.977143-65.682286t-22.308571-87.990857q0-50.322286 25.161143-93.110857 69.12 85.138286 168.301714 136.265143t212.260571 56.832q-4.534857-21.723429-4.534857-42.276571 0-76.580571 53.979429-130.56t130.56-53.979429q80.018286 0 134.875429 58.294857 62.317714-11.995429 117.174857-44.544-21.138286 65.682286-81.115429 101.741714 53.174857-5.705143 106.276571-28.598857z"
+                                      p-id="2100"
+                                      fill="white"
+                                    ></path></svg
+                                ></a>
+                              </li>
+                              <li>
+                                <a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u={{Request::url()}}" class="share-button">
+                                    <i class="fab fa-facebook-f" style="color: #fff;"></i>
+                                   </a>
+                              </li>
+                              <li>
+                                <a target="_blank" href="whatsapp://send?text={{Request::url()}}" class="share-button">
+                                    <i class="fab fa-whatsapp" style="color: #fff;"></i>
+                                   </a>
+                              </li>
+                            </ul>
+                          </button>
+                          
                         @if(!$fav)
                         <li><a href="{{route('favorite.create',$property->id)}}"><i class="icon-13" title="المفضلة"></i></a></li>
                         @else
