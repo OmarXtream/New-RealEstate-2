@@ -264,28 +264,20 @@
                 <div class="col-lg-8 col-md-12 col-sm-12 content-side">
                     <div class="property-details-content">
                         <div class="carousel-inner">
-                            <div class="single-item-carousel owl-carousel owl-theme owl-dots-none">
+
+            
+                                <div class="three-item-carousel owl-carousel owl-theme owl-nav-none dots-style-one">
 
                                 @if(!$property->gallery->isEmpty())
 
                                 @foreach($property->gallery as $gallery)
 
-                                <div class="single-slider">
-
-                                    <div class="gallery-block-one">
-                                        <div class="inner-box">
-                                            <div class="image-box">
-                                                <figure class="image"><img src="{{Storage::url('property/gallery/'.$gallery->name)}}" alt=""></figure>
-                                                <a href="{{Storage::url('property/gallery/'.$gallery->name)}}" class="lightbox-image" data-fancybox="gallery"><i class="icon-31"></i></a>
-                                            </div>
-                                        </div>
+                                <div class="gallery-block-two">
+                                    <div class="inner-box">
+                                        <figure class="image-box">
+                                            <a href="{{Storage::url('property/gallery/'.$gallery->name)}}" class="lightbox-image" data-fancybox="gallery"><img src="{{Storage::url('property/gallery/'.$gallery->name)}}" alt=""></a>
+                                        </figure>
                                     </div>
-                            
-                                    {{-- <figure class="image-box"><img src="{{Storage::url('property/gallery/'.$gallery->name)}}" alt=""></figure>
-                                    <a href="{{Storage::url('property/gallery/'.$gallery->name)}}" class="lightbox-image" data-fancybox="gallery"><i class="icon-31"></i></a> --}}
-
-                                </a>
-
                                 </div>
                                 @endforeach
 
