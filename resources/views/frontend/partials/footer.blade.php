@@ -56,25 +56,31 @@
                             </div>
                         </div>
 
-                        <div class="col-lg-4 col-md-6 col-sm-12 footer-column">
+                        <div class="col-lg-4 col-md-6 col-sm-12 footer-column mt-5">
                             <div class="footer-widget links-widget ml-70">
-                                <div class="widget-title">
-                                    <h3>التواصل الاجتماعي</h3>
-                                </div>
                                 <div class="widget-content">
-                                    <ul class="links-list class">
-                                        <li class="uppercase">
-                                            <div class="row mt-2">
-                                                
-                                            <div class="col-4"><h5><a href="https://www.instagram.com/rawabireal/" target="_blank"><i class="fa-brands fa-instagram fa-lg"></i> </a></h5></div>
-                                            <div class="col-4"><h5><a href="https://www.twitter.com/rawabireal/" target="_blank"><i class="fa-brands fa-twitter fa-lg"></i> </a></h5></div>
-                                            <div class="col-4"><h5><a href="https://www.snapchat.com/add/rawabireal?share_id=LQ4Gu_ShYb8&locale=en-GB" target="_blank"><i class="fa-brands fa-snapchat fa-lg"></i></a></h5></div>
-
+                                    
+                                    <div class="team-block-one">
+                                        <div class="inner-box" >
+                                            <figure class="image-box"><img src="assets/images/team/team-3.jpg" alt=""></figure>
+                                            <div class="lower-content">
+                                                <div class="inner" dir="ltr" style="background-color:#1b1d21 !important;">
+                                                    <h3 class="mb-4" style="color:#fff">التواصل الاجتماعي</h3>
+                                                    <ul class="social-links clearfix">
+                                                        <center>
+                                                        <li><a href="https://www.instagram.com/rawabireal/" target="_blank"><i class="fab fa-instagram" dir="rtl"></i> </a></li>
+                                                        <li><a href="https://www.twitter.com/rawabireal/" target="_blank"><i class="fab fa-twitter" dir="rtl"></i> </a></li>
+                                                        <li><a href="https://www.snapchat.com/add/rawabireal" target="_blank"><i class="fab fa-snapchat" dir="rtl"></i></a></li>            
+                                                    </center>
+                                                    </ul>
+                                                    <hr>
+                
+                                                </div>
+                                            </div>
                                         </div>
+                                    </div>      
 
-                                        </li>
-                                     </ul>
-                                </div>
+                                     </div>
                             </div>
                         </div>
 
