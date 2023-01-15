@@ -24,7 +24,7 @@
                     <h2>انشاء خاصية</h2>
                 </div>
                 <div class="body">
-                    <form action="{{route('admin.features.store')}}" method="POST">
+                    <form action="{{route('admin.features.store')}}" method="POST" enctype="multipart/form-data">
                         @csrf
 
                         <div class="form-group form-float">

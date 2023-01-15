@@ -8,7 +8,7 @@ use Illuminate\Support\Facades\Storage;
 use Intervention\Image\Facades\Image;
 use App\Feature;
 use Toastr;
-
+use Carbon\Carbon;
 class FeatureController extends Controller
 {
 
@@ -47,14 +47,15 @@ class FeatureController extends Controller
                 Storage::disk('public')->makeDirectory('posts');
             }
             Storage::disk('public')->put('posts/'.$imagename, file_get_contents($icon));
+            $tag->icon = $imagename;
+
         } 
 
 
-      
-        $tag->icon = $imagename;
+
         $tag->slug = str_slug($request->name);
         $tag->save();
-        Toastr::success('message', 'Feature created successfully.');
+        Toastr::success('message', 'تم الإنشاء بنجاح.');
         return redirect()->route('admin.features.index');
     }
     
