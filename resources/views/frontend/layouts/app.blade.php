@@ -9,6 +9,23 @@
 
   gtag('config', 'G-SFZFF3XHTV');
 </script>
+<!-- Snap Pixel Code -->
+<script type='text/javascript'>
+    (function(e,t,n){if(e.snaptr)return;var a=e.snaptr=function()
+    {a.handleRequest?a.handleRequest.apply(a,arguments):a.queue.push(arguments)};
+    a.queue=[];var s='script';r=t.createElement(s);r.async=!0;
+    r.src=n;var u=t.getElementsByTagName(s)[0];
+    u.parentNode.insertBefore(r,u);})(window,document,
+    'https://sc-static.net/scevent.min.js');
+    
+    snaptr('init', 'c2112b81-9503-4159-8a70-ae0904fb9ac0', {
+    'user_email': 'alrawabireal@gmail.com'
+    });
+    
+    snaptr('track', 'PAGE_VIEW');
+    
+    </script>
+    <!-- End Snap Pixel Code -->
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
