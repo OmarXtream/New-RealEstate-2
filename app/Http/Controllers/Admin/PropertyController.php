@@ -343,9 +343,10 @@ class PropertyController extends Controller
 
     public function Requests()
     {
-        $requests = PropertiesRequests::get(); 
+        $NewRequests = PropertiesRequests::where('status',1)->get(); 
+        $OldRequests = PropertiesRequests::where('status',2)->get(); 
 
-        return view('admin.properties.Requests', compact('requests'));
+        return view('admin.properties.Requests', compact('NewRequests','OldRequests'));
     }
 
     public function adminNotes(Request $request)
@@ -357,6 +358,16 @@ class PropertyController extends Controller
         }
 
         return redirect()->back()->with('message', 'تم تحديث الملاحظات بنجاح');
+    }
+
+    public function markRead(Request $request)
+    {
+        $req = PropertiesRequests::findOrFail($request->rid);
+
+        $req->update(['status' => 2]);
+        
+
+        return redirect()->back()->with('message', 'تم تحديث حالة الطلب بنجاح');
     }
 
     public function Marakating()

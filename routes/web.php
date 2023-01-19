@@ -102,6 +102,7 @@ Route::group(['prefix'=>'admin','namespace'=>'Admin','middleware'=>['auth','admi
 
     Route::get('/PRequests', 'PropertyController@Requests')->name('PropertieRequest');
     Route::post('/PRequests', 'PropertyController@adminNotes')->name('PropertieRequest.notes');
+    Route::post('/PRequests/markRead', 'PropertyController@markRead')->name('PropertieRequest.markRead');
 
     Route::get('/PMarketing', 'PropertyController@Marakating')->name('PropertiesMarkating');
     
