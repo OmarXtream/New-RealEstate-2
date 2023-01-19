@@ -41,3 +41,14 @@
         </section>
 
 @endsection
+@section('scripts')
+
+<!-- Twitter conversion tracking event code -->
+<script type="text/javascript">
+    // Insert Twitter Event ID
+    twq('event', 'tw-od2bv-odja1', {
+    });
+  </script>
+  <!-- End Twitter conversion tracking event code -->
+@endsection
+
