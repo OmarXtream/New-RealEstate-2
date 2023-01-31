@@ -47,42 +47,42 @@
 
                     <div class="form-group form-float">
                         <div class="form-line">
-                            <input type="number" class="form-control" name="price" required>
+                            <input type="number" class="form-control" name="price" value="{{old('price')}}" required>
                             <label class="form-label">السعر</label>
                         </div>
                     </div>
 
                     <div class="form-group form-float">
                         <div class="form-line">
-                            <input type="number" class="form-control" name="bedroom" required>
+                            <input type="number" class="form-control" name="bedroom" value="{{old('bedroom')}}" required>
                             <label class="form-label">غرف</label>
                         </div>
                     </div>
 
                     <div class="form-group form-float">
                         <div class="form-line">
-                            <input type="number" class="form-control" name="bathroom" required>
+                            <input type="number" class="form-control" name="bathroom" value="{{old('bathroom')}}" required>
                             <label class="form-label">دورات المياه</label>
                         </div>
                     </div>
 
                     <div class="form-group form-float">
                         <div class="form-line">
-                            <input type="text" class="form-control" name="city" required>
+                            <input type="text" class="form-control" name="city" value="{{old('city')}}" required>
                             <label class="form-label">المدينة</label>
                         </div>
                     </div>
 
                     <div class="form-group form-float">
                         <div class="form-line">
-                            <input type="text" class="form-control" name="address" required>
+                            <input type="text" class="form-control" name="address" value="{{old('address')}}" required>
                             <label class="form-label">العنوان</label>
                         </div>
                     </div>
 
                     <div class="form-group form-float">
                         <div class="form-line">
-                            <input type="number" class="form-control" name="area" required>
+                            <input type="number" class="form-control" name="area" value="{{old('area')}}" required>
                             <label class="form-label">المساحة الارضية</label>
                         </div>
                         <div class="help-info">Square Feet</div>
@@ -158,7 +158,7 @@
 
                     <div class="form-group form-float">
                         <div class="form-line">
-                            <input type="text" class="form-control" name="video">
+                            <input type="text" class="form-control" value="{{old('video')}}" name="video">
                             <label class="form-label">فيديو</label>
                         </div>
                         <div class="help-info">رابط يوتيوب</div>
@@ -237,8 +237,8 @@
     <script>
         $("#input-id").fileinput({
         'showUpload': false,
+         'showCancel': true,
         'language': 'ar',
-
         });
 
         $(function () {
