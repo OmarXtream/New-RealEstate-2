@@ -310,7 +310,12 @@
                             <div class="text">
                                 <center>
                                 @foreach($property->features as $feature)
-                                <p>{{$feature->name}}</p>
+                                <p>{{$feature->name}}
+                                @if(Storage::disk('public')->exists('features/'.$feature->icon))
+                                <img src="{{$feature->image}}" alt="{{$feature->name}}">
+                                @endif
+
+                                </p>
                                 @endforeach
                             </center>
                             </div>

@@ -43,10 +43,10 @@ class FeatureController extends Controller
             $currentDate = Carbon::now()->toDateString();
             $imagename = $slug.'-'.$currentDate.'-'.uniqid().'.'.$icon->getClientOriginalExtension();
 
-            if(!Storage::disk('public')->exists('posts')){
-                Storage::disk('public')->makeDirectory('posts');
+            if(!Storage::disk('public')->exists('features')){
+                Storage::disk('public')->makeDirectory('features');
             }
-            Storage::disk('public')->put('posts/'.$imagename, file_get_contents($icon));
+            Storage::disk('public')->put('features/'.$imagename, file_get_contents($icon));
             $tag->icon = $imagename;
 
         } 
