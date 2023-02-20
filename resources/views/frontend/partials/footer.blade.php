@@ -62,7 +62,6 @@
                                     
                                     <div class="team-block-one">
                                         <div class="inner-box" >
-                                            <figure class="image-box"><img src="assets/images/team/team-3.jpg" alt=""></figure>
                                             <div class="lower-content">
                                                 <div class="inner" dir="ltr" style="background-color:#1b1d21 !important;">
                                                     <h3 class="mb-4" style="color:#fff">التواصل الاجتماعي</h3>
@@ -129,7 +128,7 @@
     <script src="{{asset('frontend/js/isotope.js')}}"></script>
     <script src="{{asset('frontend/js/jquery.nice-select.min.js')}}"></script>
     <script src="{{asset('frontend/js/jQuery.style.switcher.min.js')}}"></script>
-    <script src="{{asset('frontend/js/jquery-ui.js')}}"></script>
+    <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js" integrity="sha256-xNjb53/rY+WmG+4L6tTl9m6PpqknWZvRt0rO1SRnJzw=" crossorigin="anonymous"></script>    
     <script src="{{asset('frontend/js/jquery.paroller.min.js')}}"></script>
     <script src="{{asset('frontend/js/nav-tool.js')}}"></script>
 

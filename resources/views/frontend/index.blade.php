@@ -25,9 +25,6 @@
                             </div>
                             <div class="lower-content">
                                 <div class="author-info clearfix">
-                                    <div class="author pull-left">
-                                        <figure class="author-thumb"><img src="{{Storage::url('users/'.$property->user->image)}}" alt=""></figure>
-                                     </div>
                                   
                                      <div class="buy-btn pull-right"><a href="{{ route('property.show',$property->slug) }}">{{ ucfirst($property->type) }} - {{ $property->purpose }}</a></div>
                                      <div class="title-text"><h4><a href="{{ route('property.show',$property->slug) }}">{{ str_limit( $property->title, 18 ) }}</a></h4></div>
@@ -117,7 +114,7 @@
                 <!-- chooseus-section end -->
         
         <!-- testimonial-style-two -->
-        <section class="testimonial-style-two" style="background-image: url({{asset('frontend/images/shape/shape-1.png')}});">
+        <section class="testimonial-style-two" style="background-image: url(frontend/images/shape/shape-1.png);">
             <div class="auto-container">
                 <div class="sec-title" style="text-align: center">
                     <h4 style="color: black">الشهادات والتوصيات</h4>
@@ -211,32 +208,5 @@
 @endsection
 
 @section('scripts')
-<script>
-    $(function(){
-        var js_properties = <?php echo json_encode($properties);?>;
-        js_properties.forEach(element => {
-            if(element.rating){
-                var elmt = element.rating;
-                var sum = 0;
-                for( var i = 0; i < elmt.length; i++ ){
-                    sum += parseFloat( elmt[i].rating ); 
-                }
-                var avg = sum/elmt.length;
-                if(isNaN(avg) == false){
-                    $("#propertyrating-"+element.id).rateYo({
-                        rating: avg,
-                        starWidth: "20px",
-                        readOnly: true
-                    });
-                }else{
-                    $("#propertyrating-"+element.id).rateYo({
-                        rating: 0,
-                        starWidth: "20px",
-                        readOnly: true
-                    });
-                }
-            }
-        });
-    })
-</script>
+
 @endsection

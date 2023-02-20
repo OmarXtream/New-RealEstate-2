@@ -81,7 +81,8 @@ src="https://www.facebook.com/tr?id=700230175016943&ev=PageView&noscript=1"
 <link href="{{asset('frontend/css/font-awesome-all.css')}}" rel="stylesheet">
 <link href="{{asset('frontend/css/flaticon.css')}}" rel="stylesheet">
 <link href="{{asset('frontend/css/owl.css')}}" rel="stylesheet">
-<link href="{{asset('frontend/css/bootstrap.css')}}" rel="stylesheet">
+{{-- <link href="{{asset('frontend/css/bootstrap.css')}}" rel="stylesheet"> --}}
+<link href="https://cdn.usebootstrap.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
 <link href="{{asset('frontend/css/jquery.fancybox.min.css')}}" rel="stylesheet">
 <link href="{{asset('frontend/css/animate.css')}}" rel="stylesheet">
 <link href="{{asset('frontend/css/jquery-ui.css')}}" rel="stylesheet">
