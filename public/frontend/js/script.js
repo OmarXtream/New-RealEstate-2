@@ -1,6 +1,19 @@
 (function ($) {
   "use strict";
 
+  //Hide Loading Box (Preloader)
+  function handlePreloader() {
+    if ($(".loader-wrap").length) {
+      $(".loader-wrap").delay(1000).fadeOut(500);
+    }
+  }
+
+  if ($(".preloader-close").length) {
+    $(".preloader-close").on("click", function () {
+      $(".loader-wrap").delay(200).fadeOut(500);
+    });
+  }
+
   if ($(".switch_btn_one").length) {
     $(".search__toggler").on("click", function () {
       $(".search-field .switch_btn_one").addClass("active");
@@ -438,6 +451,69 @@
     $(".scroll-nav").onePageNav();
   }
 
+  //Sortable Masonary with Filters
+  function enableMasonry() {
+    if ($(".sortable-masonry").length) {
+      var winDow = $(window);
+      // Needed variables
+      var $container = $(".sortable-masonry .items-container");
+      var $filter = $(".filter-btns");
+
+      $container.isotope({
+        filter: "*",
+        masonry: {
+          columnWidth: ".masonry-item.small-column",
+        },
+        animationOptions: {
+          duration: 500,
+          easing: "linear",
+        },
+      });
+
+      // Isotope Filter
+      $filter.find("li").on("click", function () {
+        var selector = $(this).attr("data-filter");
+
+        try {
+          $container.isotope({
+            filter: selector,
+            animationOptions: {
+              duration: 500,
+              easing: "linear",
+              queue: false,
+            },
+          });
+        } catch (err) {}
+        return false;
+      });
+
+      winDow.on("resize", function () {
+        var selector = $filter.find("li.active").attr("data-filter");
+
+        $container.isotope({
+          filter: selector,
+          animationOptions: {
+            duration: 500,
+            easing: "linear",
+            queue: false,
+          },
+        });
+      });
+
+      var filterItemA = $(".filter-btns li");
+
+      filterItemA.on("click", function () {
+        var $this = $(this);
+        if (!$this.hasClass("active")) {
+          filterItemA.removeClass("active");
+          $this.addClass("active");
+        }
+      });
+    }
+  }
+
+  enableMasonry();
+
   //Price Range Slider
   if ($(".price-range-slider").length) {
     $(".price-range-slider").slider({
@@ -587,5 +663,14 @@
 
   $(window).on("scroll", function () {
     headerStyle();
+  });
+
+  /* ==========================================================================
+   When document is loaded, do
+   ========================================================================== */
+
+  $(window).on("load", function () {
+    handlePreloader();
+    enableMasonry();
   });
 })(window.jQuery);

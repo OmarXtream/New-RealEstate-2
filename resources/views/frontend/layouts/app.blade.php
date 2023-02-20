@@ -86,6 +86,7 @@ src="https://www.facebook.com/tr?id=700230175016943&ev=PageView&noscript=1"
 <link href="{{asset('frontend/css/jquery.fancybox.min.css')}}" rel="stylesheet">
 <link href="{{asset('frontend/css/animate.css')}}" rel="stylesheet">
 <link href="{{asset('frontend/css/jquery-ui.css')}}" rel="stylesheet">
+
 <link href="{{asset('frontend/css/nice-select.css')}}" rel="stylesheet">
 <link href="{{asset('frontend/css/color/theme-color.css')}}" id="jssDefault" rel="stylesheet">
 <link href="{{asset('frontend/css/switcher-style.css')}}" rel="stylesheet">
@@ -103,6 +104,51 @@ src="https://www.facebook.com/tr?id=700230175016943&ev=PageView&noscript=1"
 <body>
 
     <div class="boxed_wrapper rtl">
+
+
+        <!-- preloader -->
+        <div class="loader-wrap">
+            <div class="preloader">
+                <div class="preloader-close"><i class="fa fa-times"></i></div>
+                <div id="handle-preloader" class="handle-preloader">
+                    <div class="animation-preloader">
+                        <div class="spinner"></div>
+                        <div class="txt-loading">
+                            <span data-text-preloader="e" class="letters-loading">
+                                e
+                            </span>
+                            <span data-text-preloader="i" class="letters-loading">
+                                i
+                            </span>
+                            <span data-text-preloader="b" class="letters-loading">
+                                b
+                            </span>
+                            <span data-text-preloader="a" class="letters-loading">
+                                a
+                            </span>
+                            <span data-text-preloader="w" class="letters-loading">
+                                w
+                            </span>
+                            <span data-text-preloader="a" class="letters-loading">
+                                a
+                            </span>
+                            <span data-text-preloader="r" class="letters-loading">
+                                r
+                            </span>
+                            <span data-text-preloader="l" class="letters-loading">
+                                l
+                            </span>
+
+                            <span data-text-preloader="a" class="letters-loading">
+                                a
+                            </span>
+
+                        </div>
+                    </div>  
+                </div>
+            </div>
+        </div>
+        <!-- preloader end -->
         
                 <!-- switcher menu -->
                 <div class="switcher">
