@@ -86,6 +86,7 @@ src="https://www.facebook.com/tr?id=700230175016943&ev=PageView&noscript=1"
 <link href="{{asset('frontend/css/jquery.fancybox.min.css')}}" rel="stylesheet">
 <link href="{{asset('frontend/css/animate.css')}}" rel="stylesheet">
 <link href="{{asset('frontend/css/jquery-ui.css')}}" rel="stylesheet">
+
 <link href="{{asset('frontend/css/nice-select.css')}}" rel="stylesheet">
 <link href="{{asset('frontend/css/color/theme-color.css')}}" id="jssDefault" rel="stylesheet">
 <link href="{{asset('frontend/css/switcher-style.css')}}" rel="stylesheet">
