@@ -112,6 +112,10 @@ Route::group(['prefix'=>'admin','namespace'=>'Admin','middleware'=>['auth','admi
     Route::get('/excel','ExcelController@index')->name('import.excel');
     Route::post('/excel','ExcelController@uploadContent')->name('import.excel.upload');
 
+    Route::get('/users','UsersController@index')->name('users.index');
+    Route::delete('/users/delete/{user}','UsersController@destroy')->name('users.delete');
+    Route::get('userCreate','UsersController@userCreate')->name('userCreate');
+    Route::post('userCreate','UsersController@createUser')->name('userCreate.send');
 
 });
 

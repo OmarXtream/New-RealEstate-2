@@ -54,7 +54,9 @@
                             <li>فضلاً التقيد بكتابة الانواع بشكل دقيق </li>
                             <li>الغرض: [ايجار , بيع] </li>
                             <li>نوع العقار: [شقة , ملحق , عمارة , بيت] </li>
-
+                            @if(isset($lastFile) && !empty($lastFile))
+                            <li><h3><a href="{{Storage::url('excels/'.$lastFile->file)}}"><b>اضغط هنا لتحميل اخر نسخة تم رفعها</b></a></h3></li>
+                            @endif
                         </ul>
 
                         

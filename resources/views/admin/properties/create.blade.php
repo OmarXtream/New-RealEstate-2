@@ -128,27 +128,26 @@
                             <label>اختر الغرض</label>
                             <select name="purpose" class="form-control show-tick">
                                 <option value="">-- اختر --</option>
-                                <option value="بيع">بيع</option>
-                                <option value="ايجار">ايجار</option>
+                                <option value="بيع" @if(old('purpose') == 'بيع') selected @endif>بيع</option>
+                                <option value="ايجار" @if(old('purpose') == 'ايجار') selected @endif>ايجار</option>
                             </select>
                         </div>
                     </div>
-
                     <div class="form-group form-float">
                         <div class="form-line {{$errors->has('type') ? 'focused error' : ''}}">
                             <label>اختر النوع</label>
                             <select name="type" class="form-control show-tick">
                                 <option value="">-- اختر --</option>
-                                <option value="بيت">بيت</option>
-                                <option value="شقة">شقة</option>
-                                <option value="ملحق">ملحق</option>
-                                <option value="عمارة">عمارة</option>
+                                <option value="بيت" @if(old('type') == 'بيت') selected @endif>بيت</option>
+                                <option value="شقة" @if(old('type') == 'شقة') selected @endif>شقة</option>
+                                <option value="ملحق" @if(old('type') == 'ملحق') selected @endif>ملحق</option>
+                                <option value="عمارة" @if(old('type') == 'عمارة') selected @endif>عمارة</option>
 
                             </select>
                         </div>
                     </div>
 
-                    <h5>Features</h5>
+                    <h5>خصائص عقارية</h5>
                     <div class="form-group demo-checkbox">
                         @foreach($features as $feature)
                             <input type="checkbox" id="features-{{$feature->id}}" name="features[]" class="filled-in chk-col-indigo" value="{{$feature->id}}" />
@@ -236,11 +235,13 @@
     <script src="{{asset('backend/plugins/tinymce/tinymce.js')}}"></script>
     <script>
         $("#input-id").fileinput({
-        'showUpload': false,
+         'showUpload': false,
          'showCancel': true,
-        'language': 'ar',
+         'showRemove': true
+
         });
 
+        
         $(function () {
             tinymce.init({
                 selector: "textarea#tinymce",

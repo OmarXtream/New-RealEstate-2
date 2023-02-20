@@ -13,10 +13,17 @@
                     </a>
                 </li>
 
+                <li class="{{ Request::is('admin/users') ? 'active' : '' }}">
+                    <a href="{{ route('admin.users.index') }}">
+                        <i class="material-icons">person</i>
+                        <span>المستخدمين</span>
+                    </a>
+                </li>
+
                 <li class="{{ Request::is('admin/InfoForm') ? 'active' : '' }}">
                     <a href="{{ route('admin.InfoForm') }}">
                         <i class="material-icons">spa</i>
-                        <span>طلبات عقارية</span>
+                        <span>طلبات التمويل</span>
                     </a>
                 </li>
 
@@ -44,7 +51,6 @@
                         <span>طلبات تسويق العقار</span>
                     </a>
                 </li>
-
                 <li class="{{ Request::is('admin/excel*') ? 'active' : '' }}">
                     <a href="{{ route('admin.import.excel') }}">
                         <i class="material-icons">upload</i>
@@ -52,32 +58,24 @@
                     </a>
                 </li>
 
-            
                 <li class="{{ Request::is('admin/features*') ? 'active' : '' }}">
                     <a href="{{ route('admin.features.index') }}">
                         <i class="material-icons">star</i>
-                        <span>الخصائص</span>
+                        <span>خصائص عقارية</span>
                     </a>
                 </li>
 
-                <li class="{{ Request::is('admin/services*') ? 'active' : '' }}">
+                {{-- <li class="{{ Request::is('admin/services*') ? 'active' : '' }}">
                     <a href="{{ route('admin.services.index') }}">
                         <i class="material-icons">wb_sunny</i>
                         <span>الخدمات</span>
                     </a>
-                </li>
+                </li> --}}
 
                 <li class="{{ Request::is('admin/testimonials*') ? 'active' : '' }}">
                     <a href="{{ route('admin.testimonials.index') }}">
                         <i class="material-icons">view_carousel</i>
                         <span>الشهادات</span>
-                    </a>
-                </li>
-                
-                <li class="{{ Request::is('admin/userCreate*') ? 'active' : '' }}">
-                    <a href="{{ route('admin.userCreate') }}">
-                        <i class="material-icons">person_add</i>
-                        <span>إنشاء مستخدم</span>
                     </a>
                 </li>
 

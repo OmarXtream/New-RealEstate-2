@@ -21,6 +21,19 @@
                 <div class="header">
                     <h2>إنشاء منشور</h2>
                 </div>
+                @if(Session::has('errors'))
+                <div class="text-center alert alert-light">
+                    <h5 style="font-weight: bold;color:black">* فضلاً قم بملىء كل الحقول</h5>
+                @if($errors->any())
+                {!! implode('', $errors->all('<p style="color:red">:message</p>')) !!}
+                @endif
+                </div>
+                @endif
+                @if (session()->has('message'))
+                <div class="text-center alert alert-light">
+                    <h3 style="font-weight: bold; color:black">{{ session('message') }}</h3>
+                </div>
+                @endif
                 <div class="body">
 
                     <div class="form-group form-float">
@@ -50,18 +63,18 @@
                 </div>
                 <div class="body">
 
-                    <div class="form-group form-float">
+                    <div class="form-group form-float" dir="rtl">
                         <div class="form-line {{$errors->has('categories') ? 'focused error' : ''}}">
                             <label>اختر النوع</label>
                             <select name="categories[]" class="form-control show-tick" multiple data-live-search="true">
                                 @foreach($categories as $category)
-                                    <option value="{{$category->id}}">{{$category->name}}</option>
+                                    <option value="{{$category->id}}" >{{$category->name}}</option>
                                 @endforeach
                             </select>
                         </div>
                     </div>
 
-                    <div class="form-group form-float">
+                    <div class="form-group form-float" dir="rtl">
                         <div class="form-line {{$errors->has('tags') ? 'focused error' : ''}}">
                             <label>اختر الموضوع</label>
                             <select name="tags[]" class="form-control show-tick" multiple data-live-search="true">

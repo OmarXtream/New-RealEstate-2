@@ -7,6 +7,8 @@ use App\Http\Controllers\Controller;
 
 use Illuminate\Support\Facades\DB;
 use App\Property;
+use App\ExcelFiles;
+
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Http\Response;
 
@@ -15,22 +17,44 @@ use Toastr;
 
 use Excel;
 use App\Imports\PropertiesImport;
+
+use Illuminate\Support\Facades\Storage;
+use Intervention\Image\Facades\Image;
+use Carbon\Carbon;
+
+
 class ExcelController extends Controller
 {
 
     public function index()
     {
-        return view('admin.excelUpload');
+        $lastFile = ExcelFiles::latest()->first();
+        return view('admin.excelUpload',compact('lastFile'));
     }
     
     public function uploadContent(Request $request){
          $file = $request->file('uploaded_file');
         
-        try{
+        // try{
         Excel::import(new PropertiesImport, $file);
-        } catch (Exception $e) {
-            // return redirect()->back()->with('message', 'حدث خطأ ما ');
-        }        
+
+        $file = $request->file('uploaded_file');
+        if(isset($file)){
+            $excelFile = new ExcelFiles();
+            $currentDate = Carbon::now()->toDateString();
+            $fileName = $currentDate.'-'.uniqid().'.'.$file->getClientOriginalExtension();
+
+            if(!Storage::disk('public')->exists('excels')){
+                Storage::disk('public')->makeDirectory('excels');
+            }
+            Storage::disk('public')->put('excels/'.$fileName, file_get_contents($file));
+            $excelFile->file = $fileName;
+            $excelFile->save();
+    
+        } 
+        // } catch (Exception $e) {
+        //     // return redirect()->back()->with('message', 'حدث خطأ ما ');
+        // }        
 
         
         Toastr::success('message', 'تم رفع البيانات بنجاح.');

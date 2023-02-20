@@ -23,6 +23,19 @@
                 <div class="header">
                     <h2>انشاء تصنيف</h2>
                 </div>
+                @if(Session::has('errors'))
+                <div class="text-center alert alert-light">
+                    <h5 style="font-weight: bold;color:black">* فضلاً قم بملىء كل الحقول</h5>
+                @if($errors->any())
+                {!! implode('', $errors->all('<p style="color:red">:message</p>')) !!}
+                @endif
+                </div>
+                @endif
+                @if (session()->has('message'))
+                <div class="text-center alert alert-light">
+                    <h3 style="font-weight: bold; color:black">{{ session('message') }}</h3>
+                </div>
+                @endif
                 <div class="body">
                     <form action="{{route('admin.categories.store')}}" method="POST" enctype="multipart/form-data">
                         @csrf

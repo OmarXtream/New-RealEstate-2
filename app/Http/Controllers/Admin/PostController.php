@@ -127,7 +127,7 @@ class PostController extends Controller
             if(Storage::disk('public')->exists('posts/'.$post->image)){
                 Storage::disk('public')->delete('posts/'.$post->image);
             }
-            // $postimage = Image::make($image)->resize(1600, 980)->save();
+            $postimage = Image::make($image)->resize(1600, 980)->save();
             Storage::disk('public')->put('posts/'.$imagename, file_get_contents($image));
 
         }else{
@@ -172,25 +172,24 @@ class PostController extends Controller
         return back();
     }
 
-
     public function upload(Request $request)
     {
         if($request->hasFile('upload')) {
             $filenamewithextension = $request->file('upload')->getClientOriginalName();
-       
+
             $filename = pathinfo($filenamewithextension, PATHINFO_FILENAME);
-       
+
             $extension = $request->file('upload')->getClientOriginalExtension();
-       
+
             $filenametostore = $filename.'_'.time().'.'.$extension;
-       
+
             $request->file('upload')->storeAs('public/uploads', $filenametostore);
-  
+
             $CKEditorFuncNum = $request->input('CKEditorFuncNum');
             $url = asset('storage/uploads/'.$filenametostore);
-            $msg = 'Image successfully uploaded';
+            $msg = 'تم رفع الصورة بنجاح';
             $re = "<script>window.parent.CKEDITOR.tools.callFunction($CKEditorFuncNum, '$url', '$msg')</script>";
-              
+
             // Render HTML output
             @header('Content-type: text/html; charset=utf-8');
             echo $re;
