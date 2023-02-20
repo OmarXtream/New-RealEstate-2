@@ -15,9 +15,9 @@
                         <div class="inner-box">
                             <div class="image-box">
                                 @if(Storage::disk('public')->exists('property/'.$property->image) && $property->image)
-                                <figure class="image"><img src="{{Storage::url('property/'.$property->image)}}" alt=""></figure>
+                                <figure class="image"><img src="{{Storage::url('property/'.$property->image)}}" alt="property"></figure>
                                 @else
-                                <figure class="image"><img src="{{asset('frontend/images/feature/feature-1.jpg')}}" alt=""></figure>
+                                <figure class="image"><img src="{{asset('frontend/images/feature/feature-1.jpg')}}" alt="property"></figure>
                                 @endif
 
                                 <div class="batch"><i class="icon-11"></i></div>
@@ -132,7 +132,7 @@
                                         <h3>{{$testimonial->testimonial}}</h3>
                                     </div>
                                     <div class="author-info">
-                                        <figure class="author-thumb"><img src="{{Storage::url('testimonial/'.$testimonial->image)}}" alt=""></figure>
+                                        <figure class="author-thumb"><img src="{{Storage::url('testimonial/'.$testimonial->image)}}" alt="user-img"></figure>
                                         <h4 style="color: black">{{$testimonial->name}}</h4>
                                     </div>
                                 </div>
@@ -161,37 +161,37 @@
                     <div class="col-lg-8 col-md-12 col-sm-12 inner-column">
                              <ul class="logo-list clearfix">
                                 <li>
-                                    <figure class="logo"><a href="#"><img src="{{asset('frontend/partners/1.png')}}" alt=""></a></figure>
+                                    <figure class="logo"><a href="#"><img src="{{asset('frontend/partners/1.png')}}" alt="partner"></a></figure>
                                 </li>
                                 <li>
-                                    <figure class="logo"><a href="#"><img src="{{asset('frontend/partners/2.png')}}" alt=""></a></figure>
+                                    <figure class="logo"><a href="#"><img src="{{asset('frontend/partners/2.png')}}" alt="partner"></a></figure>
                                 </li>
                                 <li>
-                                    <figure class="logo"><a href="#"><img src="{{asset('frontend/partners/3.png')}}" alt=""></a></figure>
+                                    <figure class="logo"><a href="#"><img src="{{asset('frontend/partners/3.png')}}" alt="partner"></a></figure>
                                 </li>
                                 <li>
-                                    <figure class="logo"><a href="#"><img src="{{asset('frontend/partners/4.png')}}" alt=""></a></figure>
+                                    <figure class="logo"><a href="#"><img src="{{asset('frontend/partners/4.png')}}" alt="partner"></a></figure>
                                 </li>
                                 <li>
-                                    <figure class="logo"><a href="#"><img src="{{asset('frontend/partners/5.png')}}" alt=""></a></figure>
+                                    <figure class="logo"><a href="#"><img src="{{asset('frontend/partners/5.png')}}" alt="partner"></a></figure>
                                 </li>
                                 <li>
-                                    <figure class="logo"><a href="#"><img src="{{asset('frontend/partners/6.png')}}" alt=""></a></figure>
+                                    <figure class="logo"><a href="#"><img src="{{asset('frontend/partners/6.png')}}" alt="partner"></a></figure>
                                 </li>
                                 <li>
-                                    <figure class="logo"><a href="#"><img src="{{asset('frontend/partners/7.png')}}" alt=""></a></figure>
+                                    <figure class="logo"><a href="#"><img src="{{asset('frontend/partners/7.png')}}" alt="partner"></a></figure>
                                 </li>
                                 <li>
-                                    <figure class="logo"><a href="#"><img src="{{asset('frontend/partners/8.png')}}" alt=""></a></figure>
+                                    <figure class="logo"><a href="#"><img src="{{asset('frontend/partners/8.png')}}" alt="partner"></a></figure>
                                 </li>
                                 <li>
-                                    <figure class="logo"><a href="#"><img src="{{asset('frontend/partners/9.png')}}" alt=""></a></figure>
+                                    <figure class="logo"><a href="#"><img src="{{asset('frontend/partners/9.png')}}" alt="partner"></a></figure>
                                 </li>
                                 <li>
-                                    <figure class="logo"><a href="#"><img src="{{asset('frontend/partners/10.png')}}" alt=""></a></figure>
+                                    <figure class="logo"><a href="#"><img src="{{asset('frontend/partners/10.png')}}" alt="partner"></a></figure>
                                 </li>
                                 <li>
-                                    <figure class="logo"><a href="#"><img src="{{asset('frontend/partners/11.png')}}" alt=""></a></figure>
+                                    <figure class="logo"><a href="#"><img src="{{asset('frontend/partners/11.png')}}" alt="partner"></a></figure>
 
                                 </li>
                             </ul>
