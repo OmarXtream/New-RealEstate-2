@@ -15,7 +15,8 @@
 
     <!-- Widgets -->
     <div class="row clearfix">
-        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+      
+        <div class="col-lg-2 col-md-2 col-sm-6 col-xs-12">
             <div class="info-box bg-pink hover-expand-effect">
                 <div class="icon">
                     <i class="material-icons">playlist_add_check</i>
@@ -26,29 +27,40 @@
                 </div>
             </div>
         </div>
-        {{-- <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+        <div class="col-lg-2 col-md-2 col-sm-6 col-xs-12">
             <div class="info-box bg-cyan hover-expand-effect">
                 <div class="icon">
                     <i class="material-icons">help</i>
                 </div>
                 <div class="content">
-                    <div class="text">TOTAL POST</div>
-                    <div class="number count-to" data-from="0" data-to="{{ $postcount }}" data-speed="1000" data-fresh-interval="20"></div>
+                    <div class="text">طلبات التسويق</div>
+                    <div class="number count-to" data-from="0" data-to="{{ $PropertiesMarkating }}" data-speed="1000" data-fresh-interval="20"></div>
                 </div>
             </div>
-        </div> --}}
-        {{-- <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+        </div>
+        <div class="col-lg-2 col-md-2 col-sm-6 col-xs-12">
             <div class="info-box bg-light-green hover-expand-effect">
                 <div class="icon">
                     <i class="material-icons">forum</i>
                 </div>
                 <div class="content">
-                    <div class="text">TOTAL COMMENT</div>
-                    <div class="number count-to" data-from="0" data-to="{{ $commentcount }}" data-speed="1000" data-fresh-interval="20"></div>
+                    <div class="text">طلبات تمويل</div>
+                    <div class="number count-to" data-from="0" data-to="{{ $InfoFormCount }}" data-speed="1000" data-fresh-interval="20"></div>
                 </div>
             </div>
-        </div> --}}
-        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+        </div>
+        <div class="col-lg-2 col-md-2 col-sm-6 col-xs-12">
+            <div class="info-box bg-pink hover-expand-effect">
+                <div class="icon">
+                    <i class="material-icons">playlist_add_check</i>
+                </div>
+                <div class="content">
+                    <div class="text">طلبات العقار</div>
+                    <div class="number count-to" data-from="0" data-to="{{ $PropertiesRequestsCount }}" data-speed="15" data-fresh-interval="20"></div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-2 col-md-2 col-sm-6 col-xs-12">
             <div class="info-box bg-orange hover-expand-effect">
                 <div class="icon">
                     <i class="material-icons">person_add</i>
@@ -56,6 +68,18 @@
                 <div class="content">
                     <div class="text rtl">عدد المستخدمين</div>
                     <div class="number count-to" data-from="0" data-to="{{ $usercount }}" data-speed="1000" data-fresh-interval="20"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-2 col-md-2 col-sm-6 col-xs-12">
+            <div class="info-box bg-orange hover-expand-effect">
+                <div class="icon">
+                    <i class="material-icons">label</i>
+                </div>
+                <div class="content">
+                    <div class="text rtl">عدد الرسائل</div>
+                    <div class="number count-to" data-from="0" data-to="{{ $MessagesCount }}" data-speed="1000" data-fresh-interval="20"></div>
                 </div>
             </div>
         </div>
