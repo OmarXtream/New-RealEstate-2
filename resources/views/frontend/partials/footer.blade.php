@@ -111,7 +111,12 @@
 
 
         <!-- main-footer end -->
+        @if(Request::is('/'))
 
+        <div class="floating-chat text-right">
+            <i class="fab fa-whatsapp fa-lg" aria-hidden="true"></i>
+            </div>
+            @endif
     </div>
 
 

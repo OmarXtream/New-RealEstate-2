@@ -172,7 +172,7 @@ src="https://www.facebook.com/tr?id=700230175016943&ev=PageView&noscript=1"
 
         @yield('scripts')
 
-    <script type="text/javascript">
+    {{-- <script type="text/javascript">
     var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
     (function(){
     var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
@@ -182,7 +182,7 @@ src="https://www.facebook.com/tr?id=700230175016943&ev=PageView&noscript=1"
     s1.setAttribute('crossorigin','*');
     s0.parentNode.insertBefore(s1,s0);
     })();
-    </script>
+    </script> --}}
     </body><!-- End of .page_wrapper -->
    
  
