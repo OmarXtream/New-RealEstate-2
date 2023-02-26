@@ -470,7 +470,7 @@
                                     <div class="form-group message-btn">
                                         <button id="msgsubmitbtn" type="submit" class="theme-btn btn-one">إرسال</button>
                                     </div>
-                                    <h3 class="text-center" id="result"></h3>
+                                    <h4 class="text-center" id="result"></h4>
 
                                 </form>
                             </div>
