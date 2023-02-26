@@ -69,6 +69,7 @@
                                                         <center>
                                                         <li><a href="https://www.instagram.com/rawabireal/" target="_blank"><i class="fab fa-instagram" dir="rtl"></i> </a></li>
                                                         <li><a href="https://www.twitter.com/rawabireal/" target="_blank"><i class="fab fa-twitter" dir="rtl"></i> </a></li>
+                                                        <li><a href="https://www.facebook.com/Alrawabireal/" target="_blank"><i class="fa-brands fa-facebook fa-lg"></i> </a></li>
                                                         <li><a href="https://www.snapchat.com/add/rawabireal" target="_blank"><i class="fab fa-snapchat" dir="rtl"></i></a></li>            
                                                     </center>
                                                     </ul>

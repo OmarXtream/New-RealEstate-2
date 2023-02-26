@@ -22,6 +22,7 @@
                         <ul class="social-links clearfix">
                             <li><a href="https://www.instagram.com/rawabireal/" target="_blank"><i class="fa-brands fa-instagram fa-lg"></i> </a></li>
                             <li><a href="https://www.twitter.com/rawabireal/" target="_blank"><i class="fa-brands fa-twitter fa-lg"></i> </a></li>
+                            <li><a href="https://www.facebook.com/Alrawabireal/" target="_blank"><i class="fa-brands fa-facebook fa-lg"></i> </a></li>
                             <li><a href="https://www.snapchat.com/add/rawabireal?share_id=LQ4Gu_ShYb8&locale=en-GB" target="_blank"><i class="fa-brands fa-snapchat fa-lg"></i> </a></li>
                         </ul>
 
