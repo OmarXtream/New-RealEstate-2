@@ -43,7 +43,7 @@
                                 <div class="widget-content pb-5">
 
                                     @foreach($cities as $city)
-                                    <div class="buy-btn pull-left text-center"><a class="category" href="{{ route('property.city',$city->city_slug) }}"><h4 class="category" style="color:black;">{{ $city->city }}</h4></a></div>
+                                    <div class="buy-btn text-center"><a class="category" href="{{ route('property.city',$city->city_slug) }}"><h4 class="category" style="color:black;">{{ $city->city }}</h4></a></div>
                                     <br>
                                 @endforeach
             
