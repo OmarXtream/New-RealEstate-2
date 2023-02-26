@@ -323,7 +323,7 @@
                         @endif
                         <div class="discription-box content-widget">
                             <div class="title-box text-center">
-                                <h4>تخطيط الارض</h4>
+                                <h4>كروكي العقار</h4>
                             </div>
                             <div class="text">
                                 @if(Storage::disk('public')->exists('property/'.$property->floor_plan) && $property->floor_plan)
@@ -470,6 +470,8 @@
                                     <div class="form-group message-btn">
                                         <button id="msgsubmitbtn" type="submit" class="theme-btn btn-one">إرسال</button>
                                     </div>
+                                    <h3 class="text-center" id="result"></h3>
+
                                 </form>
                             </div>
                         </div>
@@ -565,18 +567,17 @@
                     data: data,
                     beforeSend: function() {
                         $(btn).addClass('disabled');
-                        $(btn).empty().append('جاري الإرسال..');
+                        $('#result').empty().append('جاري الإرسال..');
                     },
                     success: function(data) {
                         if (data.message) {
                         $('form.agent-message-box')[0].reset();
                         $(btn).removeClass('disabled');
-                        $(btn).empty().append('تم الإرسال');
+                        $('#result').empty().append('تم الإرسال بنجاح , سوف يتم التواصل معكم');
                         }
                     },
                     error: function(xhr) {
                         $(btn).removeClass('disabled');
-                        $(btn).empty().append('إعادة الإرسال');
                     },
                     complete: function() {
                         $('form.agent-message-box')[0].reset();
