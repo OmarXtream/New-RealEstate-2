@@ -312,7 +312,7 @@
                                 @foreach($property->features as $feature)
                                 <p>{{$feature->name}}
                                 @if(Storage::disk('public')->exists('features/'.$feature->icon))
-                                <img src="{{Storage::url('features/'.$feature->icon)}}" width="20px" height="20px" alt="{{$feature->name}}">
+                                <img src="{{Storage::url('features/'.$feature->icon)}}" width="32px" height="32px" alt="{{$feature->name}}">
                                 @endif
 
                                 </p>
