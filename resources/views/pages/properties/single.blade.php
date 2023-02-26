@@ -463,6 +463,7 @@
                                     </div>
                                     <div class="form-group">
                                         <input type="number" name="phone" placeholder="رقم الهاتف" required="">
+                                        <small class="float-right mt-1 mb-1">فضلاً قم بكتابة الرقم باللغة الإنقليزية</small>
                                     </div>
                                     <div class="form-group">
                                         <textarea name="message" placeholder=" (اسم العقار وتفاصيل طلبه) "></textarea>
