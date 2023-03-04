@@ -151,14 +151,8 @@
     
     snaptr('init', 'cef51892-6637-4b65-8ede-bb67967cac4e', {
 
-    @auth
-    'user_email': '{{Auth::user()->email}}'
-    @endauth
-
-    @guest
-    'user_email': 'alrawabireal+@php echo(rand(1,1000));@endphp@gmail.com'
-
-    @endguest    
+    'user_email': '  @auth{{Auth::user()->email}} @endauth'
+  
     });
     
     snaptr('track', 'PAGE_VIEW');
