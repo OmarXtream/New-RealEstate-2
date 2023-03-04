@@ -140,3 +140,27 @@
 
     <!-- main-js -->
     <script src="{{asset('frontend/js/script.js')}}"></script>
+<!-- Snap Pixel Code -->
+<script type='text/javascript'>
+    (function(e,t,n){if(e.snaptr)return;var a=e.snaptr=function()
+    {a.handleRequest?a.handleRequest.apply(a,arguments):a.queue.push(arguments)};
+    a.queue=[];var s='script';r=t.createElement(s);r.async=!0;
+    r.src=n;var u=t.getElementsByTagName(s)[0];
+    u.parentNode.insertBefore(r,u);})(window,document,
+    'https://sc-static.net/scevent.min.js');
+    
+    snaptr('init', 'cef51892-6637-4b65-8ede-bb67967cac4e', {
+
+    @auth
+    'user_email': '{{Auth::user()->email}}'
+    @endauth
+
+    @guest
+    'user_email': 'alrawabireal+@php echo(rand(1,1000));@endphp@gmail.com'
+
+    @endguest    
+    });
+    
+    snaptr('track', 'PAGE_VIEW');
+    
+    </script>
