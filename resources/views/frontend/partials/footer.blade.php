@@ -151,7 +151,7 @@
     
     snaptr('init', 'cef51892-6637-4b65-8ede-bb67967cac4e', {
 
-    'user_email': '  @auth{{Auth::user()->email}} @endauth'
+    'user_email': '  @auth {{Auth::user()->email}} @endauth'
   
     });
     
