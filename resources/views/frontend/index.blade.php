@@ -264,7 +264,7 @@
 
                     <div class="feature-block-one">
                         <div class="inner-box">
-                            <div class="image-box img-fluid" style="height: 100%">
+                            <div class="image-box img-fluid" style="height: 100%;width=350px; height=350px;">
                                 @if(Storage::disk('public')->exists('property/'.$property->image) && $property->image)
                                 <figure class="image"><img style="height: 100%" class="img-fluid" src="{{Storage::url('property/'.$property->image)}}" alt="property"></figure>
                                 @else
