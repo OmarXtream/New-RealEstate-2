@@ -266,9 +266,9 @@
                         <div class="inner-box">
                             <div class="image-box img-fluid">
                                 @if(Storage::disk('public')->exists('property/'.$property->image) && $property->image)
-                                <figure class="image" style="width:350px; height:350px;"><img class="img-fluid" src="{{Storage::url('property/'.$property->image)}}" alt="property"></figure>
+                                <figure class="image img-fluid" style="width:350px; height:350px;"><img class="img-fluid" src="{{Storage::url('property/'.$property->image)}}" alt="property"></figure>
                                 @else
-                                <figure class="image" style="width:350px; height:350px;"><img class="img-fluid" src="{{$property->image}}" alt="{{$property->title}}"></figure>
+                                <figure class="image img-fluid" style="width:350px; height:350px;"><img class="img-fluid" src="{{$property->image}}" alt="{{$property->title}}"></figure>
                                 @endif
 
                                 <div class="batch"><i class="icon-11"></i></div>
