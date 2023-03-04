@@ -97,10 +97,10 @@
         
                                 </div>
                             </div>
-
                             <div class="pagination-wrapper">
                                 {{ $properties->links() }}
                             </div>
+
                         </div>
                     </div>
                 </div>
