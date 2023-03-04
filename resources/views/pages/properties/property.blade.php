@@ -86,9 +86,9 @@
                                                     </div>
                                                 </div>
                                                 <ul class="more-details clearfix">
-                                                    <li><i class="icon-14"></i>غرف نوم: <strong>{{ $property->bedroom}}</strong></li>
+                                                    <li><i class="icon-14"></i>عدد الغرف: <strong>{{ $property->bedroom}}</strong></li>
                                                     <li><i class="icon-15"></i>دورات مياه: <strong>{{ $property->bathroom}}</strong></li>
-                                                    <li><i class="icon-16"></i>مساحة أرضية: <strong>{{ $property->area}}</strong></li>
+                                                    <li><i class="icon-16"></i>المساحة: <strong>{{ $property->area}}</strong></li>
                                                 </ul>
                                             </div>
                                         </div>
