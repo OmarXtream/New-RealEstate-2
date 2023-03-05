@@ -307,17 +307,16 @@
                             <div class="title-box text-center">
                                 <h4>مميزات العقار</h4>
                             </div>
-                            <div class="text">
-                                <center>
+                            <div class="text-right">
                                 @foreach($property->features as $feature)
-                                <p>{{$feature->name}}
+                                <p>
                                 @if(Storage::disk('public')->exists('features/'.$feature->icon))
                                 <img src="{{Storage::url('features/'.$feature->icon)}}" width="32px" height="32px" alt="{{$feature->name}}">
                                 @endif
+                                {{$feature->name}}
 
                                 </p>
                                 @endforeach
-                            </center>
                             </div>
                         </div>
                         @endif
