@@ -63,12 +63,10 @@
                                             @if(Storage::disk('public')->exists('property/'.$property->image) && $property->image)
                                             <div class="image-box img-fluid" style="height: 100%">
                                                 <a href="{{ route('property.show',$property->slug) }}"><img style="height: 100%" class="img-fluid" src="{{Storage::url('property/'.$property->image)}}" alt="{{$property->title}}"></a>
-                                                <div class="batch"><i class="icon-11"></i></div>
                                             </div>
                                             @else
                                             <div class="image-box">
                                                 <a href="{{ route('property.show',$property->slug) }}"><img style="height: 100%" class="img-fluid" src="{{$property->image}}" alt="{{$property->title}}"></a>
-                                                <div class="batch"><i class="icon-11"></i></div>
                                             </div>
         
                                             @endif
@@ -88,7 +86,7 @@
                                                 <ul class="more-details clearfix">
                                                     <li><i class="icon-14"></i>عدد الغرف: <strong>{{ $property->bedroom}}</strong></li>
                                                     <li><i class="icon-15"></i>دورات مياه: <strong>{{ $property->bathroom}}</strong></li>
-                                                    <li><i class="icon-16"></i>المساحة: <strong>{{ $property->area}}</strong></li>
+                                                    <li><i class="icon-16"></i>المساحة: <strong>{{ $property->area}} م</strong></li>
                                                 </ul>
                                             </div>
                                         </div>

@@ -300,7 +300,7 @@
 
                                     <i class="icon-15"> دورات المياه : {{ $property->bathroom}}  </i>
                                     <br>
-                                      <i class="icon-16"> المساحة الارضية: {{ $property->area}} </i> 
+                                      <i class="icon-16"> المساحة : {{ $property->area}} م   </i> 
 </center>
 
                                  </ul>
