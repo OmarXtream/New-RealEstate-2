@@ -300,7 +300,7 @@ class PagesController extends Controller
     private function convertYoutube($youtubelink, $w = 250, $h = 140) {
         return preg_replace(
             "/\s*[a-zA-Z\/\/:\.]*youtu(be.com\/watch\?v=|.be\/)([a-zA-Z0-9\-_]+)([a-zA-Z0-9\/\*\-\_\?\&\;\%\=\.]*)/i",
-            "<iframe width=\"$w\" height=\"$h\" src=\"//www.youtube.com/embed/$2\" frameborder=\"0\" allowfullscreen></iframe>",
+            "<iframe class='embed-responsive-item' width=\"$w\" height=\"$h\" src=\"//www.youtube.com/embed/$2\" frameborder=\"0\" allowfullscreen></iframe>",
             $youtubelink
         );
     }
