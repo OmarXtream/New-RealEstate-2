@@ -22,29 +22,34 @@
                         <table class="table table-bordered table-striped table-hover dataTable js-exportable">
                             <thead>
                                 <tr>
+                                    <th>#</th>
                                     <th>الإسم</th>
                                     <th>رقم الهاتف</th>
+                                    <th>البريد الإلكتروني</th>
                                     <th>العمر</th>
                                     <th>القطاع</th>
                                     <th>الإلتزامات الشخصية</th>
                                     <th>البنك</th>
                                     <th>الراتب</th>
                                     <th>مدعوم من سكني</th>
+                                    <th>التاريخ</th>
                                     <th width="100px">الملاحظات</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 @foreach($infos as $info)
                                 <tr>
+                                    <td>{{$info->id}}</td>
                                     <td>{{$info->name}}</td>
                                     <td>{{$info->phone}}</td>
+                                    <td>{{$info->email}}</td>
                                     <td>{{$info->Age}}</td>
                                     <td>{{$info->typeText()}}</td>
-
                                     <td>{{$info->commitments}}</td>
                                     <td>{{$info->bank}}</td>
                                     <td>{{$info->salary}}</td>
                                     <td>{{$info->SupportText()}}</td>
+                                    <td>{{$info->created_at->format('d M Y - H:i:s')}}</td>
                                     <td col="2">{{$info->notes}}</td>
 
                                 </tr>
