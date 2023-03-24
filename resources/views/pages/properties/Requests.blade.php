@@ -52,7 +52,7 @@
                             <div class="form-inner">
 
 
-                                <form id="req-form" action="{{route('PropertieRequest.create')}}" method="POST">
+                                <form id="req-form" action="{{route('PropertieRequest.create')}}" method="POST" onsubmit="disableButton()">
                                     @csrf
                                             <div class="row clearfix">
                                         <div class="col-lg-6 col-md-6 col-sm-12 form-group">
@@ -160,14 +160,9 @@
 @endsection
 @section('scripts')
     <script>
-
-        $(function(){
-            $(document).on('submit','#req-form',function(e){
-                var btn = $('#rqsubmitbtn');
-                $(btn).addClass('disabled');
-
-            })
-        })
+         function disableButton() {
+        document.getElementById("rqsubmitbtn").disabled = true;
+        } 
     </script>
 @endsection
 
