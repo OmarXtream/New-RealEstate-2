@@ -52,7 +52,7 @@
                             <div class="form-inner">
 
 
-                                <form action="{{route('PropertieRequest.create')}}" method="POST">
+                                <form id="req-form" action="{{route('PropertieRequest.create')}}" method="POST">
                                     @csrf
                                             <div class="row clearfix">
                                         <div class="col-lg-6 col-md-6 col-sm-12 form-group">
@@ -149,7 +149,7 @@
 
                     
                     <div class="col-lg-12 col-md-12 col-sm-12 form-group message-btn">
-                        <button class="theme-btn btn-one" type="submit" name="submit-form">إرسال</button>
+                        <button class="theme-btn btn-one" type="submit" name="submit-form" id="rqsubmitbtn">إرسال</button>
                     </form>
                     </div>
 
@@ -158,3 +158,17 @@
         </section>
 
 @endsection
+@section('scripts')
+    <script>
+
+        $(function(){
+            $(document).on('submit','#req-form',function(e){
+                var btn = $('#rqsubmitbtn');
+                $(btn).addClass('disabled');
+
+            })
+        })
+    </script>
+@endsection
+
+                
