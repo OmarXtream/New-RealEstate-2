@@ -271,7 +271,6 @@
                                 <figure class="image img-fluid" style="width:350px; height:350px;"><img class="img-fluid" style="height: 100%" src="{{$property->image}}" alt="{{$property->title}}"></figure>
                                 @endif
 
-                                <div class="batch"><i class="icon-11"></i></div>
                                 <span class="category">مميز</span>
                             </div>
                             <div class="lower-content">
