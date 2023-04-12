@@ -162,21 +162,8 @@
         </div>
         @endif
         <div class="auto-container">
+            
             <div class="top-details clearfix">
-                <div class="left-column text-center clearfix">
-                    <h3>{{ $property->title }}</h3>
-                    <div class="author-info clearfix">
-                        <div class="author-box pull-left">
-                            <h6>{{ $property->address }} <i class="fa fa-location"></i></h6>
-                        </div>
-                        @if($property->featured == 1)
-                        <ul class="rating clearfix pull-left">
-                            <li><i class="icon-39"></i></li>
-                        </ul>
-                        @endif
-
-                    </div>
-                </div>
                 <div class="right-column pull-right clearfix pl-5" dir="rtl">
                     <div class="price-inner clearfix">
 
@@ -195,8 +182,23 @@
                         </div>
                     </div>
                 </div>
+                <div class="left-column text-center clearfix">
+                    <h3>{{ $property->title }}</h3>
+                    <div class="author-info clearfix">
+                        <div class="author-box pull-left">
+                            <h6>{{ $property->address }} <i class="fa fa-location"></i></h6>
+                        </div>
+                        @if($property->featured == 1)
+                        <ul class="rating clearfix pull-left">
+                            <li><i class="icon-39"></i></li>
+                        </ul>
+                        @endif
 
-                <div class="right-column pull-right clearfix mr-3 pr-3">
+                    </div>
+                </div>
+                
+
+                <div class="right-column d-flex justify-content-center clearfix mr-3 pr-3">
                     <ul class="other-option pull-right clearfix">
                         <li><a href="#" onclick="CopyURL()"><i class="fa fa-link" title="مشاركة"></i></a></li>
                         <button class="btn-share mr-3 ml-3" style="padding-right:3rem!important;padding-left:3rem!important; ">
