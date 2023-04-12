@@ -200,7 +200,7 @@
                     <ul class="other-option pull-right clearfix">
                         <li><a href="#" onclick="CopyURL()"><i class="fa fa-link" title="مشاركة"></i></a></li>
                         <button class="btn-share mr-3 ml-3" style="padding-right:3rem!important;padding-left:3rem!important; ">
-                            <span class="btn-text"> مشاركة </span
+                            <span class="btn-text px-3">مشاركة</span
                             ><span class="btn-icon">
                               <svg
                                 t="1580465783605"
