@@ -14,7 +14,7 @@
                         <ul class="info clearfix">
                             <li><i class="fa fa-map-marker-alt"></i>جدة - الفيصلية</li>
                             <li><i class="fa fa-clock"></i>10 الصباح - 10 المساء</li>
-                            <li><i class="fa fa-phone"></i><a href="tel:+966533522993">966533522993+</a></li>
+                            <li><i class="fa fa-phone"></i><a href="tel:+966533522988">0533522988</a></li>
                         </ul>
                     </div>
                     

@@ -99,7 +99,7 @@
                             @if(isset($footersettings[0]) && $footersettings[0]['footer'])
                             {{ $footersettings[0]['footer'] }}
                         @else
-                            © 2022 Developer puzzle.
+                            © 2023 Developer puzzle.
                         @endif
                             </div>
                             <ul class="footer-nav pull-right clearfix">
