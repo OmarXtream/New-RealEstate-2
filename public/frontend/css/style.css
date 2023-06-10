@@ -1,16 +1,8 @@
-@font-face {
-  font-family: "JF Flat Regular";
-  src: url('../fonts/JF-Flat-regular.eot');
-  src: url('../fonts/JF-Flat-regular.eot?#iefix') format('embedded-opentype'),
-  url('../fonts/JF-Flat-regular.svg#JF Flat Regular') format('svg'),
-  url('../fonts/JF-Flat-regular.woff') format('woff'),
-  url('../fonts/JF-Flat-regular.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-}
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600;700;900&display=swap');
+
 
 body {
-  font-family: "JF Flat Regular", Arial, sans-serif !important;
+  font-family: "Cairo", Arial, sans-serif !important;
  }
 * {
   margin:0px;
@@ -35,7 +27,7 @@ body {
   line-height:26px;
   font-weight:400;
   background:#ffffff;
-  font-family: 'JF Flat Regular', sans-serif;
+  font-family: 'Cairo', sans-serif;
   background-size:cover;
   background-repeat:no-repeat;
   background-position:center top;
@@ -81,7 +73,7 @@ body {
 
 
 a{
-  font-family: 'JF Flat Regular', sans-serif;
+  font-family: 'Cairo', sans-serif;
   text-decoration:none;
   transition:all 500ms ease;
   -moz-transition:all 500ms ease;
@@ -96,7 +88,7 @@ a:hover{
 }
 
 input,button,select,textarea{
-  font-family: 'JF Flat Regular', sans-serif;
+  font-family: 'Cairo', sans-serif;
   font-weight: 400;
   font-size: 15px;
 }
@@ -133,7 +125,7 @@ textarea:focus{
 
 p{
   position: relative;
-  font-family: 'JF Flat Regular', sans-serif;
+  font-family: 'Cairo', sans-serif;
   color: #93959e;
   font-weight: 400;
   margin: 0px;
@@ -142,7 +134,7 @@ p{
 
 h1,h2,h3,h4,h5,h6{
   position:relative;
-  font-family: 'JF Flat Regular', sans-serif;
+  font-family: 'Cairo', sans-serif;
   font-weight: 400;
   color: #ffffff;
   margin: 0px;
@@ -212,7 +204,7 @@ h1,h2,h3,h4,h5,h6{
 }
 
 .handle-preloader .animation-preloader .txt-loading .letters-loading{
-  font-family: 'JF Flat Regular', sans-serif;
+  font-family: 'Cairo', sans-serif;
   font-weight: 400;
   letter-spacing: 15px;
   display: inline-block;
@@ -327,7 +319,7 @@ img {
   vertical-align: middle;
   font-size: 17px;
   line-height: 25px;
-  font-family: 'JF Flat Regular', sans-serif;
+  font-family: 'Cairo', sans-serif;
   font-weight: 500;
   text-align: center;
   padding: 15.5px 34px;
